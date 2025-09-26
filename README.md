@@ -1,3 +1,3 @@
 "# designED"
 
-Welcome to Readme.md of DesignED team!
+Welcome to Readme.md of DesignED!
