@@ -45,4 +45,28 @@ Welcome to Readme.md of DesignED team!
 - Type **code .** to open visual studio code. Now you can work locally.  
   ![open_vsc](./readme_img/10.jpg)
 
-# Push and Pull request
+  <h3> 2. Using Github Desktop</h3>
+
+- Fist, download Github Desktop [Download](https://github.com/apps/desktop)
+
+- Go to the main branch of repo click the **Code** button and click Open with Github Desktop.  
+  ![clone_desktop](./readme_img/11.jpg)
+
+- Choose your desired local path.
+
+![clone_desktop](./readme_img/12.jpg)
+
+- Click Open Visual Studio Code and you can start working on there.
+
+![clone_vsc](./readme_img/13.jpg)
+
+# Commit, Push and Pull request
+
+<h3> 1. Using git cli</h3>
+
+- Open terminal in Visual Studio Code.
+
+![open_terminal](./readme_img/14.jpg)
+
+- type git add .
+  ![git add](./readme_img/15.jpg)
