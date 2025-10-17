@@ -1,3 +1,10 @@
+<?php
+// This is just a temporary page
+/*
+Template Name: Contact Us
+*/
+?>
+
 <?php get_header(); ?>
 <h1><?php the_title(); ?></h1>
 
