@@ -5,7 +5,7 @@ if (have_posts()): while (have_posts()): the_post();
         <?php
         if (has_post_thumbnail()):
         ?>
-
+            <br>
             <img src="<?php the_post_thumbnail_url('blog-small') ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true) ?>">
 
         <?php
