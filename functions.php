@@ -67,7 +67,7 @@ function featured_products_post_type()
         ),
         'hierachical' => true,
         'public' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'menu_icon' => 'dashicons-cart',
         'supports' => array('title', 'editor', 'thumbnail'),
         'show_ui'       => true,
@@ -105,7 +105,7 @@ add_action('pre_get_posts', function ($q) {
     }
 });
 
-
+// Add widgets
 add_action('widgets_init', function () {
     register_sidebar([
         'name'          => __('Footer', 'your-textdomain'),
@@ -117,3 +117,11 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>',
     ]);
 });
+
+
+// Hide Block Editor
+// add_action('admin_init', function () {
+//     remove_post_type_support('post', 'editor');
+//     remove_post_type_support('page', 'editor');
+//     remove_post_type_support('featured', 'editor');
+// });

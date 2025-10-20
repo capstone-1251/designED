@@ -17,6 +17,7 @@ if (have_posts()): while (have_posts()): the_post();
         <?php
         the_field('exerpt');
         ?>
+
         <br>
         <a href="<?php the_permalink(); ?>">Explore <?php the_title() ?></a>
 
