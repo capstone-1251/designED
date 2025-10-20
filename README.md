@@ -2,6 +2,26 @@
 
 Welcome to Readme.md of DesignED team!
 
+# Creating and deleting branches
+
+1. On GitHub main page of the repository, click the main button and click view all branches.  
+   ![Main](./readme_img/1.jpg)
+
+2. Click New branch.  
+   ![New_Branch](./readme_img/2.jpg)
+
+3. Create a new branch. **When you create a new branch** please use this name convention _**yourname**_ (You can see the example on the image below)
+
+- Under the branch source - Select main.  
+  ![Naming_Convention](./readme_img/3.jpg)
+
+4. The branch created will show up at your branches and active branches. Click your branch (either are fine like the image below).  
+   ![Branches](./readme_img/4.jpg)
+
+5. Clone the whole Repo, and now you can work on the branch you just created.
+   <br>
+   <br>
+
 # Theme installation
 
 First, follow the document below.
@@ -15,6 +35,8 @@ First, follow the document below.
   ![Find 4](./readme_img/t4.jpg)
   ![Find 5](./readme_img/t5.jpg)
   ![Find 6](./readme_img/t6.jpg)
+
+> After you find this location, please follow the next step.
 
 # How to clone the repo and work on your branch
 
@@ -54,26 +76,6 @@ First, follow the document below.
 
 ![clone_vsc](./readme_img/13.jpg)
 
-# Creating and deleting branches
-
-1. On GitHub main page of the repository, click the main button and click view all branches.  
-   ![Main](./readme_img/1.jpg)
-
-2. Click New branch.  
-   ![New_Branch](./readme_img/2.jpg)
-
-3. Create a new branch. **When you create a new branch** please use this name convention yourname-theme-number of your iteration (You can see the example on the image below)
-
-- Under the branch source - Select main.  
-  ![Naming_Convention](./readme_img/3.jpg)
-
-4. The branch created will show up at your branches and active branches. Click your branch (either are fine like the image below).  
-   ![Branches](./readme_img/4.jpg)
-
-5. Clone the whole Repo and work on the branch you just created.
-   <br>
-   <br>
-
 # Commit, Push and Pull request
 
 <h3>1. Change the branch</h3>
@@ -93,7 +95,11 @@ First, follow the document below.
 
 ![switch branch](./readme_img/c3.jpg)
 
-<h3>2. Commit and push Using git cli</h3>
+> Now, you are working on your branch.
+
+<h3>2. Commit and push using git cli</h3>
+
+> After you've done with your portion of code, let's commit and push.
 
 - Open terminal in Visual Studio Code.
 
@@ -105,10 +111,36 @@ First, follow the document below.
 
 - type _**git commit -m "your comment"**_ to commit your code, in the double quotes, you can add the comment. The comment section should reflect on what you did.
 
-![git add](./readme_img/15-2.jpg)
+![git commit](./readme_img/15-2.jpg)
 
 - type _**git push**_ to push you code to the main branch
 
-![git add](./readme_img/15-3.jpg)
+![git pull](./readme_img/15-3.jpg)
 
-<h3>3. Commit and push Using git cli</h3>
+<h3>3. Create Pull requtest</h3>
+
+- Go to your branch in github browser.
+
+![pull request 1](./readme_img/16.jpg)
+
+- Click the following area.
+
+![pull request 2](./readme_img/17.jpg)
+
+- Click **'Create Pull Request'**
+
+![pull request 3](./readme_img/18.jpg)
+
+- Click **'Create Pull Request'** again
+
+![pull request 4](./readme_img/19.jpg)
+
+- Click **'Merge pull request'**
+
+![pull request 5](./readme_img/20.jpg)
+
+- Click **'Confirm Merge'**
+
+![pull request 3](./readme_img/21.jpg)
+
+> After this step, please let Kris know that you already created a pull request. Kris will review the code, solve merge conflicts and delete your branch
