@@ -48,6 +48,7 @@ register_nav_menus(
 add_image_size('blog-large', 800, 400, false);
 add_image_size('blog-small', 300, 200, true);
 add_image_size('logo', 50, 50, false);
+add_image_size('custom-size', 300, 600, false);
 
 
 // Alt text for images
@@ -81,7 +82,7 @@ function featured_products_post_type()
 add_action('init', 'featured_products_post_type');
 
 
-
+// Category for CUT
 add_action('init', function () {
     register_taxonomy_for_object_type('category', 'featured');
 });

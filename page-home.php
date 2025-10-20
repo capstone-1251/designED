@@ -4,6 +4,8 @@ $promo = get_field('promo_products');
 $items = get_posts([
     'post_type'      => 'featured',
 ]);
+$story_img = get_field('story_image');
+$picture = $story_img['sizes']['custom-size'];
 ?>
 
 <?php get_header(); ?>
@@ -53,6 +55,6 @@ wp_reset_postdata();
     the_field('story');
     ?></p>
 
-<img src="<?php the_field('story_image') ?>" alt="">
+<img src="<?php echo $picture ?>" alt="Temp">
 
 <?php get_footer(); ?>

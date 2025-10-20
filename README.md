@@ -2,25 +2,19 @@
 
 Welcome to Readme.md of DesignED team!
 
-# Creating and deleting branches
+# Theme installation
 
-1. On GitHub main page of the repository, click the main button and click view all branches.  
-   ![Main](./readme_img/1.jpg)
+First, follow the document below.
 
-2. Click New branch.  
-   ![New_Branch](./readme_img/2.jpg)
+[WP Local setup](https://docs.google.com/document/d/1H8_SA2pxsIRQKkaT1ilrDuTKQj0Y7lXDFyYJ7AIcQlI/edit?tab=t.0)
 
-3. Create a new branch. **When you create a new branch** please use this name convention yourname-theme-number of your iteration (You can see the example on the image below)
-
-- Under the branch source - Select main.  
-  ![Naming_Convention](./readme_img/3.jpg)
-
-4. The branch created will show up at your branches and active branches. Click your branch (either are fine like the image below).  
-   ![Branches](./readme_img/4.jpg)
-
-5. Clone the whole Repo and work on the branch you just created.
-   <br>
-   <br>
+- Find the location where to clone the theme. This will be where we clone and work on the theme.
+  ![Find 1](./readme_img/t1.jpg)
+  ![Find 2](./readme_img/t2.jpg)
+  ![Find 3](./readme_img/t3.jpg)
+  ![Find 4](./readme_img/t4.jpg)
+  ![Find 5](./readme_img/t5.jpg)
+  ![Find 6](./readme_img/t6.jpg)
 
 # How to clone the repo and work on your branch
 
@@ -47,7 +41,7 @@ Welcome to Readme.md of DesignED team!
 
   <h3> 2. Using Github Desktop</h3>
 
-- Fist, download Github Desktop [Download](https://github.com/apps/desktop)
+- First, download Github Desktop [Download](https://github.com/apps/desktop)
 
 - Go to the main branch of repo click the **Code** button and click Open with Github Desktop.  
   ![clone_desktop](./readme_img/11.jpg)
@@ -60,13 +54,36 @@ Welcome to Readme.md of DesignED team!
 
 ![clone_vsc](./readme_img/13.jpg)
 
+# Creating and deleting branches
+
+1. On GitHub main page of the repository, click the main button and click view all branches.  
+   ![Main](./readme_img/1.jpg)
+
+2. Click New branch.  
+   ![New_Branch](./readme_img/2.jpg)
+
+3. Create a new branch. **When you create a new branch** please use this name convention yourname-theme-number of your iteration (You can see the example on the image below)
+
+- Under the branch source - Select main.  
+  ![Naming_Convention](./readme_img/3.jpg)
+
+4. The branch created will show up at your branches and active branches. Click your branch (either are fine like the image below).  
+   ![Branches](./readme_img/4.jpg)
+
+5. Clone the whole Repo and work on the branch you just created.
+   <br>
+   <br>
+
 # Commit, Push and Pull request
 
-<h3> 1. Using git cli</h3>
+<h3> 1. Commit and push Using git cli</h3>
 
 - Open terminal in Visual Studio Code.
 
 ![open_terminal](./readme_img/14.jpg)
 
-- type git add .
-  ![git add](./readme_img/15.jpg)
+- type _**git add .**_
+
+![git add](./readme_img/15.jpg)
+
+- type
