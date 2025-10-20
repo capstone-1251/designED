@@ -76,7 +76,14 @@ First, follow the document below.
 
 # Commit, Push and Pull request
 
-<h3> 1. Commit and push Using git cli</h3>
+<h3>1. Change the branch</h3>
+- Open terminal in Visual Studio Code.
+
+![open_terminal](./readme_img/14.jpg)
+
+- type _**git switch your-branch**_ in "your-branch", change it your branch name
+
+<h3>2. Commit and push Using git cli</h3>
 
 - Open terminal in Visual Studio Code.
 
@@ -94,6 +101,4 @@ First, follow the document below.
 
 ![git add](./readme_img/15-3.jpg)
 
-<h3> 2. Commit and push Using git cli</h3>
-afdsasfdfasd
-asdfasfd
+<h3>3. Commit and push Using git cli</h3>
