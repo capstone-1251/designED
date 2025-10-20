@@ -95,4 +95,3 @@ First, follow the document below.
 ![git add](./readme_img/15-3.jpg)
 
 <h3> 2. Commit and push Using git cli</h3>
-adsffsdaasfdasfd
