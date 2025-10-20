@@ -86,4 +86,12 @@ First, follow the document below.
 
 ![git add](./readme_img/15.jpg)
 
-- type
+- type _**git commit -m "your comment"**_ to commit your code, in the double quotes, you can add the comment. The comment section should reflect on what you did.
+
+![git add](./readme_img/15-2.jpg)
+
+- type _**git push**_ to push you code to the main branch
+
+![git add](./readme_img/15-3.jpg)
+
+<h3> 2. Commit and push Using git cli</h3>
