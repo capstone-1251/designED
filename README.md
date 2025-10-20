@@ -81,7 +81,17 @@ First, follow the document below.
 
 ![open_terminal](./readme_img/14.jpg)
 
-- type _**git switch your-branch**_ in "your-branch", change it your branch name
+- type _**git switch your-branch**_ in "your-branch", change it your branch name.
+
+![switch branch](./readme_img/c1.jpg)
+
+- type _**git fetch origin**_ to fetch everything from main.
+
+![switch branch](./readme_img/c2.jpg)
+
+- type _**git merge main**_ to merge all the file with main.
+
+![switch branch](./readme_img/c3.jpg)
 
 <h3>2. Commit and push Using git cli</h3>
 
