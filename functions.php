@@ -52,7 +52,7 @@ add_image_size('custom-size', 300, 600, false);
 
 
 // Alt text for images
-$attachment_id = get_post_thumbnail_id(); // Or the ID of your specific image
+$attachment_id = get_post_thumbnail_id();
 $alt_text = get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
 
 
@@ -121,8 +121,25 @@ add_action('widgets_init', function () {
 
 
 // Hide Block Editor
-// add_action('admin_init', function () {
-//     remove_post_type_support('post', 'editor');
-//     remove_post_type_support('page', 'editor');
-//     remove_post_type_support('featured', 'editor');
-// });
+add_action('admin_init', function () {
+    // remove_post_type_support('post', 'editor');
+    remove_post_type_support('page', 'editor');
+    // remove_post_type_support('featured', 'editor');
+});
+
+
+// Remove WPforms classes
+// add_filter('wpforms-241-field_3', 'my_css_attributes_filter', 100, 1);
+// add_filter('wpforms-241-field_3', 'my_css_attributes_filter', 100, 1);
+// add_filter('wpforms-241-field_3', 'my_css_attributes_filter', 100, 1);
+// function my_css_attributes_filter($var)
+// {
+//     return is_array($var) ? array_intersect($var, array('none')) : '';
+// }
+
+add_filter('wpforms_field_properties', function ($properties, $field, $form_data) {
+    if ((int) $form_data['id'] === 241) {
+        $properties['inputs']['primary']['class'] = [];
+    }
+    return $properties;
+}, 100, 3);
