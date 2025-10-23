@@ -138,8 +138,27 @@ add_action('admin_init', function () {
 // }
 
 add_filter('wpforms_field_properties', function ($properties, $field, $form_data) {
-    if ((int) $form_data['id'] === 241) {
-        $properties['inputs']['primary']['class'] = [];
+    // Limit to specific forms
+    $form_id = isset($form_data['id']) ? (int) $form_data['id'] : 0;
+    if (!in_array($form_id, [241, 257], true)) {
+        return $properties;
     }
+
+    // --- Text-like fields (single input) ---
+    if (isset($properties['inputs']['primary'])) {
+        $properties['inputs']['primary']['class'] = [];
+        return $properties;
+    }
+
+    // --- Choice-based and dropdown fields ---
+    if (isset($properties['inputs']) && is_array($properties['inputs'])) {
+        foreach ($properties['inputs'] as $key => $input) {
+            // For radio, checkbox, or dropdown fields (numeric indexes only)
+            if (is_int($key) || ctype_digit((string) $key)) {
+                $properties['inputs'][$key]['class'] = [];
+            }
+        }
+    }
+
     return $properties;
 }, 100, 3);
