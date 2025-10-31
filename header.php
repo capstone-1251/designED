@@ -15,20 +15,21 @@
 <body>
 
     <header>
-        <?php if (function_exists('the_custom_logo') && has_custom_logo()) : ?>
-            <div class="site-logo"><?php the_custom_logo(); ?></div>
-        <?php endif; ?>
-
-
-        <?php
-
-        wp_nav_menu(
-            array(
-                'theme_location' => 'top-menu',
-                'menu_class' => 'nav-bar'
-            )
-        )
-        ?>
+        <div class="container">
+            <div class="header-container">
+                <?php if (function_exists('the_custom_logo') && has_custom_logo()) : ?>
+                    <div class="site-logo"><?php the_custom_logo(); ?></div>
+                <?php endif; ?>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'top-menu',
+                        'menu_class' => 'nav-bar'
+                    )
+                )
+                ?>
+            </div>
+        </div>
     </header>
 
     <main>

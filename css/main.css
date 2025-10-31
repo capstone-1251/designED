@@ -1,6 +1,10 @@
 /* Temporary CSS files, might change it to tailwind or Sass later */
+html {
+  font-size: 16px;
+}
+
 .site-logo img {
-  width: 50px;
+  width: 35px;
   height: auto;
 }
 
@@ -11,4 +15,44 @@
   border-radius: 5px;
   color: black;
   text-decoration: none;
+}
+
+.container {
+  max-width: 1620px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar {
+  list-style-type: none;
+  display: flex;
+  gap: 3rem;
+}
+
+#menu-item-83 {
+  position: relative;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(241, 241, 241);
+  list-style-type: none;
+  padding: 0.5rem;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+#menu-item-83:hover .sub-menu {
+  display: block;
 }

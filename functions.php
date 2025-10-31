@@ -82,29 +82,29 @@ function featured_products_post_type()
 add_action('init', 'featured_products_post_type');
 
 
-// Category for CUT
+// Category for CPT
 add_action('init', function () {
     register_taxonomy_for_object_type('category', 'featured');
 });
 
-add_action('pre_get_posts', function ($q) {
-    if (is_admin() || ! $q->is_main_query()) return;
+// add_action('pre_get_posts', function ($q) {
+//     if (is_admin() || ! $q->is_main_query()) return;
 
-    if ($q->is_archive()) {
+//     if ($q->is_archive()) {
 
-        if ($q->is_post_type_archive('featured')) return;
+//         if ($q->is_post_type_archive('featured')) return;
 
-        $current = $q->get('post_type');
-        if (empty($current) || $current === 'post' || $current === ['post']) {
-            $q->set('post_type', ['post', 'featured']);
-        }
-    }
+//         $current = $q->get('post_type');
+//         if (empty($current) || $current === 'post' || $current === ['post']) {
+//             $q->set('post_type', ['post', 'featured']);
+//         }
+//     }
 
 
-    if ($q->is_home() || $q->is_search()) {
-        $q->set('post_type', ['post', 'featured']);
-    }
-});
+//     if ($q->is_home() || $q->is_search()) {
+//         $q->set('post_type', ['post', 'featured']);
+//     }
+// });
 
 // Add widgets
 add_action('widgets_init', function () {
@@ -126,16 +126,6 @@ add_action('admin_init', function () {
     remove_post_type_support('page', 'editor');
     remove_post_type_support('featured', 'editor');
 });
-
-
-// Remove WPforms classes
-// add_filter('wpforms-241-field_3', 'my_css_attributes_filter', 100, 1);
-// add_filter('wpforms-241-field_3', 'my_css_attributes_filter', 100, 1);
-// add_filter('wpforms-241-field_3', 'my_css_attributes_filter', 100, 1);
-// function my_css_attributes_filter($var)
-// {
-//     return is_array($var) ? array_intersect($var, array('none')) : '';
-// }
 
 add_filter('wpforms_field_properties', function ($properties, $field, $form_data) {
     // Limit to specific forms

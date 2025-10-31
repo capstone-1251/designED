@@ -35,6 +35,7 @@ $owner_picture = $owner_image['sizes']['custom-size'];
     </div>
     <div><img src="<?php echo $picture ?>" alt="<?php echo $about_image['alt']; ?>"></div>
 </div>
+
 <div>
     <div>
         <h2>

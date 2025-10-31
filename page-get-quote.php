@@ -10,7 +10,6 @@ $picture = $quote_img['sizes']['blog-large'];
 <?php get_header(); ?>
 <div>
     <div>
-        <h1><?php the_title(); ?></h1>
         <?php
         the_field('contact_short_description')
         ?>
@@ -27,7 +26,7 @@ $picture = $quote_img['sizes']['blog-large'];
             the_field('get_quote_description')
             ?>
         </p>
-        <img src="<?php echo $picture ?>" alt="Temp">
+        <img src="<?php echo $picture ?>" alt="<?php echo $quote_img['alt']; ?>">
 
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
@@ -46,6 +45,7 @@ $picture = $quote_img['sizes']['blog-large'];
                 ?></p>
         </div>
     </div>
+
     <div>
         <?php
         echo do_shortcode('[wpforms id="257"]');

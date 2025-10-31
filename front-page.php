@@ -26,8 +26,6 @@ $picture = $story_img['sizes']['custom-size'];
 </div>
 <br>
 <a href="<?php echo esc_url($catalog); ?>" class="btn">Product Catalog</a>
-<a href="<?php echo esc_url($promo); ?>" class="btn">Promo Products</a>
-
 <h2>
     <?php
     the_field('featured_category');
