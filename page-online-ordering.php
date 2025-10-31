@@ -19,7 +19,8 @@ $picture3 = $image3['sizes']['custom-size'];
         the_field('online_ordering_description')
         ?>
         <br>
-        <a href="<?php the_field('portal_button') ?>" class="featured-card-name" target="_blank">Go to Web Portal</a>
+        <br>
+        <a href="<?php the_field('portal_button') ?>" class="btn" target="_blank">Go to Web Portal</a>
     </div>
 </div>
 

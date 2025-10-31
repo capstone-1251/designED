@@ -122,9 +122,9 @@ add_action('widgets_init', function () {
 
 // Hide Block Editor
 add_action('admin_init', function () {
-    // remove_post_type_support('post', 'editor');
+    remove_post_type_support('post', 'editor');
     remove_post_type_support('page', 'editor');
-    // remove_post_type_support('featured', 'editor');
+    remove_post_type_support('featured', 'editor');
 });
 
 

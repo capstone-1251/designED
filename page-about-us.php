@@ -13,11 +13,27 @@ $owner_picture = $owner_image['sizes']['custom-size'];
 <div>
     <div>
         <h1><?php the_title(); ?></h1>
-        <?php
-        the_field('about_us_description')
-        ?>
+        <ul>
+            <li><?php
+                the_field('about_us_1');
+                ?></li>
+            <li><?php
+                the_field('about_us_2');
+                ?></li>
+            <li><?php
+                the_field('about_us_3');
+                ?></li>
+        </ul>
+        <p>
+            <?php
+            the_field('about_us_description');
+            ?>
+        </p>
+        <p><?php
+            the_field('about_us_tagline');
+            ?></p>
     </div>
-    <div><img src="<?php echo $picture ?>" alt="Temp"></div>
+    <div><img src="<?php echo $picture ?>" alt="<?php echo $about_image['alt']; ?>"></div>
 </div>
 <div>
     <div>
@@ -33,7 +49,7 @@ $owner_picture = $owner_image['sizes']['custom-size'];
         </p>
     </div>
     <div>
-        <div><img src="<?php echo $owner_picture ?>" alt="Temp"></div>
+        <div><img src="<?php echo $owner_picture ?>" alt="<?php echo $owner_image['alt']; ?>"></div>
     </div>
 </div>
 
