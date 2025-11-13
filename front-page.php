@@ -6,6 +6,9 @@ $items = get_posts([
 ]);
 $story_img = get_field('story_image');
 $picture = $story_img['sizes']['custom-size'];
+$promo_image = get_field('promo_product_picture');
+$promo_picture = $promo_image['sizes']['custom-size'];
+$promo_link = get_field('promo_product_link');
 ?>
 
 <?php get_header(); ?>
@@ -45,14 +48,31 @@ foreach ($items as $post) {
 wp_reset_postdata();
 ?>
 
-<h2><?php
-    the_field('our_story');
-    ?></h2>
+<div>
+    <h2><?php
+        the_field('our_story');
+        ?></h2>
 
-<p><?php
-    the_field('story');
-    ?></p>
+    <p><?php
+        the_field('story');
+        ?></p>
 
-<img src="<?php echo $picture ?>" alt="Temp">
+    <img src="<?php echo $picture ?>" alt="<?php echo $story_img['alt']; ?>">
+
+</div>
+
+<div>
+    <img src="<?php echo $promo_picture ?>" alt="<?php echo $promo_image['alt']; ?>">
+    <div>
+        <p>
+            <?php
+            the_field('promo_product_details');
+            ?>
+        </p>
+        <a href="<?php echo esc_url($promo_link); ?>" class="btn">Product Catalog</a>
+    </div>
+</div>
+
+
 
 <?php get_footer(); ?>

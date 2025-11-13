@@ -1,4 +1,24 @@
 <?php
+function mytheme_enqueue_fonts()
+{
+    // Montserrat
+    wp_enqueue_style(
+        'Montserrat',
+        'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap',
+        array(),
+        null
+    );
+
+    // Poppins
+    wp_enqueue_style(
+        'Poppins',
+        'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+        array(),
+        null
+    );
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_fonts');
+
 
 function load_css()
 {
@@ -86,25 +106,6 @@ add_action('init', 'featured_products_post_type');
 add_action('init', function () {
     register_taxonomy_for_object_type('category', 'featured');
 });
-
-// add_action('pre_get_posts', function ($q) {
-//     if (is_admin() || ! $q->is_main_query()) return;
-
-//     if ($q->is_archive()) {
-
-//         if ($q->is_post_type_archive('featured')) return;
-
-//         $current = $q->get('post_type');
-//         if (empty($current) || $current === 'post' || $current === ['post']) {
-//             $q->set('post_type', ['post', 'featured']);
-//         }
-//     }
-
-
-//     if ($q->is_home() || $q->is_search()) {
-//         $q->set('post_type', ['post', 'featured']);
-//     }
-// });
 
 // Add widgets
 add_action('widgets_init', function () {
