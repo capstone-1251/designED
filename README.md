@@ -3,9 +3,10 @@
 Welcome to Readme.md of DesignED team!
 
 > Everytime you open your project, please fetch, pull and merge everything before you start doing anything.
-> git fetch origin
-> git pull
-> git merge main
+
+- git fetch origin
+- git pull
+- git merge main
 
 # Creating and deleting branches
 
