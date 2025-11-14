@@ -211,7 +211,6 @@ header .header-container .hamburger svg {
 
 footer {
   background-color: var(--darkcyan);
-  padding: 2rem;
 }
 footer .footer-container {
   display: flex;
@@ -224,5 +223,4 @@ footer .footer-container a {
   justify-content: space-between;
   align-items: center;
   color: var(--white);
-  background-color: #000000;
 }/*# sourceMappingURL=main.css.map */
