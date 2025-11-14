@@ -169,6 +169,7 @@ header .header-container nav .nav-bar {
 }
 header .header-container nav .nav-bar #menu-item-83 {
   position: relative;
+  background: url(../img/chevron-down.svg);
 }
 header .header-container nav .nav-bar .sub-menu {
   display: none;
