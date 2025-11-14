@@ -185,17 +185,25 @@ header .header-container nav .nav-bar .sub-menu {
 header .header-container nav .nav-bar #menu-item-83:hover .sub-menu {
   display: block;
 }
+header .header-container nav .nav-bar li a {
+  color: var(--dark);
+}
 header .header-container nav .search-btn {
   width: 24px;
   cursor: pointer;
 }
-
-footer {
-  padding: 2rem;
+header .header-container .hamburger {
+  display: none;
+  cursor: pointer;
 }
-footer .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000000;
+header .header-container .hamburger svg {
+  width: 24px;
+}
+@media (max-width: 1215px) {
+  header .header-container nav {
+    display: none;
+  }
+  header .header-container .hamburger {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */

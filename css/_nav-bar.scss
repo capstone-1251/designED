@@ -38,11 +38,33 @@ header {
                 #menu-item-83:hover .sub-menu {
                     display: block;
                 }
-    
+                li {
+                    a {
+                        color: var(--dark);
+                    }
+                }
             }
             .search-btn {
                 width: 24px;
                 cursor: pointer;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            svg {
+                width: 24px;
+            }
+        }
+
+        @media (max-width: $labtop) {
+            nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
             }
         }
     }
