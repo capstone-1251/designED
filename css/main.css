@@ -169,6 +169,7 @@ header .header-container nav .nav-bar {
 }
 header .header-container nav .nav-bar #menu-item-83 {
   position: relative;
+  background: url(../img/chevron-down.svg);
 }
 header .header-container nav .nav-bar .sub-menu {
   display: none;
@@ -210,6 +211,7 @@ header .header-container .hamburger svg {
 
 footer {
   background-color: var(--darkcyan);
+  padding: 2rem;
 }
 footer .footer-container {
   display: flex;
@@ -222,4 +224,5 @@ footer .footer-container a {
   justify-content: space-between;
   align-items: center;
   color: var(--white);
+  background-color: #000000;
 }/*# sourceMappingURL=main.css.map */
