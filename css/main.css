@@ -1,11 +1,15 @@
 :root {
-  --gray: #EFECE3;
-  --graytrans: #efece3c4;
-  --grayblue: #73798d;
-  --babyblue: #8FABD4;
-  --blue: #4A70A9;
+  --white: #FFFFFF;
+  --dark: #1E1E1E;
+  --margenta: #FF0ABA;
+  --margenta2: #EC008C;
+  --cyan: #3987D1;
   --darkblue: #02091b;
-  --orange: #f15010;
+  --yellow: #FFF204;
+  --darkcyan: #0B4D8C;
+  --blue: #2E83D0;
+  --brightblue: #368BDB;
+  --paleblue: #A5B9CD;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -85,8 +89,44 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h1, h2, h3, h4, h5, li {
+h1, h2, h3, h4, h5 {
   font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 1.1471rem + 3.9216vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.0221rem + 1.6993vw, 3.125rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1.0221rem + 1.6993vw, 3.125rem);
+}
+
+.btn {
+  font-size: clamp(1.125rem, 0.8676rem + 0.915vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 0.8529rem + 0.5229vw, 1.5rem);
+}
+
+nav {
+  font-family: "Montserrat", sans-serif;
+}
+
+header nav {
+  font-size: clamp(1rem, 0.9632rem + 0.1307vw, 1.125rem);
+}
+
+footer nav {
+  font-size: 16px;
+}
+
+.sm-caption {
+  font-size: 14px;
 }
 
 .container {
