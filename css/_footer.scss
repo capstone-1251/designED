@@ -1,10 +1,17 @@
 footer {
-     padding: 2rem;
+     background-color: var(--darkcyan);
     .footer-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #000000;
+        color: var(--white);
+    }
+
+    .footer-container a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--white);
     }
 
 }
