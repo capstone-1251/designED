@@ -211,13 +211,36 @@ header .header-container .hamburger svg {
 
 footer {
   background-color: var(--darkcyan);
+  padding: 2rem;
 }
 footer .footer-container {
+  color: var(--white);
+}
+footer .footer-container .sidebar {
   display: flex;
+  gap: 2rem;
   justify-content: space-between;
   align-items: center;
   color: var(--white);
 }
 footer .footer-container a {
-  color: var(--darkcyan);
+  color: var(--white);
+}
+footer .footer-container .wp-block-list {
+  background-color: #000000;
+}
+footer .footer-container .menu {
+  background-color: var(--dark);
+}
+footer .footer-container .menu-footer-menu-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+footer .footer-container .menu-footer-menu-container ul li {
+  flex: 0 0 48%;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
