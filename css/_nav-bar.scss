@@ -1,6 +1,8 @@
 header {
     padding: 2rem;
+    position: relative;
     .header-container {
+        z-index: 5;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -20,28 +22,47 @@ header {
                 gap: 3rem;
                 #menu-item-83 {
                     position: relative;
-                    background: url(../img/chevron-down.svg);
+                    padding-right: 2rem;
+                    background: url(../img/chevron-down.svg) no-repeat right;
+                    cursor: pointer;
                 }
     
                 .sub-menu {
-                    display: none;
                     position: absolute;
-                    top: 100%;
+                    top: -800px;
+                    padding: 0;
                     left: 0;
-                    background-color: rgb(241, 241, 241);
+                    background-color: var(--white);
                     list-style-type: none;
-                    padding: 0.5rem;
-                    border: 1px solid rgb(187, 187, 187);
+                    // border: 1px solid rgb(187, 187, 187);
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
                     z-index: 3;
-                    width: 200px;
+                    opacity: 0;
+                    display: flex;
+                    flex-direction: column;
+                    width: 300px;
+                    li {
+                        padding: 1rem;
+                    }
+                    li:hover {
+                        background-color: var(--margenta);
+                        a {
+                            color: var(--white);
+                        }
+                    }
                 }
     
                 #menu-item-83:hover .sub-menu {
-                    display: block;
+                    top: 100%;
+                    opacity: 1;
                 }
+
                 li {
                     a {
                         color: var(--dark);
+                    }
+                    &:hover > a {
+                        color: var(--margenta2);
                     }
                 }
             }
@@ -59,14 +80,48 @@ header {
             }
         }
 
+        
         @media (max-width: $labtop) {
             nav {
                 display: none;
             }
-
+            
             .hamburger {
                 display: block;
             }
         }
+    }
+
+    .hidden {
+        display: none;
+        // position: absolute;
+        // height: 100vh;
+        // width: 100vw;
+        // background-color: var(--white);
+        // z-index: 2;
+        // top: 0;
+        // left: 0;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // .menu-top-bar-container {
+        //     padding-top: 2rem;
+        //     .sub-menu {
+        //         li {
+        //             a {
+        //                 padding: 1rem;
+        //                 display: block;
+        //             }
+        //             &:hover {
+        //                 background-color: var(--margenta);
+        //                 a {
+        //                     color: var(--white);
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+    }
+    @media (max-width: $mobile) {
     }
 }
