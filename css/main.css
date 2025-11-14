@@ -188,4 +188,14 @@ header .header-container nav .nav-bar #menu-item-83:hover .sub-menu {
 header .header-container nav .search-btn {
   width: 24px;
   cursor: pointer;
+}
+
+footer {
+  padding: 2rem;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
 }/*# sourceMappingURL=main.css.map */
