@@ -42,6 +42,16 @@
                 </div>
             </div>
         </div>
+        <div class="hidden">
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'top-menu',
+                    'menu_class' => 'nav-hidden'
+                )
+            )
+            ?>
+        </div>
     </header>
 
     <main>

@@ -72,6 +72,8 @@ h1, h2, h3, h4, h5, h6 {
 */
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 /*
@@ -145,8 +147,10 @@ footer nav {
 
 header {
   padding: 2rem;
+  position: relative;
 }
 header .header-container {
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,25 +173,42 @@ header .header-container nav .nav-bar {
 }
 header .header-container nav .nav-bar #menu-item-83 {
   position: relative;
-  background: url(../img/chevron-down.svg);
+  padding-right: 2rem;
+  background: url(../img/chevron-down.svg) no-repeat right;
+  cursor: pointer;
 }
 header .header-container nav .nav-bar .sub-menu {
-  display: none;
   position: absolute;
-  top: 100%;
+  top: -800px;
+  padding: 0;
   left: 0;
-  background-color: rgb(241, 241, 241);
+  background-color: var(--white);
   list-style-type: none;
-  padding: 0.5rem;
-  border: 1px solid rgb(187, 187, 187);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   z-index: 3;
-  width: 200px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+header .header-container nav .nav-bar .sub-menu li {
+  padding: 1rem;
+}
+header .header-container nav .nav-bar .sub-menu li:hover {
+  background-color: var(--margenta);
+}
+header .header-container nav .nav-bar .sub-menu li:hover a {
+  color: var(--white);
 }
 header .header-container nav .nav-bar #menu-item-83:hover .sub-menu {
-  display: block;
+  top: 100%;
+  opacity: 1;
 }
 header .header-container nav .nav-bar li a {
   color: var(--dark);
+}
+header .header-container nav .nav-bar li:hover > a {
+  color: var(--margenta2);
 }
 header .header-container nav .search-btn {
   width: 24px;
@@ -200,7 +221,7 @@ header .header-container .hamburger {
 header .header-container .hamburger svg {
   width: 24px;
 }
-@media (max-width: 1215px) {
+@media (max-width: 1240px) {
   header .header-container nav {
     display: none;
   }
@@ -208,7 +229,9 @@ header .header-container .hamburger svg {
     display: block;
   }
 }
-
+header .hidden {
+  display: none;
+}
 footer {
   padding: 2rem;
 }
