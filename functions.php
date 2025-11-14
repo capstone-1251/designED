@@ -1,4 +1,6 @@
 <?php
+
+// Fonts
 function mytheme_enqueue_fonts()
 {
     // Montserrat
@@ -27,6 +29,19 @@ function load_css()
 }
 
 add_action('wp_enqueue_scripts', 'load_css');
+
+// GSAP
+function theme_gsap_script()
+{
+    // The core GSAP library
+    wp_enqueue_script('gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js', array(), false, true);
+    // ScrollTrigger - with gsap.js passed as a dependency
+    wp_enqueue_script('gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js', array('gsap-js'), false, true);
+    // Your animation code file - with gsap.js passed as a dependency
+    wp_enqueue_script('gsap-js2', get_template_directory_uri() . 'js/app.js', array('gsap-js'), false, true);
+}
+
+add_action('wp_enqueue_scripts', 'theme_gsap_script');
 
 // Theme Options
 add_theme_support('menus');
