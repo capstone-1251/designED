@@ -243,4 +243,9 @@ footer .footer-container .menu-footer-menu-container ul {
 footer .footer-container .menu-footer-menu-container ul li {
   flex: 0 0 48%;
   color: #fff;
+}
+@media (max-width: 450px) {
+  footer .footer-container .menu-footer-menu-container ul, footer .footer-container .sidebar {
+    display: unset;
+  }
 }/*# sourceMappingURL=main.css.map */

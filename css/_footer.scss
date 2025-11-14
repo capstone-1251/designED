@@ -42,5 +42,13 @@ footer {
     color: #fff;
     }
 
+     @media (max-width: $mobile) {
+         .footer-container .menu-footer-menu-container ul, .footer-container .sidebar {
+    display: unset;             
+    }
+
+    
+    }
+
 
 }
