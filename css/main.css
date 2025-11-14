@@ -1,15 +1,15 @@
 :root {
-  --white: #FFFFFF;
-  --dark: #1E1E1E;
-  --margenta: #FF0ABA;
-  --margenta2: #EC008C;
-  --cyan: #3987D1;
+  --white: #ffffff;
+  --dark: #1e1e1e;
+  --margenta: #ff0aba;
+  --margenta2: #ec008c;
+  --cyan: #3987d1;
   --darkblue: #02091b;
-  --yellow: #FFF204;
-  --darkcyan: #0B4D8C;
-  --blue: #2E83D0;
-  --brightblue: #368BDB;
-  --paleblue: #A5B9CD;
+  --yellow: #fff204;
+  --darkcyan: #0b4d8c;
+  --blue: #2e83d0;
+  --brightblue: #368bdb;
+  --paleblue: #a5b9cd;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -136,13 +136,37 @@ footer nav {
   margin: 0 auto;
 }
 
-.btn {
-  background-color: rgb(241, 241, 241);
-  padding: 0.5rem;
-  border: 1px solid rgb(187, 187, 187);
-  border-radius: 5px;
-  color: black;
+.featured-card-name {
   text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: var(--dark);
+  color: var(--white);
+}
+.featured-card-name:hover {
+  background-color: var(--paleblue);
+  color: #1e1e1e;
+}
+
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  border-radius: 15px;
+  padding: 1rem;
+  background-color: var(--yellow);
+  color: var(--dark);
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: var(--paleblue);
+  color: var(--dark);
 }
 
 header {
@@ -233,11 +257,17 @@ header .hidden {
   display: none;
 }
 footer {
-  padding: 2rem;
+  background-color: var(--darkcyan);
 }
 footer .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
+  color: var(--white);
+}
+footer .footer-container a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
 }/*# sourceMappingURL=main.css.map */
