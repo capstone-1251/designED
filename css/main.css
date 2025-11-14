@@ -206,4 +206,20 @@ header .header-container .hamburger svg {
   header .header-container .hamburger {
     display: block;
   }
+}
+
+footer {
+  background-color: var(--darkcyan);
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+footer .footer-container a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
 }/*# sourceMappingURL=main.css.map */
