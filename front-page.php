@@ -12,67 +12,107 @@ $promo_link = get_field('promo_product_link');
 ?>
 
 <?php get_header(); ?>
+<section class="front-page">
+    <div class="front-page-container">
+                <div class="web-banner">
+                    <div>
+                        <h1>
+                            <?php
+                            the_field('headline');
+                            ?>
+                        </h1>
+        
+                        <p><?php
+                            the_field('tagline');
+                            ?></p>
+                            <a href="<?php echo esc_url($catalog); ?>" class="btn">Product Catalog</a>
+                    </div>
+        
+                    <div class="video" style="width: 750px; height: 400px;">
+                        <?php the_field('featured_video');
+                        ?>
+                    </div>
+                </div>
+                <br>
+                
+                <section class="featured-product">
+                <div class="featured-products-grid">
+                    <?php foreach ($items as $post) : setup_postdata($post); ?>
+                    
+                        <div class="featured-card">
+                            <a href="<?php echo esc_url(get_permalink()); ?>" class="featured-card-image">
+                                <?php echo get_the_post_thumbnail(get_the_ID(), 'large'); ?>
+                            
+                                <span class="featured-card-name">
+                                    <?php echo esc_html(get_the_title()); ?>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    <?php endforeach; wp_reset_postdata(); ?>
+                </div>
 
-<h1>
-    <?php
-    the_field('headline');
-    ?>
-</h1>
 
-<p><?php
-    the_field('tagline');
-    ?></p>
+                    <div>
+                        <h2>
+                            <?php
+                            the_field('featured_category');
+                            ?>
+                        </h2>
+                        <div class="hr-underline"></div>
+                        <p><?php
+                            the_field('featured_description');
+                            ?></p>
+                    </div>
+                </section>
+        
+                <section class="our-story">
+                    <div class="our-story-bg"></div>
 
-<div class="video" style="width: 1280px; height: 720px;">
-    <?php the_field('featured_video');
-    ?>
-</div>
-<br>
-<a href="<?php echo esc_url($catalog); ?>" class="btn">Product Catalog</a>
-<h2>
-    <?php
-    the_field('featured_category');
-    ?>
-</h2>
-<p><?php
-    the_field('featured_description');
-    ?></p>
+                    <div class="our-story-content">
+                        <h2><?php the_field('our_story'); ?></h2>
 
-<?php
-foreach ($items as $post) {
-    echo '<a href="' . esc_url(get_permalink()) . '">'
-        . get_the_post_thumbnail(get_the_ID(), 'blog-small')
-        . '</a>';
-    echo '<a href="' . esc_url(get_permalink()) . '" class="featured-card-name">' . esc_html(get_the_title()) . '</a>';
-}
-wp_reset_postdata();
-?>
+                        <div class="story-divider"></div>
 
-<div>
-    <h2><?php
-        the_field('our_story');
-        ?></h2>
+                        <p><?php the_field('story'); ?></p>
 
-    <p><?php
-        the_field('story');
-        ?></p>
+                        <a href="/about" class="story-btn">About Us</a>
+                    </div>
 
-    <img src="<?php echo $picture ?>" alt="<?php echo $story_img['alt']; ?>">
+                    <div class="our-story-image">
+                        <img 
+                            src="<?php echo esc_url($picture); ?>" 
+                            alt="<?php echo esc_attr($story_img['alt']); ?>" 
+                        />
+                    </div>
+                </section>
 
-</div>
 
-<div>
-    <img src="<?php echo $promo_picture ?>" alt="<?php echo $promo_image['alt']; ?>">
-    <div>
-        <p>
-            <?php
-            the_field('promo_product_details');
-            ?>
-        </p>
-        <a href="<?php echo esc_url($promo_link); ?>" class="btn">Product Catalog</a>
+        
+                <section class="promo-section">
+
+                    <div class="promo-image">
+                        <img 
+                            src="<?php echo esc_url($promo_picture); ?>" 
+                            alt="<?php echo esc_attr($promo_image['alt']); ?>">
+                    </div>
+
+                    <div class="promo-content">
+                        <h2><?php the_field('promo_title'); ?></h2>
+
+                        <div class="promo-underline"></div>
+
+                        <p><?php the_field('promo_product_details'); ?></p>
+
+                        <a href="<?php echo esc_url($promo_link); ?>" class="promo-btn">
+                            Visit Store
+                        </a>
+                    </div>
+
+                 </section>
+
     </div>
-</div>
-
+</section>
 
 
 <?php get_footer(); ?>
