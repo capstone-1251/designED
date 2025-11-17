@@ -1,8 +1,10 @@
-@import '_var';
+@import "_var";
 
 // Reset
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -26,18 +28,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -45,14 +60,20 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -69,7 +90,7 @@ ul {
   12. Anchor Tag
 */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 // General styles
@@ -81,8 +102,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: "Montserrat", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -106,10 +131,10 @@ p {
 }
 
 nav {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-header nav li a{
+header nav li a {
   font-size: clamp(1rem, 0.9632rem + 0.1307vw, 1.125rem);
 }
 
@@ -126,6 +151,7 @@ footer nav {
   margin: 0 auto;
 }
 
-@import '_button';
-@import '_nav-bar.scss';
-@import '_footer';
+@import "_button";
+@import "_nav-bar.scss";
+@import "_footer";
+@import "_front-page";
