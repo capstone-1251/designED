@@ -21,14 +21,48 @@ footer {
         color: var(--white);
     }
 
-    .footer-container .wp-block-list
-    {
-        // background-color: #000000;
+    .footer-container .wp-block-list {
+        background-color: #000000;
+    list-style: none;
+    padding-left: 0;
     }
 
-    .footer-container .menu
+
+    .footer-container .wp-block-list li {
+    position: relative;
+    padding-left: 24px;
+    padding-bottom: 37px;
+    }
+
+    
+    .footer-container .wp-block-list li:first-child::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 16px;                  
+    height: 16px;
+    background-image: url("../img/phone.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+
+    .footer-container .wp-block-list li:last-child::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/email.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+
+    .footer-container .menu 
     {
-        // background-color: var(--dark);
+        // padding-bottom: 37px;
+        background-color: var(--dark);
     }
 
     .footer-container .menu-footer-menu-container ul {
@@ -44,6 +78,7 @@ footer {
     .footer-container .menu-footer-menu-container ul li {
     flex: 0 0 48%;                
     color: #fff;
+    padding-bottom: 37px;
     }
 
      @media (max-width: $mobile) {
