@@ -22,7 +22,7 @@
     </div>
     <div class="credit">
                   <p>2025 Printed</p>
-                 </div>
+     </div>
 
 </footer>
 
