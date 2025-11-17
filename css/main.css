@@ -326,6 +326,10 @@ header .hidden .close svg {
   cursor: pointer;
   width: 30px;
 }
+header .hidden .close img {
+  width: 50px;
+  height: 50px;
+}
 header .hidden .search {
   padding: 0.5rem 2rem;
   display: flex;
@@ -348,7 +352,7 @@ header .hidden .search svg {
   left: 120px;
 }
 header .hidden .menu-top-bar-container .nav-hidden > li a {
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   display: block;
   color: var(--dark);
 }
@@ -360,7 +364,7 @@ header .hidden .menu-top-bar-container .nav-hidden > li a:hover a {
   color: var(--white);
 }
 header .hidden .menu-top-bar-container .nav-hidden li:not(li:first-of-type) a {
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   display: block;
   color: var(--dark);
 }
@@ -404,7 +408,7 @@ header .unhidden .close img {
   height: 50px;
 }
 header .unhidden .search {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 4rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -422,10 +426,10 @@ header .unhidden .search input {
 header .unhidden .search svg {
   position: absolute;
   width: 20px;
-  left: 120px;
+  left: 140px;
 }
 header .unhidden .menu-top-bar-container .nav-hidden > li a {
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   display: block;
   color: var(--dark);
 }
@@ -437,7 +441,7 @@ header .unhidden .menu-top-bar-container .nav-hidden > li a:hover a {
   color: var(--white);
 }
 header .unhidden .menu-top-bar-container .nav-hidden li:not(li:first-of-type) a {
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   display: block;
   color: var(--dark);
 }
