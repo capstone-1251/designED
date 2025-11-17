@@ -259,9 +259,32 @@ header .hidden {
 footer {
   background-color: var(--darkcyan);
   padding: 2rem;
+  position: absolute;
+  width: 100%;
+}
+footer .phone-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #ffe94d;
+  margin-left: auto;
+  margin-right: 4rem;
+  bottom: 17rem;
+  z-index: 10;
+}
+footer .phone-btn svg {
+  width: 45px;
+  height: 45px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 footer .footer-container {
   color: var(--white);
+  font-family: "Montserrat", sans-serif;
 }
 footer .footer-container .sidebar {
   display: flex;
@@ -273,7 +296,6 @@ footer .footer-container a {
   color: var(--white);
 }
 footer .footer-container .wp-block-list {
-  background-color: #000000;
   list-style: none;
   padding-left: 0;
 }
@@ -304,9 +326,6 @@ footer .footer-container .wp-block-list li:last-child::before {
   background-size: contain;
   background-repeat: no-repeat;
 }
-footer .footer-container .menu {
-  background-color: var(--dark);
-}
 footer .footer-container .menu-footer-menu-container ul {
   display: flex;
   flex-wrap: wrap;
@@ -322,7 +341,7 @@ footer .footer-container .menu-footer-menu-container ul li {
   padding-bottom: 37px;
 }
 @media (max-width: 450px) {
-  footer .footer-container .menu-footer-menu-container ul, footer .footer-container .sidebar {
+  footer .footer-container .sidebar {
     display: unset;
   }
 }/*# sourceMappingURL=main.css.map */
