@@ -839,4 +839,114 @@ footer .credit p {
   .online-order-content .portal-image {
     max-width: 100%;
   }
+}
+
+.container {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+.container .aboutus-underline {
+  width: 104px;
+  height: 4px;
+  background: #ff0088;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+.container .owner-section {
+  padding: 5rem 0;
+}
+.container .owner-section .owner-inner {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.container .owner-section .owner-text {
+  flex: 1;
+}
+.container .owner-section .owner-text h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #2b77d8;
+  margin-bottom: 0.75rem;
+}
+.container .owner-section .owner-text .promo-underline {
+  width: 80px;
+  height: 4px;
+  background: #ff0088;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+.container .owner-section .owner-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: #222;
+  max-width: 40rem;
+}
+.container .owner-section .owner-text .owner-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  background: #ffe248;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.container .owner-section .owner-text .owner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+.container .owner-section .owner-media {
+  flex: 0 0 420px;
+}
+.container .owner-section .owner-photo-wrap {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+.container .owner-section .owner-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .owner-section .owner-name {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4rem 1.6rem;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .container .owner-section .owner-inner {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .container .owner-section .owner-media {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+  .container .owner-section .owner-text h2 {
+    font-size: 2.1rem;
+  }
 }/*# sourceMappingURL=main.css.map */
