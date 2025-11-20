@@ -214,6 +214,7 @@ header .header-container .site-logo img {
 }
 header .header-container nav {
   display: flex;
+  align-items: center;
   gap: 3rem;
 }
 header .header-container nav .nav-bar {
@@ -239,6 +240,7 @@ header .header-container nav .nav-bar .sub-menu {
   display: flex;
   flex-direction: column;
   width: 300px;
+  transition: 0.5s opacity ease;
 }
 header .header-container nav .nav-bar .sub-menu li {
   padding: 1rem;
@@ -260,8 +262,33 @@ header .header-container nav .nav-bar li:hover > a {
   color: var(--margenta2);
 }
 header .header-container nav .search-btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+}
+header .header-container nav .search-btn svg {
   width: 24px;
+  height: 24px;
   cursor: pointer;
+}
+header .header-container nav .search-btn input {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s opacity ease;
+  bottom: -70px;
+  right: -20px;
+  position: absolute;
+  border-radius: 15px;
+  border: 1px solid gray;
+  padding: 0.8rem 1rem;
+  width: 500px;
+  box-shadow: 2px 2px 5px 0 gray;
+  z-index: 5;
+}
+header .header-container nav .search-btn .search-close {
+  visibility: visible;
+  opacity: 1;
 }
 header .header-container .hamburger {
   display: none;
@@ -279,8 +306,165 @@ header .header-container .hamburger svg {
   }
 }
 header .hidden {
-  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--white);
+  z-index: 5;
+  top: 0;
+  right: -100vw;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s right ease;
 }
+header .hidden .close {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem 0.5rem 2rem;
+}
+header .hidden .close svg {
+  cursor: pointer;
+  width: 30px;
+}
+header .hidden .close img {
+  width: 50px;
+  height: 50px;
+}
+header .hidden .search {
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+header .hidden .search input {
+  padding: 0.3rem 2.3rem;
+  width: 50%;
+  border-radius: 15px;
+  border: 1px solid gray;
+  box-shadow: none;
+  font-weight: 300;
+  position: relative;
+}
+header .hidden .search svg {
+  position: absolute;
+  width: 20px;
+  left: 120px;
+}
+header .hidden .menu-top-bar-container .nav-hidden > li a {
+  padding: 1rem 4rem;
+  display: block;
+  color: var(--dark);
+}
+header .hidden .menu-top-bar-container .nav-hidden > li a:hover {
+  color: var(--white);
+  background-color: var(--margenta);
+}
+header .hidden .menu-top-bar-container .nav-hidden > li a:hover a {
+  color: var(--white);
+}
+header .hidden .menu-top-bar-container .nav-hidden li:not(li:first-of-type) a {
+  padding: 1rem 4rem;
+  display: block;
+  color: var(--dark);
+}
+header .hidden .menu-top-bar-container .nav-hidden li:not(li:first-of-type):hover {
+  background-color: var(--margenta);
+}
+header .hidden .menu-top-bar-container .nav-hidden li:not(li:first-of-type):hover a {
+  color: var(--white);
+}
+header .hidden .menu-top-bar-container .sub-menu {
+  padding-left: 2rem;
+}
+header .hidden .menu-top-bar-container .sub-menu li a {
+  display: block;
+  color: var(--dark);
+}
+header .hidden .menu-top-bar-container .sub-menu li:hover {
+  background-color: var(--margenta);
+}
+header .hidden .menu-top-bar-container .sub-menu li:hover a {
+  color: var(--white);
+}
+header .unhidden {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--white);
+  z-index: 5;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+header .unhidden .close {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem 0.5rem 2rem;
+}
+header .unhidden .close img {
+  width: 50px;
+  height: 50px;
+}
+header .unhidden .search {
+  padding: 0.5rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+header .unhidden .search input {
+  padding: 0.3rem 2.3rem;
+  width: 50%;
+  border-radius: 15px;
+  border: 1px solid gray;
+  box-shadow: none;
+  font-weight: 300;
+  position: relative;
+}
+header .unhidden .search svg {
+  position: absolute;
+  width: 20px;
+  left: 140px;
+}
+header .unhidden .menu-top-bar-container .nav-hidden > li a {
+  padding: 1rem 4rem;
+  display: block;
+  color: var(--dark);
+}
+header .unhidden .menu-top-bar-container .nav-hidden > li a:hover {
+  color: var(--white);
+  background-color: var(--margenta);
+}
+header .unhidden .menu-top-bar-container .nav-hidden > li a:hover a {
+  color: var(--white);
+}
+header .unhidden .menu-top-bar-container .nav-hidden li:not(li:first-of-type) a {
+  padding: 1rem 4rem;
+  display: block;
+  color: var(--dark);
+}
+header .unhidden .menu-top-bar-container .nav-hidden li:not(li:first-of-type):hover {
+  background-color: var(--margenta);
+}
+header .unhidden .menu-top-bar-container .nav-hidden li:not(li:first-of-type):hover a {
+  color: var(--white);
+}
+header .unhidden .menu-top-bar-container .sub-menu {
+  padding-left: 2rem;
+}
+header .unhidden .menu-top-bar-container .sub-menu li a {
+  display: block;
+  color: var(--dark);
+}
+header .unhidden .menu-top-bar-container .sub-menu li:hover {
+  background-color: var(--margenta);
+}
+header .unhidden .menu-top-bar-container .sub-menu li:hover a {
+  color: var(--white);
+}
+
 footer {
   background-color: var(--darkcyan);
   padding: 2rem;
