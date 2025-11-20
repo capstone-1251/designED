@@ -16,28 +16,31 @@ $owner_picture = $owner_image['sizes']['custom-size'];
         <div>
             <h1><?php the_title(); ?></h1>
             <div class="aboutus-underline"></div>
-            <div><img src="<?php echo $picture ?>" alt="<?php echo $about_image['alt']; ?>"></div>
-            <p>
-                <?php
-                the_field('about_us_description');
-                ?>
-            </p>
-            <ul>
-                <li><?php
-                    the_field('about_us_1');
-                    ?></li>
-                <li><?php
-                    the_field('about_us_2');
-                    ?></li>
-                <li><?php
-                    the_field('about_us_3');
-                    ?></li>
-            </ul>
-            <p><?php
-                the_field('about_us_tagline');
-                ?></p>
-                
-        </div>
+            <div class="about-inner">
+    <!-- Left column: image -->
+    <div class="about-media">
+        <img class="about-image"
+             src="<?php echo $picture; ?>"
+             alt="<?php echo esc_attr( $about_image['alt'] ); ?>">
+    </div>
+
+    <!-- Right column: text -->
+    <div class="about-text">
+        <p>
+            <?php the_field('about_us_description'); ?>
+        </p>
+
+        <ul class="about-list">
+            <li><?php the_field('about_us_1'); ?></li>
+            <li><?php the_field('about_us_2'); ?></li>
+            <li><?php the_field('about_us_3'); ?></li>
+        </ul>
+
+        <p class="about-tagline">
+            <?php the_field('about_us_tagline'); ?>
+        </p>
+    </div>
+</div>
         
     </div>
     
