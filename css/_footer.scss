@@ -1,11 +1,11 @@
 @import "_var";
-@import "_mixin";
 
 footer {
-  background-color: var(--darkcyan);
-  padding: 2rem;
-  position: absolute;
-  width: 100%;
+
+     background-color: var(--darkcyan);
+     padding: 2rem;
+     position: absolute;
+     width: 100%;
 
   .phone-btn {
     position: absolute;
@@ -20,11 +20,11 @@ footer {
     justify-content: center;
   }
 
-  .phone-btn svg {
+    .phone-btn svg {
     width: 45px;
     height: 45px;
     object-fit: contain;
-  }
+    }
 
   .footer-container {
     color: var(--white);
@@ -104,9 +104,26 @@ footer {
     padding-bottom: 37px;
   }
 
-  @media (max-width: $mobile) {
-    .footer-container .sidebar {
-      display: unset;
+    .footer-container .has-black-background-color {
+        background-color: red;
     }
-  }
+
+    .credit p {
+    width: 100%;
+    background-color: var(--dark);
+    color: red;
+    z-index: 200;
+    }
+
+
+
+     @media (max-width: $mobile) {
+         .footer-container .sidebar {
+    display: unset;             
+    }
+
+    
+    }
+
 }
+
