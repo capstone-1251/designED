@@ -17,14 +17,14 @@ $owner_picture = $owner_image['sizes']['custom-size'];
             <h1><?php the_title(); ?></h1>
             <div class="aboutus-underline"></div>
             <div class="about-inner">
-    <!-- Left column: image -->
+   
     <div class="about-media">
         <img class="about-image"
              src="<?php echo $picture; ?>"
              alt="<?php echo esc_attr( $about_image['alt'] ); ?>">
     </div>
 
-    <!-- Right column: text -->
+    
     <div class="about-text">
         <p>
             <?php the_field('about_us_description'); ?>
