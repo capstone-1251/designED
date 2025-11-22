@@ -112,7 +112,7 @@ $promo_link = get_field('promo_product_link');
         </section>
 
     </div>
-</section>
+</body>
 
 
 <?php get_footer(); ?>

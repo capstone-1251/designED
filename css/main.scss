@@ -1,4 +1,8 @@
-@import "_var";
+@use "_var";
+@use "_button";
+@use "_nav-bar.scss";
+@use "_footer";
+@use "_front-page";
 
 // Reset
 /* 1. Use a more-intuitive box-sizing model */
@@ -150,9 +154,3 @@ footer nav {
   max-width: 1500px;
   margin: 0 auto;
 }
-
-@import "_button";
-@import "_nav-bar.scss";
-@import "_footer";
-@import "_front-page";
-@import "_online-ordering-page";
