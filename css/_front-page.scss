@@ -1,187 +1,220 @@
-@import "_mixin.scss";
-@import "_var";
-@import "_button";
-
 .front-page {
   background: var(--white);
 
+  .header {
+    background: linear-gradient(90deg, #0066cc, #3fa3e0);
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+    height: 850px;
+  }
+
   .front-page-container {
     @include container(1350px);
+    position: relative;
+    z-index: 5;
+  }
 
-    .web-banner {
+  .web-banner {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: $section-margin-bottom;
+    height: 65vh;
+
+    h1,
+    p {
+      color: var(--white);
+    }
+
+    .banner-underline {
+      width: 100px;
+      height: 4px;
+      background: var(--yellow);
+      border-radius: 4px;
+      margin: 1.5rem 0;
+    }
+
+    .btn {
+      @include btn();
+      margin: 1rem 0;
+    }
+  }
+
+  .featured-product {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: $section-margin-bottom;
+    width: 1200px;
+    margin: 0 auto;
+
+    .hr-underline {
+      width: 80px;
+      height: 4px;
+      background: #ff0088;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-flex {
       display: flex;
       gap: 2rem;
       align-items: center;
-      margin-bottom: $section-margin-bottom;
     }
 
-    .featured-product {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: $section-margin-bottom;
-
-      .hr-underline {
-        width: 80px;
-        height: 4px;
-        background: #ff0088;
-        border-radius: 4px;
-        margin-bottom: 1.5rem;
-      }
-      .featured-products-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        align-items: start;
-
-        // For staggered layout like your sample
-        .featured-card:nth-child(2) {
-          margin-top: 2rem;
-        }
-      }
-
-      .featured-card {
-        position: relative;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        background: white;
-
-        .featured-card-image {
-          display: block;
-          position: relative;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-          }
-        }
-
-        .featured-card-name {
-          position: absolute;
-          bottom: 12px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: black;
-          color: white;
-          padding: 8px 18px;
-          border-radius: 999px;
-          font-size: 1rem;
-          font-weight: 600;
-          white-space: nowrap;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        }
-      }
+    .product-description {
+      width: 50%;
     }
-    .our-story {
-      position: relative;
+
+    .featured-products-grid {
       display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      align-items: center;
-      padding: 4rem 0;
-      background: linear-gradient(90deg, #0066cc, #3fa3e0);
-      clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 85%);
+      width: 85%;
+      height: 800px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      align-items: start;
+
+      .featured-card:nth-child(3) {
+        margin-top: 0;
+      }
+
+      .featured-card:nth-child(2) {
+        margin-top: 10rem;
+      }
+    }
+
+    .featured-card {
+      position: relative;
+      border-radius: 20px;
       overflow: hidden;
-      margin-bottom: $section-margin-bottom;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      background: white;
 
-      .our-story-bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 80%;
-        height: 100%;
-        z-index: -1;
-      }
-
-      .our-story-content {
-        color: #fff;
-        padding: 3rem 4rem;
-
-        h2 {
-          margin-bottom: 1rem;
-        }
-
-        .story-divider {
-          width: 60px;
-          height: 3px;
-          background: #fff;
-          margin-bottom: 1.2rem;
-        }
-
-        p {
-          line-height: 1.6;
-          margin-bottom: 2rem;
-        }
-
-        .story-btn {
-          background: var(--yellow);
-          padding: 0.9rem 2rem;
-          border-radius: 8px;
-          color: var(--dark);
-          display: inline-block;
-          text-decoration: none;
-
-          &:hover {
-            background: #ffdb00;
-            transition: 0.2s;
-          }
-        }
-      }
-
-      .our-story-image {
-        display: flex;
-        justify-content: center;
+      .featured-card-image {
+        display: block;
+        position: relative;
 
         img {
-          width: 90%;
+          width: 100%;
           height: 100%;
-          border-radius: 20px;
-          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
           object-fit: cover;
+          display: block;
         }
+      }
+
+      .featured-card-name {
+        @include innerBtn();
       }
     }
+  }
+  .our-story {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: $section-margin-bottom;
 
-    .promo-section {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 3rem;
+    .our-story-content {
       align-items: center;
+      color: var(--white);
       padding: 4rem 0;
-      position: relative;
-      z-index: 2;
+      display: flex;
+      gap: 2rem;
+      z-index: 1;
 
-      .promo-image img {
-        width: 100%;
-        border-radius: 20px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-        object-fit: cover;
+      .texts {
+        width: 50%;
+        margin-top: 4rem;
       }
 
-      .promo-content {
-        padding-right: 2rem;
+      h2 {
+        margin-bottom: 1rem;
+      }
 
-        .promo-underline {
-          width: 80px;
-          height: 4px;
-          background: #ff0088;
-          border-radius: 4px;
-          margin-bottom: 1.5rem;
-        }
+      .story-divider {
+        width: 60px;
+        height: 3px;
+        background: #fff;
+        margin-bottom: 1.2rem;
+      }
 
-        .promo-btn {
-          background: var(--dark);
-          color: var(--white);
-          padding: 0.9rem 2.2rem;
-          border-radius: 12px;
-          display: inline-block;
-          transition: 0.2s;
+      p {
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
 
-          &:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-          }
-        }
+      .story-btn {
+        @include btn();
+      }
+    }
+    .our-story-image {
+      img {
+        width: 600px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        object-fit: cover;
+      }
+    }
+  }
+}
+.our-story-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 10%, 100% 0, 100% 70%, 0 80%);
+  transform: rotate(180deg);
+  z-index: 0;
+}
+
+.promo-product {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+.promo-section {
+  gap: 3rem;
+  align-items: center;
+  padding-bottom: 3rem 0;
+  position: relative;
+  z-index: 2;
+  margin: $section-margin-bottom;
+
+  .promo-image img {
+    width: 1350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
+  }
+
+  .promo-content {
+    padding-right: 2rem;
+
+    .promo-underline {
+      width: 80px;
+      height: 4px;
+      background: #ff0088;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+
+    .promo-btn {
+      background: var(--dark);
+      text-align: center;
+      color: var(--white);
+      width: 284px;
+      padding: 0.9rem 2.2rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      display: inline-block;
+      transition: 0.2s;
+      font-weight: 600;
+
+      &:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        background-color: var(--white);
+        color: var(--dark);
       }
     }
   }

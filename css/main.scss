@@ -151,9 +151,11 @@ footer nav {
   margin: 0 auto;
 }
 
+@import "_mixin";
+@import "_fonts";
 @import "_button";
-@import "_nav-bar.scss";
+@import "_nav-bar";
 @import "_footer";
 @import "_front-page";
-@import "_online-ordering-page.scss";
-@import "_about-us.scss";
+@import "_online-ordering-page";
+@import "_about-us";
