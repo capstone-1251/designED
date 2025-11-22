@@ -1,3 +1,60 @@
-.onlineheading {
-    background-color: black;
+.online-order-content {
+  @include container(1350px);
+
+  .promo-underline {
+    width: 80px;
+    height: 4px;
+    background: #ff0088;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+
+  .inner-flex,
+  .inner-flex-reverse {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .inner-flex-reverse {
+    flex-direction: row-reverse;
+  }
+
+
+  .service-text {
+    flex: 1; 
+  }
+
+  .service-media {
+    flex: 0 0 420px; 
+  }
+
+  .portal-image {
+    width: 100%;     
+    height: auto;
+    max-width: 420px;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    object-fit: cover;
+  }
+
+  
+  @media (max-width: 900px) {
+    .inner-flex,
+    .inner-flex-reverse {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .service-media {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .portal-image {
+      max-width: 100%;
+    }
+  }
 }
