@@ -11,7 +11,7 @@ $promo_picture = $promo_image['sizes']['custom-size'];
 $promo_link = get_field('promo_product_link');
 ?>
 
-
+<?php get_header(); ?>
 <section class="front-page">
     <div class="front-page-container">
         <div class="web-banner">
@@ -111,6 +111,10 @@ $promo_link = get_field('promo_product_link');
 
         </section>
 
-</section>
+    </div>
+</body>
+
+
+<?php get_footer(); ?>
 
 

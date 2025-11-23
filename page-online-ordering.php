@@ -12,7 +12,7 @@ $picture3 = $image3['sizes']['custom-size'];
 ?>
 
 <?php get_header(); ?>
-<div class="container" >
+<div class="online-order-content" >
     <h1><?php the_title(); ?></h1>
     <div>
         <?php
