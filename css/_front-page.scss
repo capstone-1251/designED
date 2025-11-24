@@ -226,12 +226,6 @@
   }
 }
 
-/*  Global */
-.btn {
-  @include btn();
-  margin: 1rem 0;
-}
-
 @media (max-width: 400px) {
   .web-banner {
     margin-top: 6rem;

@@ -1,5 +1,4 @@
 @import "_var";
-@import "_mixin";
 
 // Reset
 /* 1. import a more-intuitive box-sizing model */
@@ -94,6 +93,15 @@ a {
   text-decoration: none;
 }
 
+
+/*
+___________________________________________________________________________________________________________
+*/
+
+@import "_mixin";
+@import "_button";
+
+
 // General styles
 html {
   font-size: 16px;
@@ -112,11 +120,11 @@ h5 {
 }
 
 h1 {
-  font-size: clamp(2.25rem, 1.1471rem + 3.9216vw, 6rem);
+  font-size: clamp(2.25rem, 1.7353rem + 1.8301vw, 4rem);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 1.0221rem + 1.6993vw, 3.125rem);
+  font-size: clamp(1.5rem, 1.0588rem + 1.5686vw, 3rem);
 }
 
 h3 {
@@ -128,7 +136,7 @@ h3 {
 }
 
 p {
-  font-size: clamp(1rem, 0.8529rem + 0.5229vw, 1.5rem);
+  font-size: clamp(1.125rem, 1.0882rem + 0.1307vw, 1.25rem);
 }
 
 nav {
@@ -152,7 +160,16 @@ footer nav {
   margin: 0 auto;
 }
 
-@import "_button";
+.btn {
+  @include btn();
+  // margin: 1rem 0;
+}
+
+.mg-line {
+  @include margentaLine(60px);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
 @import "_nav-bar";
 @import "_footer";
 @import "_front-page";

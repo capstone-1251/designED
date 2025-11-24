@@ -3,3 +3,9 @@
   max-width: $width;
   margin: 0 auto;
 }
+
+@mixin margentaLine($width) {
+  height: 4px;
+  width: $width;
+  background-color: var(--margenta);
+}
