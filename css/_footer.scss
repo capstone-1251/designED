@@ -1,7 +1,4 @@
-
-
 footer {
-
      background-color: var(--darkcyan);
      padding: 2rem;
      position: absolute;
@@ -119,10 +116,8 @@ footer {
 
      @media (max-width: $mobile) {
          .footer-container .sidebar {
-    display: unset;             
-    }
-
-    
+            display: unset;             
+            }
     }
 
 }

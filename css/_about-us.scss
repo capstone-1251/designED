@@ -1,16 +1,3 @@
-.about-container {
-  position: relative;
-  width: 100%;
-  height: 1550px;
-
-  background: linear-gradient(90deg, #0066cc, #3fa3e0);
-  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
-  background-attachment: fixed; 
- color: var(--white);
-  align-items: center;
-}
-
-
 .container {
   @include container(1350px);
 
@@ -187,10 +174,6 @@
     flex: 0 0 100%;          
     width: 100%;
   }
-
-    
-    
+ 
   }
 
-
-  
