@@ -4,7 +4,7 @@
     .product-archive-banner {
         background: linear-gradient(90deg, rgb(0, 102, 204, 0.9), rgb(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
         padding: 0 2rem;
-        height: 90vh;
+        height: 700px;
         color: var(--white);
         .container {
             padding-top: 8rem;
@@ -13,6 +13,167 @@
             }
             .btn {
                 width: fit-content;
+            }
+        }
+
+    }
+    @media (min-width: $ipad) {
+        clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
+        .product-archive-banner { 
+            height: 55vh;
+            .container {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                .content {
+                    grid-area: 1 / 1 / 2 / 9;
+                }
+                .btn {
+                    grid-area: 1 / 10 / 2 / 13;
+                    width: 100%;
+                    padding: 0.8rem 1rem;
+                    height: fit-content;
+                    border-radius: 10px;
+                    margin-top: 6rem;
+                }
+            }
+        }
+    }
+}
+
+.featured-catalog {
+    padding: 2rem 2rem 8rem 2rem;
+    .section-featured {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        .desktop {
+            display: none;
+        }
+        h2 {
+            color: var(--blue);
+        }
+        img {
+            border-radius: 20px;
+            width: 100%;
+            height: 25vh;
+            object-fit: cover;
+        }
+        p {
+            margin: 2rem 0;
+        }
+        .btn {
+            @include btn-black();
+        }
+    }
+
+    @media (min-width: $ipad) {
+        .section-featured {
+            margin-top: 4rem;
+            gap: 6rem;
+            img {
+                height: 43vh;
+            }
+            p {
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+            }
+            .post-112 {
+                .desktop {
+                    .img-content {
+                        grid-area: 1 / 6 / 2 / 13;
+                    }
+                    .text-content {
+                        grid-area: 1 / 1 / 2 / 6;
+                    }
+                }
+            }
+            .desktop {
+                display: block;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 1fr;
+                gap: 2rem;
+                .img-content {
+                    grid-area: 1 / 1 / 2 / 8;
+                }
+                .text-content {
+                    grid-area: 1 / 8 / 2 / 13;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .mg-line {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+.other-products {
+    background: linear-gradient(90deg, #2a71ab, #2872b4);
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    height: 2000px;
+    padding: 2rem;
+    color: var(--white);
+    margin-bottom: -25px;
+    .content {
+        padding-top: 7rem;
+        .section-blog {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            article {
+                position: relative;
+                width: fit-content;
+                img {
+                    height: 400px;
+                    width: auto;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+                .btn {
+                    @include btn-black();
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 15px;
+                    width: calc(100% - 20px);
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+            }
+        }
+    }
+    @media (min-width: $ipad) {
+        height: fit-content;
+        clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 8rem;
+            @include container(1500px);
+            .mg-line {
+                margin-bottom: 4rem;
+            }
+            .section-blog {
+                flex-flow: row wrap;
+                margin: 0 auto;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 7rem;
+                article {
+                    width: 300px;
+                }
             }
         }
     }
