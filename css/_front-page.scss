@@ -3,34 +3,54 @@
 
 .front-page {
   background: var(--white);
+}
+.front-page-container {
+  width: $desktop;
+  margin: 0 auto;
+}
+
+header {
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+  height: 850px;
   position: relative;
-  z-index: 5;
-
-  .header {
-    background: linear-gradient(90deg, #0066cc, #3fa3e0);
-    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
-    height: 850px;
-  }
-
-  .front-page-container {
-    width: $desktop;
-    margin: 0 auto;
-    position: relative;
-    z-index: 5;
-  }
+  z-index: 0;
+  width: 100%;
 }
 
 /* Web Banner */
 .web-banner {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 5rem;
+
+  .video {
+    width: 800px;
+  }
+
+  .banner-btn {
+    @include btn();
+  }
+}
+
+.web-banner .front-page-container {
   display: flex;
   gap: 2rem;
   align-items: center;
-  margin-bottom: $section-margin-bottom;
   height: 65vh;
+  margin-bottom: $section-margin-bottom;
+
+  h1 {
+    line-height: 1;
+  }
 
   h1,
   p {
     color: var(--white);
+    margin-bottom: 1rem;
   }
 
   .banner-underline {
@@ -40,46 +60,29 @@
     border-radius: 4px;
     margin: 1.5rem 0;
   }
-
-  .btn {
-    @include btn();
-    margin: 1rem 0;
-  }
 }
 
-/* Featured Products */
 .featured-product {
   display: flex;
   gap: 2rem;
   align-items: center;
-  margin: 0 auto $section-margin-bottom;
-  width: 1200px;
+  margin: 0 auto;
+  width: 1350px;
 
   .hr-underline {
     width: 80px;
     height: 4px;
-    background: #ff0088;
+    background: var(--margenta);
     border-radius: 4px;
     margin-bottom: 1.5rem;
-  }
-
-  .product-flex {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .product-description {
-    width: 50%;
   }
 
   .featured-products-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 320px;
     gap: 2rem;
-    width: 85%;
-    height: 800px;
-    align-items: start;
+    width: 100%;
 
     .featured-card {
       position: relative;
@@ -88,90 +91,96 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
       background: white;
 
-      &.nth-child-2 {
-        margin-top: 10rem;
-      }
-
-      &.nth-child-3 {
-        margin-top: 1rem;
-      }
-
-      .featured-card-image img {
+      .featured-card-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
+        position: relative;
       }
 
       .featured-card-name {
         @include innerBtn();
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 1rem;
       }
+    }
+    .featured-card:nth-of-type(1) {
+      grid-row: span 1;
+      height: 450px;
+    }
+
+    .featured-card:nth-of-type(2) {
+      grid-row: span 2;
+      height: 550px;
+      margin-top: 15rem;
+    }
+
+    .featured-card:nth-of-type(3) {
+      grid-row: span 2;
+      margin-top: 8rem;
+      height: 450px;
     }
   }
 }
 
 /* Our Story */
 .our-story {
-  display: flex;
-  gap: 2rem;
-  overflow: hidden;
   margin-bottom: $section-margin-bottom;
   position: relative;
 
-  .our-story-content {
+  .story-container {
+    width: $desktop;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 2rem;
-    z-index: 1;
-    color: var(--white);
-    padding: 4rem 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
 
-    .texts {
-      width: 50%;
-      margin-top: 4rem;
+    .our-story-content {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      gap: 1rem;
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+      width: 60%;
+
+      .story-divider {
+        width: 60px;
+        height: 3px;
+        background: #fff;
+      }
+      .story-btn {
+        @include btn();
+        max-width: 360px;
+      }
     }
 
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    .story-divider {
-      width: 60px;
-      height: 3px;
-      background: #fff;
-      margin-bottom: 1.2rem;
-    }
-
-    p {
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    .story-btn {
-      @include btn();
+    .our-story-image img {
+      width: 600px;
+      height: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      object-fit: cover;
+      position: relative;
+      z-index: 2; // ensures image is above the background too
     }
   }
 
-  .our-story-image img {
-    width: 600px;
-    height: 100%;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-    object-fit: cover;
+  .our-story-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #0066cc, #3fa3e0);
+    clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 90%);
+    transform: rotate(180deg);
+    z-index: 0;
   }
-}
-
-.our-story-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 90%;
-  background: linear-gradient(90deg, #0066cc, #3fa3e0);
-  clip-path: polygon(0 10%, 100% 0, 100% 70%, 0 80%);
-  transform: rotate(180deg);
-  z-index: 0;
 }
 
 /* Promo Section */
@@ -209,22 +218,43 @@
     }
 
     .promo-btn {
-      background: var(--dark);
-      text-align: center;
+      @include btn();
+      background-color: var(--dark);
       color: var(--white);
-      width: 284px;
-      padding: 0.9rem 2.2rem;
-      margin: 1rem 0;
-      border-radius: 12px;
-      display: inline-block;
-      transition: 0.2s;
-      font-weight: 600;
-
-      &:hover {
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-        background-color: var(--white);
-        color: var(--dark);
-      }
+      width: 360px;
+      margin-top: 1rem;
     }
+  }
+}
+
+/*  Global */
+.btn {
+  @include btn();
+  margin: 1rem 0;
+}
+
+@media (max-width: 400px) {
+  .web-banner {
+    margin-top: 6rem;
+  }
+  .front-page-container,
+  .story-container {
+    padding: 1rem;
+  }
+
+  .web-banner .front-page-container {
+    display: inline-block;
+    .text {
+      width: 380px;
+    }
+    .video {
+      width: 360px;
+      margin-right: 1rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .featured-product .featured-card-grid {
+    display: inline-block;
   }
 }
