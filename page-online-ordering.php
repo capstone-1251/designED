@@ -14,7 +14,7 @@ $picture3 = $image3['sizes']['custom-size'];
 
  <div class="order-container">
     <?php get_header(); ?>
-        <div class="online-order-content">
+        <div class="online-order-content container">
       
             <div class="inner-flex">
                 <h1><?php the_title(); ?></h1>
@@ -33,7 +33,7 @@ $picture3 = $image3['sizes']['custom-size'];
 
 
 
-<div class="online-order-content">
+<div class="online-order-content container">
     <div class="inner-flex">
         <div class="service-text">
             <h2><?php the_field('web_portal'); ?></h2>
@@ -46,7 +46,7 @@ $picture3 = $image3['sizes']['custom-size'];
     </div>
      </div>
     
-    <div class="order-container-second">
+    <div class="order-container-second container">
         <div class="online-order-content">
         <div class="inner-flex-reverse">
             <div class="service-text">
@@ -61,7 +61,7 @@ $picture3 = $image3['sizes']['custom-size'];
             </div>
     </div>
 
-    <div class="online-order-content">
+    <div class="online-order-content container">
     <div class="inner-flex">
         <div class="service-text">
             <h2><?php the_field('warehousing_distribution'); ?></h2>
