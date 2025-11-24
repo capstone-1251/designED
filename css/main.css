@@ -12,7 +12,7 @@
   --paleblue: #a5b9cd;
 }
 
-/* 1. Use a more-intuitive box-sizing model */
+/* 1. import a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
@@ -1072,12 +1072,18 @@ footer .credit p {
     flex-direction: column;
     align-items: flex-start;
   }
+  .online-order-content .inner-flex-reverse {
+    flex-direction: columreverse;
+  }
   .online-order-content .service-media {
     flex: 0 0 auto;
     width: 100%;
   }
   .online-order-content .portal-image {
     max-width: 100%;
+  }
+  .online-order-content .order-container-second {
+    height: auto;
   }
 }
 

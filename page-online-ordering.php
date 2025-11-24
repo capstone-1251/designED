@@ -11,18 +11,27 @@ $image3 = get_field('warehousing_distribution_image');
 $picture3 = $image3['sizes']['custom-size'];
 ?>
 
-<?php get_header(); ?>
-<div class="container" >
-    <h1><?php the_title(); ?></h1>
-    <div>
-        <?php
-        the_field('online_ordering_description')
-        ?>
-        <br>
-        <br>
-        <a href="<?php the_field('portal_button') ?>" class="btn" target="_blank">Go to Web Portal</a>
+
+ <div class="order-container">
+    <?php get_header(); ?>
+        <div class="online-order-content">
+      
+            <div class="inner-flex">
+                <h1><?php the_title(); ?></h1>
+                <div>
+                    <?php
+                    the_field('online_ordering_description')
+                    ?>
+                    <br>
+                    <br>
+                    <a href="<?php the_field('portal_button') ?>" class="btn" target="_blank">Go to Web Portal</a>
+                </div>
+            </div>
+        
     </div>
 </div>
+
+
 
 <div class="online-order-content">
     <div class="inner-flex">
@@ -35,18 +44,24 @@ $picture3 = $image3['sizes']['custom-size'];
             <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
         </div>
     </div>
+     </div>
     
-    <div class="inner-flex-reverse">
-        <div class="service-text">
-            <h2><?php the_field('instant_proofing'); ?></h2>
-            <div class="promo-underline"></div>
-            <p><?php the_field('instant_proofing_description'); ?></p>
+    <div class="order-container-second">
+        <div class="online-order-content">
+        <div class="inner-flex-reverse">
+            <div class="service-text">
+                <h2><?php the_field('instant_proofing'); ?></h2>
+                <div class="promo-underline"></div>
+                <p><?php the_field('instant_proofing_description'); ?></p>
+            </div>
+            <div class="service-media">
+                <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
+            </div>
         </div>
-        <div class="service-media">
-            <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
-        </div>
+            </div>
     </div>
-    
+
+    <div class="online-order-content">
     <div class="inner-flex">
         <div class="service-text">
             <h2><?php the_field('warehousing_distribution'); ?></h2>
@@ -58,6 +73,7 @@ $picture3 = $image3['sizes']['custom-size'];
         </div>
     </div>
 </div>
+    </div>
 
 
 
