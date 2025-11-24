@@ -13,7 +13,6 @@ $promo_link = get_field('promo_product_link');
 
 <?php get_header(); ?>
 <div class="header">
-
 <div class="web-banner">
             <div class="front-page-container">
                 <div class="text">
@@ -33,7 +32,7 @@ $promo_link = get_field('promo_product_link');
                 </div>
             </div>
         </div>
-</div> <!-- your styled hero background -->
+</div> 
 
 <section class="front-page">
         <section class="featured-product">
@@ -109,10 +108,7 @@ $promo_link = get_field('promo_product_link');
 
         </section>
 
-    </div>
-</body>
+</section>
 
 
 <?php get_footer(); ?>
-
-

@@ -1,8 +1,10 @@
+@use "_var" as *;
+
 footer {
-     background-color: var(--darkcyan);
-     padding: 2rem;
-     position: absolute;
-     width: 100%;
+  background-color: var(--darkcyan);
+  padding: 2rem;
+  position: absolute;
+  width: 100%;
 
   .phone-btn {
     position: absolute;
@@ -26,7 +28,7 @@ footer {
   .footer-container {
     color: var(--white);
     font-family: "Montserrat", sans-serif;
-    @include container(1350px);
+    width: $labtop;
   }
 
   .footer-container .sidebar {
@@ -112,12 +114,9 @@ footer {
     z-index: 200;
   }
 
-
-
-     @media (max-width: $mobile) {
-         .footer-container .sidebar {
-            display: unset;             
-            }
+  @media (max-width: $mobile) {
+    .footer-container .sidebar {
+      display: unset;
     }
   }
 }
