@@ -83,6 +83,7 @@ add_image_size('blog-large', 800, 400, false);
 add_image_size('blog-small', 300, 200, true);
 add_image_size('logo', 50, 50, false);
 add_image_size('custom-size', 300, 600, false);
+add_image_size('custom-size-2', 800, 450, false);
 
 
 // Alt text for images

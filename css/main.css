@@ -12,19 +12,177 @@
   --paleblue: #a5b9cd;
 }
 
+/* 1. import a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*
+  11. Ul reset
+*/
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+  12. Anchor Tag
+*/
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 1.1471rem + 3.9216vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.0221rem + 1.6993vw, 3.125rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1.0221rem + 1.6993vw, 3.125rem);
+}
+
+.btn {
+  font-size: clamp(1.125rem, 0.8676rem + 0.915vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 0.8529rem + 0.5229vw, 1.5rem);
+}
+
+nav {
+  font-family: "Montserrat", sans-serif;
+}
+
+header nav li a {
+  font-size: clamp(1rem, 0.9632rem + 0.1307vw, 1.125rem);
+}
+
+footer nav {
+  font-size: 16px;
+}
+
+.sm-caption {
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 header {
   padding: 2rem;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 30;
 }
 header .header-container {
   z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
   padding: 0.5rem 2rem 0.5rem 2rem;
   border-radius: 20px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 450px) {
+  header .header-container {
+    background-color: unset;
+    box-shadow: unset;
+    padding: unset;
+  }
 }
 header .header-container .site-logo img {
   width: 35px;
@@ -128,12 +286,18 @@ header .hidden {
   height: 100vh;
   width: 100vw;
   background-color: var(--white);
-  z-index: 5;
+  z-index: 20;
   top: 0;
   right: -100vw;
   display: flex;
   flex-direction: column;
   transition: 0.5s right ease;
+  overflow: scroll;
+}
+@media (min-width: 1240px) {
+  header .hidden {
+    display: none;
+  }
 }
 header .hidden .close {
   display: flex;
@@ -157,7 +321,7 @@ header .hidden .search {
 }
 header .hidden .search input {
   padding: 0.3rem 2.3rem;
-  width: 50%;
+  width: 100%;
   border-radius: 15px;
   border: 1px solid gray;
   box-shadow: none;
@@ -210,11 +374,17 @@ header .unhidden {
   height: 100vh;
   width: 100vw;
   background-color: var(--white);
-  z-index: 5;
+  z-index: 20;
   top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
+}
+@media (min-width: 1240px) {
+  header .unhidden {
+    display: none;
+  }
 }
 header .unhidden .close {
   display: flex;
@@ -234,7 +404,7 @@ header .unhidden .search {
 }
 header .unhidden .search input {
   padding: 0.3rem 2.3rem;
-  width: 50%;
+  width: 100%;
   border-radius: 15px;
   border: 1px solid gray;
   box-shadow: none;
@@ -289,7 +459,7 @@ footer {
   position: absolute;
   width: 100%;
 }
-footer .phone-btn {
+footer .container .phone-btn {
   position: absolute;
   right: 5%;
   top: -55px;
@@ -301,36 +471,37 @@ footer .phone-btn {
   align-items: center;
   justify-content: center;
 }
-footer .phone-btn svg {
+footer .container .phone-btn svg {
   width: 45px;
   height: 45px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-footer .footer-container {
+footer .container .footer-container {
   color: var(--white);
   font-family: "Montserrat", sans-serif;
   width: 1240px;
+  max-width: 100%;
 }
-footer .footer-container .sidebar {
+footer .container .footer-container .sidebar {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
   color: var(--white);
 }
-footer .footer-container a {
+footer .container .footer-container a {
   color: var(--white);
 }
-footer .footer-container .wp-block-list {
+footer .container .footer-container .wp-block-list {
   list-style: none;
   padding-left: 0;
 }
-footer .footer-container .wp-block-list li {
+footer .container .footer-container .wp-block-list li {
   position: relative;
   padding-left: 24px;
   padding-bottom: 37px;
 }
-footer .footer-container .wp-block-list li:first-child::before {
+footer .container .footer-container .wp-block-list li:first-child::before {
   content: "";
   position: absolute;
   left: 0;
@@ -341,7 +512,7 @@ footer .footer-container .wp-block-list li:first-child::before {
   background-size: contain;
   background-repeat: no-repeat;
 }
-footer .footer-container .wp-block-list li:last-child::before {
+footer .container .footer-container .wp-block-list li:last-child::before {
   content: "";
   position: absolute;
   left: 0;
@@ -352,7 +523,7 @@ footer .footer-container .wp-block-list li:last-child::before {
   background-size: contain;
   background-repeat: no-repeat;
 }
-footer .footer-container .menu-footer-menu-container ul {
+footer .container .footer-container .menu-footer-menu-container ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -361,22 +532,22 @@ footer .footer-container .menu-footer-menu-container ul {
   margin: 0;
   padding: 0;
 }
-footer .footer-container .menu-footer-menu-container ul li {
+footer .container .footer-container .menu-footer-menu-container ul li {
   flex: 0 0 48%;
   color: #fff;
   padding-bottom: 37px;
 }
-footer .footer-container .has-black-background-color {
+footer .container .footer-container .has-black-background-color {
   background-color: red;
 }
-footer .credit p {
+footer .container .credit p {
   width: 100%;
   background-color: var(--dark);
   color: red;
   z-index: 200;
 }
 @media (max-width: 450px) {
-  footer .footer-container .sidebar {
+  footer .container .footer-container .sidebar {
     display: unset;
   }
 }
@@ -390,7 +561,7 @@ footer .credit p {
   margin: 0 auto;
 }
 
-header {
+.header {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
   height: 850px;
@@ -497,8 +668,8 @@ header {
   bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  background: black;
-  color: white;
+  background: var(--dark);
+  color: var(--white);
   padding: 8px 18px;
   border-radius: 999px;
   white-space: nowrap;
@@ -580,7 +751,7 @@ header {
 }
 .our-story .story-container .our-story-image img {
   width: 600px;
-  height: 100%;
+  height: 500px;
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   -o-object-fit: cover;
@@ -591,10 +762,12 @@ header {
 .our-story .our-story-bg {
   position: absolute;
   inset: 0;
+  top: -40px;
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 90%);
   transform: rotate(180deg);
   z-index: 0;
+  height: 540px;
 }
 
 /* Promo Section */
@@ -933,151 +1106,23 @@ header {
     width: 100%;
   }
 }
-/* 1. import a more-intuitive box-sizing model */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.overlay {
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 }
-
-/* 2. Remove default margin */
-* {
-  margin: 0;
+.overlay .product-archive-banner {
+  background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
+  padding: 0 2rem;
+  height: 90vh;
+  color: var(--white);
 }
-
-/* 3. Enable keyword animations */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
+.overlay .product-archive-banner .container {
+  padding-top: 8rem;
 }
-body {
-  /* 4. Add accessible line-height */
-  line-height: 1.5;
-  /* 5. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
+.overlay .product-archive-banner .container p {
+  margin: 1rem 0;
 }
-
-/* 6. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* 7. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* 8. Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/* 9. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
-
-/*
-  10. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
-
-/*
-  11. Ul reset
-*/
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/*
-  12. Anchor Tag
-*/
-a {
-  text-decoration: none;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Montserrat", sans-serif;
-}
-
-h1 {
-  font-size: clamp(2.25rem, 1.1471rem + 3.9216vw, 6rem);
-}
-
-h2 {
-  font-size: clamp(1.5rem, 1.0221rem + 1.6993vw, 3.125rem);
-}
-
-h3 {
-  font-size: clamp(1.5rem, 1.0221rem + 1.6993vw, 3.125rem);
-}
-
-.btn {
-  font-size: clamp(1.125rem, 0.8676rem + 0.915vw, 2rem);
-}
-
-p {
-  font-size: clamp(1rem, 0.8529rem + 0.5229vw, 1.5rem);
-}
-
-nav {
-  font-family: "Montserrat", sans-serif;
-}
-
-header nav li a {
-  font-size: clamp(1rem, 0.9632rem + 0.1307vw, 1.125rem);
-}
-
-footer nav {
-  font-size: 16px;
-}
-
-.sm-caption {
-  font-size: 14px;
-}
-
-.container {
-  max-width: 1500px;
-  margin: 0 auto;
+.overlay .product-archive-banner .container .btn {
+  width: -moz-fit-content;
+  width: fit-content;
 }/*# sourceMappingURL=main.css.map */

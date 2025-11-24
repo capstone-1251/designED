@@ -1,6 +1,3 @@
-@use "_var" as *;
-@use "_mixin" as *;
-
 .container {
   @include container(1350px);
 

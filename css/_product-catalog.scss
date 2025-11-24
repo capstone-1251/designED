@@ -1,0 +1,19 @@
+.overlay {
+    background: linear-gradient(90deg, #0066cc, #3fa3e0);
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    .product-archive-banner {
+        background: linear-gradient(90deg, rgb(0, 102, 204, 0.9), rgb(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
+        padding: 0 2rem;
+        height: 90vh;
+        color: var(--white);
+        .container {
+            padding-top: 8rem;
+            p {
+                margin: 1rem 0;
+            }
+            .btn {
+                width: fit-content;
+            }
+        }
+    }
+}

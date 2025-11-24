@@ -1,11 +1,15 @@
 <?php get_header(); ?>
 
-<div>
-    <div>
-        <h1>Product Catalog</h1>
-        <p>Discover our full range of high-quality printing products and services. Browse through categories, compare options, and find the perfect solution for your personal or business needs—all in one place.</p>
+<div class="overlay">
+    <div class="product-archive-banner">
+        <div class="container">
+            <div class="content">
+                <h1>Product Catalog</h1>
+                <p>Explore our full range of custom print products, from business essentials to promotional materials and specialty finishes. Browse, compare, and discover the perfect options to bring your ideas to life—all in one easy-to-navigate catalog.</p>
+            </div>
+            <a href="<?php echo esc_url(home_url('/get-quote/')); ?>" class="btn">Get Quote</a>
+        </div>
     </div>
-    <a href="<?php echo esc_url(home_url('/get-quote/')); ?>">Get Quote</a>
 </div>
 
 <?php get_template_part('includes/section', 'archive'); ?>
