@@ -12,10 +12,10 @@ $picture3 = $image3['sizes']['custom-size'];
 ?>
 
 
-    <div class="order-container">
-        <?php get_header(); ?>
-        <div class="online-order-content" >
-            <div class="online-ordering-hero">
+ <div class="order-container">
+    <?php get_header(); ?>
+        <div class="online-order-content">
+      
             <div class="inner-flex">
                 <h1><?php the_title(); ?></h1>
                 <div>
@@ -27,9 +27,11 @@ $picture3 = $image3['sizes']['custom-size'];
                     <a href="<?php the_field('portal_button') ?>" class="btn" target="_blank">Go to Web Portal</a>
                 </div>
             </div>
-        </div>
+        
     </div>
 </div>
+
+
 
 <div class="online-order-content">
     <div class="inner-flex">

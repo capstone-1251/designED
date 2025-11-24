@@ -779,6 +779,16 @@ footer .credit p {
   color: var(--dark);
 }
 
+.order-container {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+  background-attachment: fixed;
+  align-items: center;
+}
+
 .online-order-content {
   width: 100%;
   max-width: 1350px;
@@ -818,23 +828,21 @@ footer .credit p {
      object-fit: cover;
 }
 .online-order-content .online-ordering-hero {
-  position: relative;
   width: 100%;
   height: 850px;
-  margin-top: 0;
-  /* BLUE GRADIENT + POLYGON SHAPE */
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
-  /* keep the background fixed while scrolling */
-  background-attachment: fixed;
   display: flex;
   align-items: center;
-  z-index: 1;
-  /* optional: keep content from touching edges */
-}
-.online-order-content .online-ordering-hero .order-container {
   position: relative;
-  z-index: 2;
+  width: 100%;
+  height: 650px;
+  margin-top: 0;
+  display: flex;
+  align-items: left;
+  z-index: 1;
+  top: 0;
+  color: aliceblue;
 }
 @media (max-width: 900px) {
   .online-order-content .inner-flex,
