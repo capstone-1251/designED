@@ -1,4 +1,7 @@
 @mixin btn() {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 284px;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -10,24 +13,36 @@
   color: var(--dark);
   transition: all 0.3s;
   &:hover {
-    background-color: var(--margenta);
-    color: var(--white);
+    background-color: var(--dark);
+    color: var(--yellow);
   }
 }
 
 @mixin innerBtn() {
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
+  position: absolute;
   text-align: center;
-  border: 0;
-  border-radius: 30px;
-  padding: 1rem;
-  background-color: var(--dark);
-  color: var(--white);
+  width: 330px;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
   &:hover {
-    background-color: var(--margenta);
-    transition: all 0.3s;
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--dark);
   }
 }
+
+// .btn {
+//   background-color: rgb(241, 241, 241);
+//   padding: 0.5rem;
+//   border: 1px solid rgb(187, 187, 187);
+//   border-radius: 5px;
+//   color: black;
+//   text-decoration: none;
+// }

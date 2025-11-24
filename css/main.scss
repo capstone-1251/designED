@@ -5,7 +5,7 @@
 @use "_front-page";
 
 // Reset
-/* 1. Use a more-intuitive box-sizing model */
+/* 1. import a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
@@ -154,3 +154,12 @@ footer nav {
   max-width: 1500px;
   margin: 0 auto;
 }
+
+@import "_mixin";
+@import "_fonts";
+@import "_button";
+@import "_nav-bar";
+@import "_footer";
+@import "_front-page";
+@import "_online-ordering-page";
+@import "_about-us";
