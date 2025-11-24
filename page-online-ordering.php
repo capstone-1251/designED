@@ -44,18 +44,24 @@ $picture3 = $image3['sizes']['custom-size'];
             <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
         </div>
     </div>
+     </div>
     
-    <div class="inner-flex-reverse">
-        <div class="service-text">
-            <h2><?php the_field('instant_proofing'); ?></h2>
-            <div class="promo-underline"></div>
-            <p><?php the_field('instant_proofing_description'); ?></p>
+    <div class="order-container-second">
+        <div class="online-order-content">
+        <div class="inner-flex-reverse">
+            <div class="service-text">
+                <h2><?php the_field('instant_proofing'); ?></h2>
+                <div class="promo-underline"></div>
+                <p><?php the_field('instant_proofing_description'); ?></p>
+            </div>
+            <div class="service-media">
+                <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
+            </div>
         </div>
-        <div class="service-media">
-            <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
-        </div>
+            </div>
     </div>
-    
+
+    <div class="online-order-content">
     <div class="inner-flex">
         <div class="service-text">
             <h2><?php the_field('warehousing_distribution'); ?></h2>
@@ -67,6 +73,7 @@ $picture3 = $image3['sizes']['custom-size'];
         </div>
     </div>
 </div>
+    </div>
 
 
 

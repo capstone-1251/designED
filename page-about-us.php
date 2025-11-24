@@ -9,10 +9,12 @@ $owner_image = get_field('owner_image');
 $owner_picture = $owner_image['sizes']['custom-size'];
 ?>
 
-<?php get_header(); ?>
+
+ <div class="about-container">
+  <?php get_header(); ?>
 <div class="container">
-    <div>
-        
+
+    <div>  
         <div>
             <h1><?php the_title(); ?></h1>
             <div class="aboutus-underline"></div>
@@ -42,20 +44,29 @@ $owner_picture = $owner_image['sizes']['custom-size'];
     </div>
 </div>
         
+ </div>
+  </div>
     </div>
-    
-    <div class="owner-section">
-    <div class="owner-inner">
+        </div>
+ 
+<div class="container">
+<div class="owner-section">
+
+  <div class="owner-inner">
+
     <div class="owner-text">
+
       <h2><?php the_field('meet_the_owner'); ?></h2>
       <div class="promo-underline"></div>
 
       <p><?php the_field('owner_description'); ?></p>
 
       <a href="/contact" class="owner-btn">Contact Us</a>
+   
     </div>
 
     <div class="owner-media">
+
       <div class="owner-photo-wrap">
         <span class="owner-name">
           <?php echo esc_html( $owner_image['title'] ?? 'Edward Gebran' ); ?>
@@ -66,11 +77,13 @@ $owner_picture = $owner_image['sizes']['custom-size'];
           alt="<?php echo esc_attr( $owner_image['alt'] ); ?>"
         >
       </div>
+
     </div>
   </div>
 </div>
+  </div>
 
-</div>
+
 
 
 <?php get_footer(); ?>

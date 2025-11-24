@@ -786,7 +786,20 @@ footer .credit p {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
   background-attachment: fixed;
+  color: var(--white);
   align-items: center;
+}
+
+.order-container-second {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  background-attachment: fixed;
+  padding-top: 6rem;
+  align-items: center;
+  color: var(--white);
 }
 
 .online-order-content {
@@ -827,23 +840,6 @@ footer .credit p {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.online-order-content .online-ordering-hero {
-  width: 100%;
-  height: 850px;
-  background: linear-gradient(90deg, #0066cc, #3fa3e0);
-  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 650px;
-  margin-top: 0;
-  display: flex;
-  align-items: left;
-  z-index: 1;
-  top: 0;
-  color: aliceblue;
-}
 @media (max-width: 900px) {
   .online-order-content .inner-flex,
   .online-order-content .inner-flex-reverse {
@@ -860,6 +856,20 @@ footer .credit p {
   .online-order-content .portal-image {
     max-width: 100%;
   }
+  .online-order-content .order-container-second {
+    height: auto;
+  }
+}
+
+.about-container {
+  position: relative;
+  width: 100%;
+  height: 1550px;
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+  background-attachment: fixed;
+  color: var(--white);
+  align-items: center;
 }
 
 .container {
