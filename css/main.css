@@ -888,6 +888,7 @@ footer .container .credit p {
   background-attachment: fixed;
   color: var(--white);
   align-items: center;
+  margin-top: 10rem;
 }
 
 .order-container-second {
@@ -897,7 +898,6 @@ footer .container .credit p {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
   background-attachment: fixed;
-  padding-top: 6rem;
   align-items: center;
   color: var(--white);
 }
@@ -918,6 +918,7 @@ footer .container .credit p {
   display: flex;
   align-items: center;
   gap: 3rem;
+  padding-top: 6rem;
 }
 .online-order-content .inner-flex-reverse {
   flex-direction: row-reverse;
@@ -957,6 +958,17 @@ footer .container .credit p {
   .online-order-content .order-container-second {
     height: auto;
   }
+}
+
+.about-container {
+  position: relative;
+  width: 100%;
+  height: 1450px;
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+  background-attachment: fixed;
+  color: var(--white);
+  align-items: center;
 }
 
 .container {
