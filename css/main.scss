@@ -1,4 +1,8 @@
-@import "_var";
+@use "_var";
+@use "_button";
+@use "_nav-bar.scss";
+@use "_footer";
+@use "_front-page";
 
 // Reset
 /* 1. import a more-intuitive box-sizing model */

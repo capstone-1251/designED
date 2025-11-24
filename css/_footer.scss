@@ -17,11 +17,11 @@ footer {
     justify-content: center;
   }
 
-    .phone-btn svg {
+  .phone-btn svg {
     width: 45px;
     height: 45px;
     object-fit: contain;
-    }
+  }
 
   .footer-container {
     color: var(--white);
@@ -101,16 +101,16 @@ footer {
     padding-bottom: 37px;
   }
 
-    .footer-container .has-black-background-color {
-        background-color: red;
-    }
+  .footer-container .has-black-background-color {
+    background-color: red;
+  }
 
-    .credit p {
+  .credit p {
     width: 100%;
     background-color: var(--dark);
     color: red;
     z-index: 200;
-    }
+  }
 
 
 
@@ -119,6 +119,5 @@ footer {
             display: unset;             
             }
     }
-
+  }
 }
-
