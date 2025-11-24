@@ -40,6 +40,32 @@
     object-fit: cover;
   }
 
+  .online-ordering-hero {
+  position: relative;
+  width: 100%;
+  height: 850px; // as you requested
+  margin-top: 0;
+
+  /* BLUE GRADIENT + POLYGON SHAPE */
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+
+  /* keep the background fixed while scrolling */
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  /* optional: keep content from touching edges */
+  .order-container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+
   
   @media (max-width: 900px) {
     .inner-flex,
@@ -48,6 +74,10 @@
       align-items: flex-start;
       
     }
+
+    .inner-flex-reverse {
+    flex-direction: columreverse;
+  }
 
     .service-media {
       flex: 0 0 auto;

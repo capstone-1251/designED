@@ -12,7 +12,7 @@
   --paleblue: #a5b9cd;
 }
 
-/* 1. Use a more-intuitive box-sizing model */
+/* 1. import a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
@@ -432,20 +432,6 @@ header .unhidden .menu-top-bar-container .sub-menu li:hover a {
   color: var(--white);
 }
 
-:root {
-  --white: #ffffff;
-  --dark: #1e1e1e;
-  --margenta: #ff0aba;
-  --margenta2: #ec008c;
-  --cyan: #3987d1;
-  --darkblue: #02091b;
-  --yellow: #fff204;
-  --darkcyan: #0b4d8c;
-  --blue: #2e83d0;
-  --brightblue: #368bdb;
-  --paleblue: #a5b9cd;
-}
-
 footer {
   background-color: var(--darkcyan);
   padding: 2rem;
@@ -544,35 +530,6 @@ footer .credit p {
   footer .footer-container .sidebar {
     display: unset;
   }
-}
-
-:root {
-  --white: #ffffff;
-  --dark: #1e1e1e;
-  --margenta: #ff0aba;
-  --margenta2: #ec008c;
-  --cyan: #3987d1;
-  --darkblue: #02091b;
-  --yellow: #fff204;
-  --darkcyan: #0b4d8c;
-  --blue: #2e83d0;
-  --brightblue: #368bdb;
-  --paleblue: #a5b9cd;
-}
-
-h1 {
-  font-size: 4.2rem;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 3.2rem;
-  line-height: 1.2;
-}
-
-p {
-  font-size: 1.2rem;
 }
 
 .front-page {
@@ -818,6 +775,8 @@ p {
 }
 .promo-section .promo-content .promo-btn:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  background-color: var(--white);
+  color: var(--dark);
 }
 
 .online-order-content {
@@ -858,11 +817,33 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.online-order-content .online-ordering-hero {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  margin-top: 0;
+  /* BLUE GRADIENT + POLYGON SHAPE */
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+  /* keep the background fixed while scrolling */
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  /* optional: keep content from touching edges */
+}
+.online-order-content .online-ordering-hero .order-container {
+  position: relative;
+  z-index: 2;
+}
 @media (max-width: 900px) {
   .online-order-content .inner-flex,
   .online-order-content .inner-flex-reverse {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .online-order-content .inner-flex-reverse {
+    flex-direction: columreverse;
   }
   .online-order-content .service-media {
     flex: 0 0 auto;
@@ -871,53 +852,6 @@ p {
   .online-order-content .portal-image {
     max-width: 100%;
   }
-}
-
-:root {
-  --white: #ffffff;
-  --dark: #1e1e1e;
-  --margenta: #ff0aba;
-  --margenta2: #ec008c;
-  --cyan: #3987d1;
-  --darkblue: #02091b;
-  --yellow: #fff204;
-  --darkcyan: #0b4d8c;
-  --blue: #2e83d0;
-  --brightblue: #368bdb;
-  --paleblue: #a5b9cd;
-}
-
-.featured-card-name {
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  border: 0;
-  border-radius: 30px;
-  padding: 1rem;
-  background-color: var(--dark);
-  color: var(--white);
-}
-.featured-card-name:hover {
-  background-color: var(--paleblue);
-  color: #1e1e1e;
-}
-
-.btn {
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  border: 0;
-  border-radius: 15px;
-  padding: 1rem;
-  background-color: var(--yellow);
-  color: var(--dark);
-  transition: all 0.3s;
-}
-.btn:hover {
-  background-color: var(--paleblue);
-  color: var(--dark);
 }
 
 .container {

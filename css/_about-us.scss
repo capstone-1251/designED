@@ -1,6 +1,4 @@
-@import "_mixin.scss";
-@import "_var";
-@import "_button";
+
 
 .container {
   @include container(1350px);

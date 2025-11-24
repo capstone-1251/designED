@@ -11,16 +11,23 @@ $image3 = get_field('warehousing_distribution_image');
 $picture3 = $image3['sizes']['custom-size'];
 ?>
 
-<?php get_header(); ?>
-<div class="online-order-content" >
-    <h1><?php the_title(); ?></h1>
-    <div>
-        <?php
-        the_field('online_ordering_description')
-        ?>
-        <br>
-        <br>
-        <a href="<?php the_field('portal_button') ?>" class="btn" target="_blank">Go to Web Portal</a>
+
+    <div class="order-container">
+        <?php get_header(); ?>
+        <div class="online-order-content" >
+            <div class="online-ordering-hero">
+            <div class="inner-flex">
+                <h1><?php the_title(); ?></h1>
+                <div>
+                    <?php
+                    the_field('online_ordering_description')
+                    ?>
+                    <br>
+                    <br>
+                    <a href="<?php the_field('portal_button') ?>" class="btn" target="_blank">Go to Web Portal</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
