@@ -61,7 +61,7 @@ $owner_picture = $owner_image['sizes']['custom-size'];
 
       <p><?php the_field('owner_description'); ?></p>
 
-      <a href="/contact" class="owner-btn">Contact Us</a>
+      <a href="/contact" class="btn">Contact Us</a>
    
     </div>
 
