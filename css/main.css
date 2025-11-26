@@ -1351,21 +1351,30 @@ footer .container .credit p {
 }
 .get-quote .quote-content .quote-card .quote-description .icon-svg {
   display: flex;
-  align-content: center;
+  align-items: center;
   gap: 1rem;
+  padding-top: 0.5rem;
   margin: 1rem 0;
+}
+.get-quote .quote-content .quote-card .quote-description .icon-svg p {
+  margin: 0;
 }
 .get-quote .quote-content .quote-card .quote-description img {
   border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-.get-quote .quote-content .quote-card .quote-description svg {
-  background-color: #0066cc;
-  padding: 0.2rem;
+.get-quote .quote-content .quote-card .quote-description .icon-container {
+  background-color: var(--darkcyan);
   border-radius: 50%;
-  color: white;
-  width: 40px;
-  height: 40px;
+  padding: 0.5rem;
   align-items: center;
+}
+.get-quote .quote-content .quote-card .quote-description .icon-container svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
 }
 @media (min-width: 750px) {
   .get-quote .quote-content .quote-card .quote-description {

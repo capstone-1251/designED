@@ -36,23 +36,34 @@
         }
         .icon-svg {
           display: flex;
-          align-content: center;
+          align-items: center;
           gap: 1rem;
+          padding-top: 0.5rem;
           margin: 1rem 0;
+
+          p {
+            margin: 0;
+          }
         }
 
         img {
           border-radius: 1rem;
+          max-width: 100%;
+          height: auto;
+          display: block;
         }
 
-        svg {
-          background-color: #0066cc;
-          padding: 0.2rem;
+        .icon-container {
+          background-color: var(--darkcyan);
           border-radius: 50%;
-          color: white;
-          width: 40px;
-          height: 40px;
+          padding: 0.5rem;
           align-items: center;
+
+          svg {
+            fill: white;
+            width: 30px;
+            height: 30px;
+          }
         }
 
         @media (min-width: $ipad) {
