@@ -1348,27 +1348,42 @@ footer .container .credit p {
 }
 .get-quote .quote-content .quote-card .quote-description .icon-svg {
   display: flex;
+  align-content: center;
   gap: 1rem;
   margin: 1rem 0;
 }
 .get-quote .quote-content .quote-card .quote-description svg {
   background-color: #0066cc;
-  padding: 0.35rem;
+  padding: 0.2rem;
   border-radius: 50%;
   color: white;
   width: 40px;
   height: 40px;
   align-items: center;
 }
+@media (min-width: 1500px) {
+  .get-quote .quote-content .quote-card .quote-description {
+    border-radius: 1rem 0 0 1rem;
+  }
+}
 .get-quote .quote-content .quote-card .quote-form {
   background-color: var(--paleblue);
   border-radius: 0 0 1rem 1rem;
   padding: 1rem;
 }
-@media (min-width: 1240px) {
+@media (min-width: 1500px) {
+  .get-quote .quote-content .quote-card .quote-form {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+@media (min-width: 1500px) {
   .get-quote .quote-content .quote-card {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
+    margin: 10rem auto;
   }
 }/*# sourceMappingURL=main.css.map */
