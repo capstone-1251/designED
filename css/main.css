@@ -1343,6 +1343,9 @@ footer .container .credit p {
   padding: 1rem;
   border-radius: 1rem 1rem 0 0;
 }
+.get-quote .quote-content .quote-card .quote-description h2 {
+  color: var(--margenta);
+}
 .get-quote .quote-content .quote-card .quote-description p {
   margin-bottom: 1rem;
 }
@@ -1351,6 +1354,9 @@ footer .container .credit p {
   align-content: center;
   gap: 1rem;
   margin: 1rem 0;
+}
+.get-quote .quote-content .quote-card .quote-description img {
+  border-radius: 1rem;
 }
 .get-quote .quote-content .quote-card .quote-description svg {
   background-color: #0066cc;
@@ -1361,9 +1367,11 @@ footer .container .credit p {
   height: 40px;
   align-items: center;
 }
-@media (min-width: 1500px) {
+@media (min-width: 750px) {
   .get-quote .quote-content .quote-card .quote-description {
     border-radius: 1rem 0 0 1rem;
+    align-content: center;
+    padding: 0 2rem;
   }
 }
 .get-quote .quote-content .quote-card .quote-form {
@@ -1371,12 +1379,12 @@ footer .container .credit p {
   border-radius: 0 0 1rem 1rem;
   padding: 1rem;
 }
-@media (min-width: 1500px) {
+@media (min-width: 750px) {
   .get-quote .quote-content .quote-card .quote-form {
     border-radius: 0 1rem 1rem 0;
   }
 }
-@media (min-width: 1500px) {
+@media (min-width: 750px) {
   .get-quote .quote-content .quote-card {
     width: 100%;
     max-width: 1350px;
@@ -1384,6 +1392,7 @@ footer .container .credit p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
+    max-width: 1000px;
     margin: 10rem auto;
   }
 }/*# sourceMappingURL=main.css.map */
