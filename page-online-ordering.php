@@ -12,11 +12,12 @@ $picture3 = $image3['sizes']['custom-size'];
 ?>
 
 
- <div class="order-container">
+
     <?php get_header(); ?>
-        <div class="online-order-content container">
+     <div class="order-container">
+        <div class="online-order-head container">
       
-            <div class="inner-flex">
+            <div class="header-inner-flex">
                 <h1><?php the_title(); ?></h1>
                 <div>
                     <?php
@@ -27,7 +28,6 @@ $picture3 = $image3['sizes']['custom-size'];
                     <a href="<?php the_field('portal_button') ?>" class="btn" target="_blank">Go to Web Portal</a>
                 </div>
             </div>
-        
     </div>
 </div>
 
@@ -44,22 +44,23 @@ $picture3 = $image3['sizes']['custom-size'];
             <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
         </div>
     </div>
-     </div>
+ </div>
     
-    <div class="order-container-second container">
-        <div class="online-order-content">
-        <div class="inner-flex-reverse">
+    <div class="order-container-second">
+        <div class="online-order-content container">
+        <div class="inner-flex">
+             <div class="service-media">
+                <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
+            </div>
             <div class="service-text">
                 <h2><?php the_field('instant_proofing'); ?></h2>
                 <div class="promo-underline"></div>
                 <p><?php the_field('instant_proofing_description'); ?></p>
             </div>
-            <div class="service-media">
-                <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
-            </div>
         </div>
             </div>
     </div>
+
 
     <div class="online-order-content container">
     <div class="inner-flex">
@@ -72,8 +73,11 @@ $picture3 = $image3['sizes']['custom-size'];
             <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
         </div>
     </div>
-</div>
-    </div>
+ </div>
+
+    
+
+ </div>
 
 
 
