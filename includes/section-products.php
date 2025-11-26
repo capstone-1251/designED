@@ -44,11 +44,13 @@ if (have_posts()): while (have_posts()): the_post();
             </div>
         </div>
 
-        <section>
-            <h2>Product Description</h2>
-            <p><?php
-                the_field('product_description');
-                ?></p>
+        <section class="product-description">
+            <div class="container">
+                <h2>Product Description</h2>
+                <p><?php
+                    the_field('product_description');
+                    ?></p>
+            </div>
         </section>
 
 <?php
