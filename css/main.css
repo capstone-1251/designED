@@ -183,6 +183,11 @@ footer nav {
   background-color: var(--dark);
   color: var(--yellow);
 }
+@media (max-width: 750px) {
+  .btn {
+    width: 100%;
+  }
+}
 
 .mg-line {
   height: 4px;
@@ -636,6 +641,11 @@ footer .container .credit p {
   color: var(--yellow);
 }
 @media (max-width: 750px) {
+  .web-banner .banner-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
   .web-banner .video {
     width: 100%;
   }
@@ -675,6 +685,7 @@ footer .container .credit p {
 
 .featured-product {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   align-items: center;
   margin: 0 auto;
@@ -747,9 +758,11 @@ footer .container .credit p {
 }
 @media (max-width: 750px) {
   .featured-product {
-    display: inline-block;
+    display: flex;
     padding: 1rem;
     flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-bottom: 6rem;
   }
   .featured-product h2 {
     margin-bottom: 1rem;
@@ -822,6 +835,11 @@ footer .container .credit p {
   background-color: var(--dark);
   color: var(--yellow);
 }
+@media (max-width: 750px) {
+  .our-story .story-container .our-story-content .story-btn {
+    width: 100%;
+  }
+}
 .our-story .story-container .our-story-image img {
   width: 600px;
   height: 500px;
@@ -857,6 +875,9 @@ footer .container .credit p {
   .our-story .story-container .our-story-content h2 {
     margin-top: 2rem;
   }
+  .our-story .story-container .our-story-content .story-btn {
+    max-width: unset;
+  }
   .our-story .our-story-bg {
     height: auto;
     width: auto;
@@ -869,6 +890,7 @@ footer .container .credit p {
 /* Promo Section */
 .promo-section {
   display: flex;
+  flex-direction: row;
   gap: 3rem;
   align-items: center;
   position: relative;
@@ -925,13 +947,17 @@ footer .container .credit p {
   color: var(--yellow);
 }
 @media (max-width: 750px) {
+  .promo-section .promo-content .promo-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
   .promo-section {
-    display: inline-block;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
     padding: 2rem;
     margin-bottom: 6rem;
-  }
-  .promo-section h2 {
-    margin-top: 1rem;
   }
 }
 

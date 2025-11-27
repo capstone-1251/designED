@@ -83,6 +83,7 @@
 
 .featured-product {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   align-items: center;
   margin: 0 auto;
@@ -143,9 +144,11 @@
     }
   }
   @media (max-width: $ipad) {
-    display: inline-block;
+    display: flex;
     padding: 1rem;
     flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-bottom: $section-margin-bottom;
 
     h2 {
       margin-bottom: 1rem;
@@ -248,6 +251,9 @@
         h2 {
           margin-top: 2rem;
         }
+        .story-btn {
+          max-width: unset;
+        }
       }
     }
 
@@ -264,6 +270,7 @@
 /* Promo Section */
 .promo-section {
   display: flex;
+  flex-direction: row;
   gap: 3rem;
   align-items: center;
   position: relative;
@@ -306,12 +313,10 @@
   }
 
   @media (max-width: $ipad) {
-    display: inline-block;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
     padding: 2rem;
     margin-bottom: $section-margin-bottom;
-
-    h2 {
-      margin-top: 1rem;
-    }
   }
 }

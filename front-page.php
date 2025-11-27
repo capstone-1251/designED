@@ -87,7 +87,7 @@ $promo_link = get_field('promo_product_link');
 
     </section>
 
-    <section class="promo-section fron">
+    <section class="promo-section">
 
         <div class="promo-image">
             <img
