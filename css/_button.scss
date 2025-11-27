@@ -16,6 +16,10 @@
     background-color: var(--dark);
     color: var(--yellow);
   }
+
+  @media (max-width: $ipad) {
+    width: 100%;
+  }
 }
 
 @mixin btn-black() {

@@ -183,6 +183,11 @@ footer nav {
   background-color: var(--dark);
   color: var(--yellow);
 }
+@media (max-width: 750px) {
+  .btn {
+    width: 100%;
+  }
+}
 
 .mg-line {
   height: 4px;
@@ -592,6 +597,11 @@ footer .container .credit p {
   margin: 0 auto;
   margin: 0 auto;
 }
+@media (max-width: 750px) {
+  .front-page-container {
+    padding: 2rem;
+  }
+}
 
 .header {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
@@ -635,12 +645,22 @@ footer .container .credit p {
   background-color: var(--dark);
   color: var(--yellow);
 }
+@media (max-width: 750px) {
+  .web-banner .banner-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .web-banner .video {
+    width: 100%;
+  }
+}
 
 .web-banner .front-page-container {
   display: flex;
   gap: 2rem;
   align-items: center;
-  height: 65vh;
+  height: 75vh;
   margin-bottom: 6rem;
 }
 .web-banner .front-page-container h1 {
@@ -658,13 +678,25 @@ footer .container .credit p {
   border-radius: 4px;
   margin: 1.5rem 0;
 }
+@media (max-width: 750px) {
+  .web-banner .front-page-container {
+    display: inline-block;
+    padding: 2rem;
+  }
+  .web-banner .front-page-container .banner-btn {
+    margin-bottom: 1rem;
+  }
+}
 
 .featured-product {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   align-items: center;
   margin: 0 auto;
-  width: 1350px;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 .featured-product .hr-underline {
   width: 80px;
@@ -731,6 +763,40 @@ footer .container .credit p {
   margin-top: 8rem;
   height: 450px;
 }
+@media (max-width: 750px) {
+  .featured-product {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin: 0 2rem;
+    width: unset;
+    margin-bottom: 6rem;
+  }
+  .featured-product h2 {
+    margin-bottom: 1rem;
+  }
+  .featured-product p {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .featured-product .featured-products-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .featured-product .featured-products-grid .featured-card {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .featured-product .featured-products-grid .featured-card:nth-of-type(1),
+  .featured-product .featured-products-grid .featured-card:nth-of-type(2),
+  .featured-product .featured-products-grid .featured-card:nth-of-type(3) {
+    margin: 0;
+  }
+}
 
 /* Our Story */
 .our-story {
@@ -783,6 +849,11 @@ footer .container .credit p {
   background-color: var(--dark);
   color: var(--yellow);
 }
+@media (max-width: 750px) {
+  .our-story .story-container .our-story-content .story-btn {
+    width: 100%;
+  }
+}
 .our-story .story-container .our-story-image img {
   width: 600px;
   height: 500px;
@@ -806,10 +877,34 @@ footer .container .credit p {
   z-index: 0;
   height: 540px;
 }
+@media (max-width: 750px) {
+  .our-story .story-container {
+    display: inline-block;
+    padding: 2rem;
+  }
+  .our-story .story-container .our-story-content {
+    width: auto;
+    padding: 2rem 0;
+  }
+  .our-story .story-container .our-story-content h2 {
+    margin-top: 2rem;
+  }
+  .our-story .story-container .our-story-content .story-btn {
+    max-width: unset;
+  }
+  .our-story .our-story-bg {
+    height: auto;
+    width: auto;
+    top: -5rem;
+    padding: 1rem;
+    clip-path: polygon(0 10%, 100% 0, 100% 85%, 0 90%);
+  }
+}
 
 /* Promo Section */
 .promo-section {
   display: flex;
+  flex-direction: row;
   gap: 3rem;
   align-items: center;
   position: relative;
@@ -864,6 +959,20 @@ footer .container .credit p {
 .promo-section .promo-content .promo-btn:hover {
   background-color: var(--dark);
   color: var(--yellow);
+}
+@media (max-width: 750px) {
+  .promo-section .promo-content .promo-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .promo-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 2rem;
+    margin-bottom: 6rem;
+  }
 }
 
 .order-container, .order-container-second {
@@ -1332,7 +1441,7 @@ footer .container .credit p {
   }
 }
 
-.get-quote .header {
+.form .header {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
   background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
@@ -1340,74 +1449,88 @@ footer .container .credit p {
   z-index: 0;
   position: absolute;
 }
-.get-quote .quote-content {
+.form .form-content,
+.form .contact-content {
   margin: 0 2rem;
   z-index: 1;
   position: relative;
   top: 110;
 }
-.get-quote .quote-content .quote-card {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+.form .form-content .form-card,
+.form .contact-content .form-card {
+  box-shadow: 0 4px 10px rgba(105, 24, 24, 0.25);
   border-radius: 1rem;
   margin: 8rem 0;
 }
-.get-quote .quote-content .quote-card .quote-description {
+.form .form-content .form-card .form-description,
+.form .contact-content .form-card .form-description {
   background-color: var(--white);
   padding: 1rem;
   border-radius: 1rem 1rem 0 0;
 }
-.get-quote .quote-content .quote-card .quote-description h2 {
+.form .form-content .form-card .form-description h1,
+.form .contact-content .form-card .form-description h1 {
   color: var(--margenta);
 }
-.get-quote .quote-content .quote-card .quote-description p {
+.form .form-content .form-card .form-description p,
+.form .contact-content .form-card .form-description p {
   margin-bottom: 1rem;
 }
-.get-quote .quote-content .quote-card .quote-description .icon-svg {
+.form .form-content .form-card .form-description .icon-svg,
+.form .contact-content .form-card .form-description .icon-svg {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding-top: 0.5rem;
   margin: 1rem 0;
 }
-.get-quote .quote-content .quote-card .quote-description .icon-svg p {
+.form .form-content .form-card .form-description .icon-svg p,
+.form .contact-content .form-card .form-description .icon-svg p {
   margin: 0;
 }
-.get-quote .quote-content .quote-card .quote-description img {
+.form .form-content .form-card .form-description img,
+.form .contact-content .form-card .form-description img {
   border-radius: 1rem;
   max-width: 100%;
   height: auto;
   display: block;
 }
-.get-quote .quote-content .quote-card .quote-description .icon-container {
+.form .form-content .form-card .form-description .icon-container,
+.form .contact-content .form-card .form-description .icon-container {
   background-color: var(--darkcyan);
   border-radius: 50%;
   padding: 0.5rem;
   align-items: center;
 }
-.get-quote .quote-content .quote-card .quote-description .icon-container svg {
+.form .form-content .form-card .form-description .icon-container svg,
+.form .contact-content .form-card .form-description .icon-container svg {
   fill: white;
   width: 30px;
   height: 30px;
 }
 @media (min-width: 750px) {
-  .get-quote .quote-content .quote-card .quote-description {
+  .form .form-content .form-card .form-description,
+  .form .contact-content .form-card .form-description {
     border-radius: 1rem 0 0 1rem;
     align-content: center;
     padding: 0 2rem;
   }
 }
-.get-quote .quote-content .quote-card .quote-form {
+.form .form-content .form-card .form-control,
+.form .contact-content .form-card .form-control {
   background-color: var(--paleblue);
   border-radius: 0 0 1rem 1rem;
   padding: 1rem;
 }
 @media (min-width: 750px) {
-  .get-quote .quote-content .quote-card .quote-form {
+  .form .form-content .form-card .form-control,
+  .form .contact-content .form-card .form-control {
     border-radius: 0 1rem 1rem 0;
   }
 }
 @media (min-width: 750px) {
-  .get-quote .quote-content .quote-card {
+  .form .form-content .form-card,
+  .form .contact-content .form-card {
     width: 100%;
     max-width: 1350px;
     margin: 0 auto;
@@ -1417,6 +1540,12 @@ footer .container .credit p {
     max-width: 1000px;
     margin: 10rem auto;
   }
+}
+.form .contact-content {
+  padding: 0.1rem;
+}
+.form .contact-content .form-card .form-description {
+  padding: 2rem 2rem;
 }
 
 .single-banner {
