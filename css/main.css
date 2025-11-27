@@ -283,24 +283,6 @@ header .header-container nav .search-btn svg {
   height: 24px;
   cursor: pointer;
 }
-header .header-container nav .search-btn input {
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s opacity ease;
-  bottom: -70px;
-  right: -20px;
-  position: absolute;
-  border-radius: 15px;
-  border: 1px solid gray;
-  padding: 0.8rem 1rem;
-  width: 500px;
-  box-shadow: 2px 2px 5px 0 gray;
-  z-index: 5;
-}
-header .header-container nav .search-btn .search-close {
-  visibility: visible;
-  opacity: 1;
-}
 header .header-container .hamburger {
   display: none;
   cursor: pointer;
@@ -430,26 +412,39 @@ header .unhidden .close img {
   width: 50px;
   height: 50px;
 }
-header .unhidden .search {
-  padding: 0.5rem 4rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-weight: bold;
-}
-header .unhidden .search input {
-  padding: 0.3rem 2.3rem;
+header .unhidden .search form {
   width: 100%;
-  border-radius: 15px;
-  border: 1px solid gray;
-  box-shadow: none;
-  font-weight: 300;
-  position: relative;
 }
-header .unhidden .search svg {
-  position: absolute;
-  width: 20px;
-  left: 150px;
+header .unhidden .search form div {
+  display: flex;
+}
+header .unhidden .search form div input[type=text] {
+  background: url(../img/magnify.svg) no-repeat 10px center;
+  background-size: 20px;
+  border-radius: 10px 0 0 10px;
+  flex-basis: 80%;
+}
+header .unhidden .search form div input[type=submit] {
+  font-size: clamp(1rem, 0.9632rem + 0.1307vw, 1.125rem);
+  font-weight: 600;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--dark);
+  color: var(--white);
+  transition: all 0.3s;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+  flex-basis: 20%;
+}
+header .unhidden .search form div input[type=submit]:hover {
+  background-color: var(--yellow);
+  color: var(--dark);
 }
 header .unhidden .menu-top-bar-container .nav-hidden > li a {
   padding: 1rem 4rem;
