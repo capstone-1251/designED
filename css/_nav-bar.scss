@@ -84,25 +84,6 @@ header {
                     height: 24px;
                     cursor: pointer;
                 }
-                input {
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: 0.5s opacity ease;
-                    bottom: -70px;
-                    right: -20px;
-                    position: absolute;
-                    border-radius: 15px;
-                    border: 1px solid gray;
-                    padding: .8rem 1rem;
-                    width: 500px;
-                    box-shadow: 2px 2px 5px 0 gray;
-                    z-index: 5;
-                }
-                
-                .search-close {
-                    visibility: visible;
-                    opacity: 1;
-                }
             }
         }
 
@@ -247,24 +228,23 @@ overflow: scroll;
     }
 }
 .search {
-    padding: .5rem 4rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-weight: bold;
-    input {
-        padding: .3rem 2.3rem;
+    form {
         width: 100%;
-        border-radius: 15px;
-        border: 1px solid gray;
-        box-shadow: none;
-        font-weight: 300;
-        position: relative;
-    }
-    svg {
-        position: absolute;
-        width: 20px;
-        left: 150px;
+        div {
+            display: flex;
+            input[type="text"] {
+                background: url(../img/magnify.svg) no-repeat 10px center;
+                background-size: 20px;
+                border-radius: 10px 0 0 10px;
+                flex-basis: 80%;
+            }
+            input[type="submit"] {
+                @include btn-black();
+                width: 100%;
+                border-radius: 0 10px 10px 0;
+                flex-basis: 20%;
+            }
+        }
     }
 }
 .menu-top-bar-container {
