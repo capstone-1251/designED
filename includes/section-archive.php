@@ -55,6 +55,9 @@
         </section>
     <?php endif;
     wp_reset_postdata(); ?>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/white-bg-01.avif" alt="Logo" class="bg-image1">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/white-bg-01.avif" alt="Logo" class="bg-image2">
+
 </div>
 
 <div class="other-products">
