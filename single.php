@@ -4,9 +4,10 @@
 get_template_part('includes/section', 'products');
 ?>
 
-<div>
+<div class="product-gallery">
     <h2>Gallery</h2>
-    <div>
+    <div class="bl-line"></div>
+    <div class="gallery-content">
         <?php
         $product_title = get_the_title();
 
