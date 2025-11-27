@@ -1332,7 +1332,7 @@ footer .container .credit p {
   }
 }
 
-.get-quote .header {
+.form .header {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
   background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
@@ -1340,74 +1340,88 @@ footer .container .credit p {
   z-index: 0;
   position: absolute;
 }
-.get-quote .quote-content {
+.form .form-content,
+.form .contact-content {
   margin: 0 2rem;
   z-index: 1;
   position: relative;
   top: 110;
 }
-.get-quote .quote-content .quote-card {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+.form .form-content .form-card,
+.form .contact-content .form-card {
+  box-shadow: 0 4px 10px rgba(105, 24, 24, 0.25);
   border-radius: 1rem;
   margin: 8rem 0;
 }
-.get-quote .quote-content .quote-card .quote-description {
+.form .form-content .form-card .form-description,
+.form .contact-content .form-card .form-description {
   background-color: var(--white);
   padding: 1rem;
   border-radius: 1rem 1rem 0 0;
 }
-.get-quote .quote-content .quote-card .quote-description h2 {
+.form .form-content .form-card .form-description h1,
+.form .contact-content .form-card .form-description h1 {
   color: var(--margenta);
 }
-.get-quote .quote-content .quote-card .quote-description p {
+.form .form-content .form-card .form-description p,
+.form .contact-content .form-card .form-description p {
   margin-bottom: 1rem;
 }
-.get-quote .quote-content .quote-card .quote-description .icon-svg {
+.form .form-content .form-card .form-description .icon-svg,
+.form .contact-content .form-card .form-description .icon-svg {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding-top: 0.5rem;
   margin: 1rem 0;
 }
-.get-quote .quote-content .quote-card .quote-description .icon-svg p {
+.form .form-content .form-card .form-description .icon-svg p,
+.form .contact-content .form-card .form-description .icon-svg p {
   margin: 0;
 }
-.get-quote .quote-content .quote-card .quote-description img {
+.form .form-content .form-card .form-description img,
+.form .contact-content .form-card .form-description img {
   border-radius: 1rem;
   max-width: 100%;
   height: auto;
   display: block;
 }
-.get-quote .quote-content .quote-card .quote-description .icon-container {
+.form .form-content .form-card .form-description .icon-container,
+.form .contact-content .form-card .form-description .icon-container {
   background-color: var(--darkcyan);
   border-radius: 50%;
   padding: 0.5rem;
   align-items: center;
 }
-.get-quote .quote-content .quote-card .quote-description .icon-container svg {
+.form .form-content .form-card .form-description .icon-container svg,
+.form .contact-content .form-card .form-description .icon-container svg {
   fill: white;
   width: 30px;
   height: 30px;
 }
 @media (min-width: 750px) {
-  .get-quote .quote-content .quote-card .quote-description {
+  .form .form-content .form-card .form-description,
+  .form .contact-content .form-card .form-description {
     border-radius: 1rem 0 0 1rem;
     align-content: center;
     padding: 0 2rem;
   }
 }
-.get-quote .quote-content .quote-card .quote-form {
+.form .form-content .form-card .form-control,
+.form .contact-content .form-card .form-control {
   background-color: var(--paleblue);
   border-radius: 0 0 1rem 1rem;
   padding: 1rem;
 }
 @media (min-width: 750px) {
-  .get-quote .quote-content .quote-card .quote-form {
+  .form .form-content .form-card .form-control,
+  .form .contact-content .form-card .form-control {
     border-radius: 0 1rem 1rem 0;
   }
 }
 @media (min-width: 750px) {
-  .get-quote .quote-content .quote-card {
+  .form .form-content .form-card,
+  .form .contact-content .form-card {
     width: 100%;
     max-width: 1350px;
     margin: 0 auto;
@@ -1417,6 +1431,12 @@ footer .container .credit p {
     max-width: 1000px;
     margin: 10rem auto;
   }
+}
+.form .contact-content {
+  padding: 0.1rem;
+}
+.form .contact-content .form-card .form-description {
+  padding: 2rem 2rem;
 }
 
 .single-banner .container {
@@ -1444,4 +1464,83 @@ footer .container .credit p {
 }
 .single-banner .container .btn {
   width: 100%;
+}
+
+.contact-us .contact-us-content {
+  margin: 0 2rem;
+  z-index: 1;
+  position: relative;
+  top: 110;
+}
+.contact-us .contact-us-content .contact-us-card {
+  box-shadow: 0 4px 10px rgba(105, 24, 24, 0.25);
+  border-radius: 1rem;
+  margin: 8rem 0;
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-description {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-description h1 {
+  color: var(--margenta);
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-description p {
+  margin-bottom: 1rem;
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-description .icon-svg {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  margin: 1rem 0;
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-description .icon-svg p {
+  margin: 0;
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-description img {
+  border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-description .icon-container {
+  background-color: var(--darkcyan);
+  border-radius: 50%;
+  padding: 0.5rem;
+  align-items: center;
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-description .icon-container svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 750px) {
+  .contact-us .contact-us-content .contact-us-card .contact-us-description {
+    border-radius: 1rem 0 0 1rem;
+    align-content: center;
+    padding: 0 2rem;
+  }
+}
+.contact-us .contact-us-content .contact-us-card .contact-us-form {
+  background-color: var(--paleblue);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+}
+@media (min-width: 750px) {
+  .contact-us .contact-us-content .contact-us-card .contact-us-form {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+@media (min-width: 750px) {
+  .contact-us .contact-us-content .contact-us-card {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    max-width: 1000px;
+    margin: 10rem auto;
+  }
 }/*# sourceMappingURL=main.css.map */

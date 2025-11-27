@@ -8,9 +8,9 @@ $picture = $quote_img['sizes']['blog-large'];
 ?>
 
 <?php get_header(); ?>
-<section class="get-quote">
+<section class="form">
     <div class="header"></div>
-    <div class="quote-content">
+    <div class="form-content">
         <div>
             <div>
                 <?php
@@ -20,11 +20,11 @@ $picture = $quote_img['sizes']['blog-large'];
             <img src="<?php the_post_thumbnail_url('blog-large') ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true) ?>">
         </div>
         
-        <div class="quote-card">
-            <div class="quote-description">
-                <h2><?php
+        <div class="form-card">
+            <div class="form-description">
+                <h1><?php
                     the_field('get_quote')
-                    ?></h2>
+                    ?></h1>
                 <p><?php
                     the_field('get_quote_description')
                     ?>
@@ -54,7 +54,7 @@ $picture = $quote_img['sizes']['blog-large'];
                 </div>
             </div>
         
-            <div class="quote-form">
+            <div class="form-control">
                 <?php
                 echo do_shortcode('[wpforms id="257"]');
                 ?>
