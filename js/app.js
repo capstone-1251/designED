@@ -13,11 +13,10 @@ close.addEventListener("click", () => {
 });
 
 searchBtn.addEventListener("click", (e) => {
-  e.stopPropagation(); // กันไม่ให้ไป trigger document click
+  e.stopPropagation();
   searchInput.classList.toggle("search-close");
 });
 
-// ปิด search เมื่อคลิกข้างนอก
 document.addEventListener("click", (evt) => {
   if (!searchInput.contains(evt.target) && !searchBtn.contains(evt.target)) {
     searchInput.classList.remove("search-close");

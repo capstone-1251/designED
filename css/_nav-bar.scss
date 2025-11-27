@@ -84,7 +84,39 @@ header {
                     height: 24px;
                     cursor: pointer;
                 }
+                .search-input {
+                    position: absolute;
+                    right: 0;
+                    top: 50px;
+                    opacity: 0;
+                    transition: 0.5s opacity ease;
+                    div {
+                        display: flex;
+                        input[type="text"] {
+                            padding: .3rem 2.3rem;
+                            width: 300px;
+                            border-radius: 15px 0 0 15px;
+                            border: 1px solid gray;
+                            box-shadow: none;
+                            font-weight: 300;
+                            background: url(../img/magnify.svg) no-repeat 10px center;
+                            background-size: 20px;
+                            background-color: var(--white);
+                        }
+                        input[type="submit"] {
+                            @include btn-black();
+                            border-radius: 0 15px 15px 0;
+                            padding: 0;
+                            height: 40px;
+                        }
+                    }
+                }
+
+                .search-input.search-close {
+                    opacity: 1;
+                }
             }
+
         }
 
         .hamburger {
