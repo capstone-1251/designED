@@ -37,7 +37,6 @@ $promo_link = get_field('promo_product_link');
 
 <section class="front-page">
     <section class="featured-product">
-        <div class="front-page-container">
             <div class="featured-products-grid">
                 <?php foreach ($items as $post) : setup_postdata($post); ?>
                     <div class="featured-card">
@@ -53,10 +52,9 @@ $promo_link = get_field('promo_product_link');
                 <?php endforeach;
                 wp_reset_postdata(); ?>
             </div>
-        </div>
 
 
-        <div>
+        <div class="text">
             <h2>
                 <?php
                 the_field('featured_category');
