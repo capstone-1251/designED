@@ -1,6 +1,23 @@
 .single-banner {
     overflow: hidden;
+        img.bg-image1 {
+        position: absolute;
+        top: 0;
+        left: -300px;
+        rotate: -80deg;
+        z-index: 1;
+        height: 1000px;
+        // opacity: 0.8;
+        @media (max-width: $ipad) {
+            left: -100px;
+            top: -30px;
+            height: 500px;
+            rotate: -30deg;
+        }
+    }
     .container {
+        position: relative;
+        z-index: 2;
         padding: 7rem 2rem 5rem 2rem;
         .thumb {
             border-radius: 20px;
@@ -61,6 +78,8 @@
 }
 
 .product-description {
+    position: relative;
+    z-index: 3;
     clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
     padding: 5rem 0;
     background: linear-gradient(90deg, rgb(0, 102, 204, 0.95), rgb(63, 163, 224, 0.95)), url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
@@ -88,6 +107,23 @@
 }
 
 .product-gallery {
+    position: relative;
+    z-index: 2;
+    img.bg-image2 {
+    position: absolute;
+    z-index: 1;
+    bottom: -400px;
+    right: -150px;
+    rotate: -40deg;
+    width: 100%;
+    @media (max-width: $ipad) {
+        right: 0;
+        bottom: -100px;
+        rotate: -60deg;
+        width: 1000px;
+        height: 1000px;
+    }
+    }
     padding: 2rem 2rem 7rem 2rem;
     h2 {
         margin-bottom: 1rem;
@@ -98,6 +134,8 @@
         background-color: var(--brightblue);
     }
     .gallery-content {
+        position: relative;
+        z-index: 2;
         margin-top: 3rem;
         .wpcp-carousel-wrapper .wpcp-single-item {
             border-radius: 15px;
@@ -110,14 +148,16 @@
         }
     }
     @media (min-width: $ipad) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .gallery-content {
-            .wpcp-carousel-wrapper .wpcp-single-item img {
-                height: 400px;
-                width: 300px;
-                object-fit: cover;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .gallery-content {
+                .wpcp-carousel-wrapper .wpcp-single-item img {
+                    height: 400px;
+                    width: 300px;
+                    object-fit: cover;
+                }
             }
         }
     }

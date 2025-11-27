@@ -196,6 +196,10 @@ footer nav {
   margin: 0.5rem 0 1.5rem 0;
 }
 
+main {
+  overflow: hidden;
+}
+
 header {
   padding: 2rem;
   position: absolute;
@@ -530,6 +534,8 @@ header .unhidden .menu-top-bar-container .sub-menu li:hover a {
 }
 
 footer {
+  position: relative;
+  z-index: 2;
   background-color: var(--darkcyan);
   padding: 2rem;
   position: absolute;
@@ -1265,6 +1271,8 @@ footer .container .credit p {
 }
 
 .overlay {
+  z-index: 2;
+  position: relative;
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 }
@@ -1313,9 +1321,48 @@ footer .container .credit p {
 }
 
 .featured-catalog {
-  padding: 2rem 2rem 8rem 2rem;
+  position: relative;
+}
+.featured-catalog img.bg-image1 {
+  position: absolute;
+  top: -180px;
+  left: -200px;
+  rotate: -60deg;
+  z-index: 1;
+  height: 700px;
+  opacity: 0.8;
+}
+@media (max-width: 750px) {
+  .featured-catalog img.bg-image1 {
+    left: -150px;
+    top: -100px;
+    width: 900px;
+    height: unset;
+  }
+}
+.featured-catalog img.bg-image2 {
+  position: absolute;
+  bottom: -400px;
+  right: -300px;
+  z-index: 1;
+  rotate: -40deg;
+  width: 80%;
+  opacity: 0.4;
+}
+@media (max-width: 750px) {
+  .featured-catalog img.bg-image2 {
+    bottom: -200px;
+    left: 0;
+    opacity: 1;
+    right: unset;
+    width: 100%;
+    rotate: -20deg;
+  }
 }
 .featured-catalog .section-featured {
+  z-index: 2;
+  position: relative;
+  padding: 2rem 2rem 8rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -1398,6 +1445,8 @@ footer .container .credit p {
 }
 
 .other-products {
+  z-index: 2;
+  position: relative;
   background: linear-gradient(90deg, #2a71ab, #2872b4);
   clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
   height: 2000px;
@@ -1592,7 +1641,25 @@ footer .container .credit p {
 .single-banner {
   overflow: hidden;
 }
+.single-banner img.bg-image1 {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  rotate: -80deg;
+  z-index: 1;
+  height: 1000px;
+}
+@media (max-width: 750px) {
+  .single-banner img.bg-image1 {
+    left: -100px;
+    top: -30px;
+    height: 500px;
+    rotate: -30deg;
+  }
+}
 .single-banner .container {
+  position: relative;
+  z-index: 2;
   padding: 7rem 2rem 5rem 2rem;
 }
 .single-banner .container .thumb {
@@ -1652,6 +1719,8 @@ footer .container .credit p {
 }
 
 .product-description {
+  position: relative;
+  z-index: 3;
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
   padding: 5rem 0;
   background: linear-gradient(90deg, rgba(0, 102, 204, 0.95), rgba(63, 163, 224, 0.95)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
@@ -1683,7 +1752,26 @@ footer .container .credit p {
 }
 
 .product-gallery {
+  position: relative;
+  z-index: 2;
   padding: 2rem 2rem 7rem 2rem;
+}
+.product-gallery img.bg-image2 {
+  position: absolute;
+  z-index: 1;
+  bottom: -400px;
+  right: -150px;
+  rotate: -40deg;
+  width: 100%;
+}
+@media (max-width: 750px) {
+  .product-gallery img.bg-image2 {
+    right: 0;
+    bottom: -100px;
+    rotate: -60deg;
+    width: 1000px;
+    height: 1000px;
+  }
 }
 .product-gallery h2 {
   margin-bottom: 1rem;
@@ -1694,6 +1782,8 @@ footer .container .credit p {
   background-color: var(--brightblue);
 }
 .product-gallery .gallery-content {
+  position: relative;
+  z-index: 2;
   margin-top: 3rem;
 }
 .product-gallery .gallery-content .wpcp-carousel-wrapper .wpcp-single-item {
@@ -1707,12 +1797,12 @@ footer .container .credit p {
      object-fit: cover;
 }
 @media (min-width: 750px) {
-  .product-gallery {
+  .product-gallery .container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .product-gallery .gallery-content .wpcp-carousel-wrapper .wpcp-single-item img {
+  .product-gallery .container .gallery-content .wpcp-carousel-wrapper .wpcp-single-item img {
     height: 400px;
     width: 300px;
     -o-object-fit: cover;

@@ -168,6 +168,10 @@ footer nav {
   margin: 0.5rem 0 1.5rem 0;
 }
 
+main {
+  overflow: hidden;
+}
+
 @import "_nav-bar";
 @import "_footer";
 @import "_front-page";
