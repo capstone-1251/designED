@@ -21,6 +21,7 @@ $promo_link = get_field('promo_product_link');
                     the_field('headline');
                     ?>
                 </h1>
+                <div class="banner-underline"></div>
                 <p><?php
                     the_field('tagline');
                     ?></p>
