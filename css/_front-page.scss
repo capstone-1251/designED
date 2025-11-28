@@ -37,6 +37,12 @@
         @include btn();
       }
 
+      @media (max-width: $labtop) {
+        .video {
+          width: 60%;
+        }
+      }
+
       @media (max-width: $ipad) {
         .video {
           width: 100%;
@@ -44,10 +50,17 @@
       }
     }
   }
+  @media (max-width: $ipad) {
+    height: 850px;
+  }
 }
 .front-page-container {
   @include container(1350px);
   margin: 0 auto;
+
+  @media (max-width: $labtop) {
+    padding: 2rem;
+  }
 
   @media (max-width: $ipad) {
     padding: 2rem;
@@ -149,12 +162,27 @@
         height: 450px;
       }
     }
-    @media (max-width: $ipad) {
+
+    @media (max-width: $labtop) {
       display: flex;
       flex-direction: column-reverse;
       align-items: flex-start;
-      margin: 0 2rem;
       width: unset;
+      padding: 2rem;
+      .featured-products-grid {
+        width: 100%;
+        max-width: 100%;
+        gap: 1rem;
+
+        .featured-card {
+          width: fit-content;
+          height: fit-content;
+        }
+      }
+    }
+
+    @media (max-width: $ipad) {
+      margin: 0 2rem;
       margin-bottom: $section-margin-bottom;
 
       h2 {
@@ -163,7 +191,6 @@
       p {
         width: fit-content;
       }
-
       .featured-products-grid {
         display: flex;
         flex-direction: column;
@@ -172,7 +199,7 @@
         max-width: 100%;
 
         .featured-card {
-          width: 100%;
+          width: fit-content;
           height: fit-content;
         }
 
@@ -251,6 +278,9 @@
     z-index: 0;
     height: 540px;
   }
+  @media (max-width: $labtop) {
+    padding: 2rem;
+  }
 
   @media (max-width: $ipad) {
     .story-container {
@@ -323,6 +353,9 @@
       width: 360px;
       margin-top: 1rem;
     }
+  }
+  @media (max-width: $labtop) {
+    padding: 2rem;
   }
 
   @media (max-width: $ipad) {

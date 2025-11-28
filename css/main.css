@@ -682,9 +682,19 @@ footer .container .credit p {
     width: 100%;
   }
 }
+@media (max-width: 1240px) {
+  .header-wrapper .header .web-banner .video {
+    width: 60%;
+  }
+}
 @media (max-width: 750px) {
   .header-wrapper .header .web-banner .video {
     width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .header-wrapper {
+    height: 850px;
   }
 }
 
@@ -693,6 +703,11 @@ footer .container .credit p {
   max-width: 1350px;
   margin: 0 auto;
   margin: 0 auto;
+}
+@media (max-width: 1240px) {
+  .front-page-container {
+    padding: 2rem;
+  }
 }
 @media (max-width: 750px) {
   .front-page-container {
@@ -803,13 +818,29 @@ footer .container .credit p {
   margin-top: 8rem;
   height: 450px;
 }
-@media (max-width: 750px) {
+@media (max-width: 1240px) {
   .featured-product .front-page-container {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
-    margin: 0 2rem;
     width: unset;
+    padding: 2rem;
+  }
+  .featured-product .front-page-container .featured-products-grid {
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+  .featured-product .front-page-container .featured-products-grid .featured-card {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 750px) {
+  .featured-product .front-page-container {
+    margin: 0 2rem;
     margin-bottom: 6rem;
   }
   .featured-product .front-page-container h2 {
@@ -827,7 +858,8 @@ footer .container .credit p {
     max-width: 100%;
   }
   .featured-product .front-page-container .featured-products-grid .featured-card {
-    width: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -917,6 +949,11 @@ footer .container .credit p {
   z-index: 0;
   height: 540px;
 }
+@media (max-width: 1240px) {
+  .our-story {
+    padding: 2rem;
+  }
+}
 @media (max-width: 750px) {
   .our-story .story-container {
     display: inline-block;
@@ -1003,6 +1040,11 @@ footer .container .credit p {
 @media (max-width: 750px) {
   .promo-section .promo-content .promo-btn {
     width: 100%;
+  }
+}
+@media (max-width: 1240px) {
+  .promo-section {
+    padding: 2rem;
   }
 }
 @media (max-width: 750px) {
