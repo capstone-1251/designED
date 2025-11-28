@@ -633,21 +633,18 @@ footer .container .credit p {
   background: url(../img/front-page-bg.avif) center/cover no-repeat fixed;
 }
 
-.header-wrapper {
+.header {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 80%);
   position: relative;
   z-index: 0;
   width: 100%;
-  margin: 0;
-}
-.header-wrapper .header {
   height: 800px;
   padding: 0 2rem;
   background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
   /* Web Banner */
 }
-.header-wrapper .header .web-banner {
+.header .web-banner {
   position: absolute;
   z-index: 10;
   width: 100%;
@@ -655,10 +652,10 @@ footer .container .credit p {
   left: 0;
   margin-top: 5rem;
 }
-.header-wrapper .header .web-banner .video {
+.header .web-banner .video {
   width: 800px;
 }
-.header-wrapper .header .web-banner .banner-btn {
+.header .web-banner .banner-btn {
   font-size: 1.2rem;
   font-weight: 600;
   width: 284px;
@@ -673,27 +670,27 @@ footer .container .credit p {
   color: var(--dark);
   transition: all 0.3s;
 }
-.header-wrapper .header .web-banner .banner-btn:hover {
+.header .web-banner .banner-btn:hover {
   background-color: var(--dark);
   color: var(--yellow);
 }
 @media (max-width: 750px) {
-  .header-wrapper .header .web-banner .banner-btn {
+  .header .web-banner .banner-btn {
     width: 100%;
   }
 }
 @media (max-width: 1240px) {
-  .header-wrapper .header .web-banner .video {
+  .header .web-banner .video {
     width: 60%;
   }
 }
 @media (max-width: 750px) {
-  .header-wrapper .header .web-banner .video {
+  .header .web-banner .video {
     width: 100%;
   }
 }
 @media (max-width: 750px) {
-  .header-wrapper {
+  .header {
     height: 850px;
   }
 }

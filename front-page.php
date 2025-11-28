@@ -15,7 +15,6 @@ $promo_link = get_field('promo_product_link');
 
 
 <section class="front-page">
-    <div class="header-wrapper">
     <div class="header">
         <div class="web-banner">
             <div class="front-page-container">
@@ -38,7 +37,6 @@ $promo_link = get_field('promo_product_link');
             </div>
         </div>
     </div>
-</div>
     <section class="featured-product ">
         <div class="front-page-container">
             <div class="featured-products-grid">

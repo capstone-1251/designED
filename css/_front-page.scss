@@ -3,50 +3,46 @@
   background: url(../img/front-page-bg.avif) center / cover no-repeat fixed;
 }
 
-.header-wrapper {
+.header {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 80%);
   position: relative;
   z-index: 0;
   width: 100%;
-  margin: 0;
+  height: 800px;
+  padding: 0 2rem;
+  background: linear-gradient(
+      90deg,
+      rgb(0, 102, 204, 0.9),
+      rgb(63, 163, 224, 0.9)
+    ),
+    url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
+  /* Web Banner */
+  .web-banner {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 5rem;
 
-  .header {
-    height: 800px;
-    padding: 0 2rem;
-    background: linear-gradient(
-        90deg,
-        rgb(0, 102, 204, 0.9),
-        rgb(63, 163, 224, 0.9)
-      ),
-      url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
-    /* Web Banner */
-    .web-banner {
-      position: absolute;
-      z-index: 10;
-      width: 100%;
-      top: 0;
-      left: 0;
-      margin-top: 5rem;
+    .video {
+      width: 800px;
+    }
 
+    .banner-btn {
+      @include btn();
+    }
+
+    @media (max-width: $labtop) {
       .video {
-        width: 800px;
+        width: 60%;
       }
+    }
 
-      .banner-btn {
-        @include btn();
-      }
-
-      @media (max-width: $labtop) {
-        .video {
-          width: 60%;
-        }
-      }
-
-      @media (max-width: $ipad) {
-        .video {
-          width: 100%;
-        }
+    @media (max-width: $ipad) {
+      .video {
+        width: 100%;
       }
     }
   }
@@ -54,6 +50,7 @@
     height: 850px;
   }
 }
+
 .front-page-container {
   @include container(1350px);
   margin: 0 auto;
