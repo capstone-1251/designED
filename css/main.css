@@ -1225,6 +1225,26 @@ footer .container .footer-container .has-black-background-color {
 
 .owner-section {
   padding: 5rem 0;
+  position: relative;
+}
+.owner-section img.about-bg {
+  position: absolute;
+  bottom: -420px;
+  left: -430px;
+  z-index: 1;
+  rotate: 30deg;
+  width: 80%;
+  opacity: 0.4;
+}
+@media (max-width: 750px) {
+  .owner-section img.about-bg {
+    bottom: 420px;
+    left: -230px;
+    z-index: 1;
+    rotate: 40deg;
+    width: 80%;
+    opacity: 0.4;
+  }
 }
 .owner-section .owner-inner {
   max-width: 1500px;
@@ -1244,6 +1264,7 @@ footer .container .footer-container .has-black-background-color {
 .owner-section .owner-photo figure {
   position: relative;
   margin: 0;
+  z-index: 5;
 }
 .owner-section .owner-photo img {
   height: 50vh;
@@ -1251,6 +1272,7 @@ footer .container .footer-container .has-black-background-color {
   border-radius: 26px;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 5;
 }
 .owner-section .owner-photo .owner-name {
   position: absolute;

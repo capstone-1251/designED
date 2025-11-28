@@ -95,6 +95,25 @@
 
 .owner-section {
   padding: 5rem 0;
+  position: relative;
+
+  img.about-bg {
+        position: absolute;
+        bottom: -420px;
+        left: -430px;
+        z-index: 1;
+        rotate: 30deg;
+        width: 80%;
+        opacity: 0.4;
+        @media (max-width: $ipad) {
+        bottom: 420px;
+        left: -230px;
+        z-index: 1;
+        rotate: 40deg;
+        width: 80%;
+        opacity: 0.4;
+        }
+    }
 
   .owner-inner {
     max-width: 1500px;
@@ -121,6 +140,7 @@
     figure {
       position: relative;
       margin: 0;
+      z-index: 5;
     }
 
     img {
@@ -128,6 +148,7 @@
       display: block;
       border-radius: 26px;
       object-fit: cover;
+      z-index: 5;
     }
 
     .owner-name {
