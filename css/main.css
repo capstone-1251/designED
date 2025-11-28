@@ -1119,6 +1119,9 @@ footer .container .footer-container .has-black-background-color {
     width: 100%;
     margin: 0 auto;
   }
+  .owner-section .btn {
+    width: 98%;
+  }
 }
 @media (max-width: 450px) {
   .owner-section {
