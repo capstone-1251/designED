@@ -1099,6 +1099,46 @@ footer .container .footer-container .has-black-background-color {
 
 .online-order-content {
   padding: 5rem 5rem 4rem 5rem;
+  position: relative;
+}
+.online-order-content img.order-bgone {
+  position: absolute;
+  bottom: -220px;
+  right: -430px;
+  z-index: 1;
+  rotate: 80deg;
+  width: 80%;
+  opacity: 0.4;
+}
+@media (max-width: 750px) {
+  .online-order-content img.order-bgone {
+    top: -52%;
+    right: 20%;
+    z-index: 1;
+    rotate: 59deg;
+    width: 100%;
+    opacity: 0.4;
+    transform: scale(4);
+  }
+}
+.online-order-content img.order-bgtwo {
+  position: absolute;
+  bottom: -150px;
+  left: -730px;
+  z-index: 1;
+  rotate: 80deg;
+  width: 80%;
+  opacity: 0.4;
+}
+@media (max-width: 750px) {
+  .online-order-content img.order-bgtwo {
+    top: 0px;
+    left: -240px;
+    z-index: 1;
+    width: 100%;
+    opacity: 0.4;
+    transform: scale(2);
+  }
 }
 .online-order-content .inner-flex {
   margin: 0 auto;
@@ -1115,6 +1155,7 @@ footer .container .footer-container .has-black-background-color {
 }
 .online-order-content .service-media {
   flex: 0 0 50%;
+  z-index: 10;
 }
 .online-order-content .portal-image {
   width: 100%;
@@ -1124,6 +1165,7 @@ footer .container .footer-container .has-black-background-color {
   border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 5;
 }
 
 @media (max-width: 850px) {
@@ -1238,11 +1280,11 @@ footer .container .footer-container .has-black-background-color {
 }
 @media (max-width: 750px) {
   .owner-section img.about-bg {
-    bottom: 420px;
-    left: -230px;
+    bottom: 400px;
+    left: -160px;
     z-index: 1;
     rotate: 40deg;
-    width: 80%;
+    width: 100%;
     opacity: 0.4;
   }
 }
