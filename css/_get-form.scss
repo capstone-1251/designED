@@ -1,4 +1,6 @@
 .form {
+  background: url(../img/white-bg-01.avif) bottom right/ cover no-repeat fixed;
+  padding-bottom: 6rem;
   .header {
     background: linear-gradient(90deg, #0066cc, #3fa3e0);
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
@@ -11,6 +13,10 @@
     padding: 0 2rem;
     z-index: 0;
     position: absolute;
+
+    @media (min-width: $ipad) {
+      height: 600px;
+    }
   }
   .form-content,
   .contact-content {
@@ -100,5 +106,9 @@
         padding: 2rem 2rem;
       }
     }
+  }
+
+  @media (min-width: $ipad) {
+    background-size: 65%;
   }
 }
