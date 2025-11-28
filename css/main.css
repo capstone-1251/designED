@@ -1413,7 +1413,7 @@ footer .container .footer-container .has-black-background-color {
   rotate: -60deg;
   z-index: 1;
   height: 700px;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 @media (max-width: 750px) {
   .featured-catalog img.bg-image1 {
@@ -1731,6 +1731,7 @@ footer .container .footer-container .has-black-background-color {
   rotate: -80deg;
   z-index: 1;
   height: 1000px;
+  opacity: 0.5;
 }
 @media (max-width: 750px) {
   .single-banner img.bg-image1 {
@@ -1846,6 +1847,7 @@ footer .container .footer-container .has-black-background-color {
   right: -150px;
   rotate: -40deg;
   width: 100%;
+  opacity: 0.5;
 }
 @media (max-width: 750px) {
   .product-gallery img.bg-image2 {
