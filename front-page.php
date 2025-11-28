@@ -12,58 +12,60 @@ $promo_link = get_field('promo_product_link');
 ?>
 
 <?php get_header(); ?>
-<div class="header">
-    <div class="web-banner">
-        <div class="front-page-container">
-            <div class="text">
-                <h1>
-                    <?php
-                    the_field('headline');
+
+
+<section class="front-page">
+    <div class="header-wrapper">
+    <div class="header">
+        <div class="web-banner">
+            <div class="front-page-container">
+                <div class="text">
+                    <h1>
+                        <?php
+                        the_field('headline');
+                        ?>
+                    </h1>
+                    <div class="banner-underline"></div>
+                    <p><?php
+                        the_field('tagline');
+                        ?></p>
+                    <a href="<?php echo esc_url($catalog); ?>" class="banner-btn">Product Catalog</a>
+                </div>
+                <div class="video">
+                    <?php the_field('featured_video');
                     ?>
-                </h1>
-                <div class="banner-underline"></div>
-                <p><?php
-                    the_field('tagline');
-                    ?></p>
-                <a href="<?php echo esc_url($catalog); ?>" class="banner-btn">Product Catalog</a>
-            </div>
-            <div class="video">
-                <?php the_field('featured_video');
-                ?>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<section class="front-page">
-    <section class="featured-product">
+    <section class="featured-product ">
+        <div class="front-page-container">
             <div class="featured-products-grid">
-                <?php foreach ($items as $post) : setup_postdata($post); ?>
-                    <div class="featured-card">
-                        <a href="<?php echo esc_url(get_permalink()); ?>"
-                            class="featured-card-image">
-                            <span class="featured-card-name">
-                                <?php echo esc_html(get_the_title()); ?>
-                            </span>
-                            <?php echo get_the_post_thumbnail(get_the_ID(), 'large'); ?>
-
-                        </a>
-                    </div>
-                <?php endforeach;
-                wp_reset_postdata(); ?>
+                    <?php foreach ($items as $post) : setup_postdata($post); ?>
+                        <div class="featured-card">
+                            <a href="<?php echo esc_url(get_permalink()); ?>"
+                                class="featured-card-image">
+                                <span class="featured-card-name">
+                                    <?php echo esc_html(get_the_title()); ?>
+                                </span>
+                                <?php echo get_the_post_thumbnail(get_the_ID(), 'large'); ?>
+                            </a>
+                        </div>
+                    <?php endforeach;
+                    wp_reset_postdata(); ?>
             </div>
-
-
-        <div class="text">
-            <h2>
-                <?php
-                the_field('featured_category');
-                ?>
-            </h2>
-            <div class="hr-underline"></div>
-            <p><?php
-                the_field('featured_description');
-                ?></p>
+            <div class="text">
+                <h2>
+                    <?php
+                    the_field('featured_category');
+                    ?>
+                </h2>
+                <div class="hr-underline"></div>
+                <p><?php
+                    the_field('featured_description');
+                    ?></p>
+            </div>
         </div>
     </section>
 
