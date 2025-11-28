@@ -983,8 +983,7 @@ footer .container .credit p {
   align-items: center;
   position: relative;
   z-index: 2;
-  margin: 6rem;
-  padding: 3rem 0;
+  padding: 6rem 0;
   width: 100%;
   max-width: 1350px;
   margin: 0 auto;
@@ -1042,6 +1041,7 @@ footer .container .credit p {
 @media (max-width: 1240px) {
   .promo-section {
     padding: 2rem;
+    padding-bottom: 6rem;
   }
 }
 @media (max-width: 750px) {
@@ -1050,7 +1050,7 @@ footer .container .credit p {
     flex-direction: column-reverse;
     align-items: flex-start;
     padding: 2rem;
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
 }
 
