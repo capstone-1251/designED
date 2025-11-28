@@ -1,0 +1,94 @@
+.get-quote {
+  .header {
+    background: linear-gradient(90deg, #0066cc, #3fa3e0);
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+    background: linear-gradient(
+        90deg,
+        rgb(0, 102, 204, 0.9),
+        rgb(63, 163, 224, 0.9)
+      ),
+      url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
+    padding: 0 2rem;
+    z-index: 0;
+    position: absolute;
+  }
+  .quote-content {
+    margin: 0 2rem;
+    z-index: 1;
+    position: relative;
+    top: 110;
+
+    .quote-card {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 1rem;
+      margin: 8rem 0;
+
+      .quote-description {
+        background-color: var(--white);
+        padding: 1rem;
+        border-radius: 1rem 1rem 0 0;
+
+        h2 {
+          color: var(--margenta);
+        }
+        p {
+          margin-bottom: 1rem;
+        }
+        .icon-svg {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding-top: 0.5rem;
+          margin: 1rem 0;
+
+          p {
+            margin: 0;
+          }
+        }
+
+        img {
+          border-radius: 1rem;
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        .icon-container {
+          background-color: var(--darkcyan);
+          border-radius: 50%;
+          padding: 0.5rem;
+          align-items: center;
+
+          svg {
+            fill: white;
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        @media (min-width: $ipad) {
+          border-radius: 1rem 0 0 1rem;
+          align-content: center;
+          padding: 0 2rem;
+        }
+      }
+      .quote-form {
+        background-color: var(--paleblue);
+        border-radius: 0 0 1rem 1rem;
+        padding: 1rem;
+
+        @media (min-width: $ipad) {
+          border-radius: 0 1rem 1rem 0;
+        }
+      }
+      @media (min-width: $ipad) {
+        @include container(1350px);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        max-width: 1000px;
+        margin: 10rem auto;
+      }
+    }
+  }
+}

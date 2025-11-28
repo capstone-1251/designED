@@ -2,7 +2,7 @@
   background: var(--white);
 }
 .front-page-container {
-  width: $desktop;
+  @include container(1350px);
   margin: 0 auto;
 }
 
@@ -10,6 +10,13 @@
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
   height: 850px;
+  background: linear-gradient(
+      90deg,
+      rgb(0, 102, 204, 0.9),
+      rgb(63, 163, 224, 0.9)
+    ),
+    url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
+  padding: 0 2rem;
   position: relative;
   z-index: 0;
   width: 100%;
@@ -100,9 +107,7 @@
         @include innerBtn();
         position: absolute;
         bottom: 0;
-        right: 0;
-        left: 0;
-        margin: 1rem;
+        margin-bottom: 1rem;
       }
     }
     .featured-card:nth-of-type(1) {
@@ -130,7 +135,7 @@
   position: relative;
 
   .story-container {
-    width: $desktop;
+    @include container(1350px);
     margin: 0 auto;
     display: flex;
     gap: 2rem;
@@ -177,6 +182,15 @@
     background: linear-gradient(90deg, #0066cc, #3fa3e0);
     clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 90%);
     transform: rotate(180deg);
+
+    background: linear-gradient(
+        90deg,
+        rgb(0, 102, 204, 0.9),
+        rgb(63, 163, 224, 0.9)
+      ),
+      url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
+    padding: 0 2rem;
+    height: 700px;
     z-index: 0;
     height: 540px;
   }
@@ -191,6 +205,7 @@
   z-index: 2;
   margin: $section-margin-bottom;
   padding: 3rem 0;
+  @include container(1350px);
 
   .promo-product {
     display: flex;
@@ -223,31 +238,5 @@
       width: 360px;
       margin-top: 1rem;
     }
-  }
-}
-
-@media (max-width: 400px) {
-  .web-banner {
-    margin-top: 6rem;
-  }
-  .front-page-container,
-  .story-container {
-    padding: 1rem;
-  }
-
-  .web-banner .front-page-container {
-    display: inline-block;
-    .text {
-      width: 380px;
-    }
-    .video {
-      width: 360px;
-      margin-right: 1rem;
-      margin-top: 1rem;
-    }
-  }
-
-  .featured-product .featured-card-grid {
-    display: inline-block;
   }
 }

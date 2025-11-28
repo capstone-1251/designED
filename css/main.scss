@@ -93,14 +93,12 @@ a {
   text-decoration: none;
 }
 
-
 /*
 ___________________________________________________________________________________________________________
 */
 
 @import "_mixin";
 @import "_button";
-
 
 // General styles
 html {
@@ -152,7 +150,7 @@ footer nav {
 }
 
 .sm-caption {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .container {
@@ -176,3 +174,5 @@ footer nav {
 @import "_online-ordering-page";
 @import "_about-us";
 @import "_product-catalog";
+@import "_get-quote";
+@import "_single"

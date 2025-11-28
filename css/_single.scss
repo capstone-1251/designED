@@ -1,0 +1,28 @@
+.single-banner {
+    .container {
+        padding: 7rem 2rem;
+        .thumb {
+            border-radius: 20px;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 1.5rem 0;
+        }
+        .featured {
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: solid 6px var(--margenta2);
+            box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+            ul {
+                list-style: disc;
+                font-weight: 200;
+                font-style: italic;
+                line-height: 1.8;
+                padding-left: 1.5rem;
+            }
+        }
+        .btn {
+            width: 100%;
+        }
+    }
+}

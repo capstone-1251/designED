@@ -156,7 +156,7 @@ footer nav {
 }
 
 .sm-caption {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .container {
@@ -607,7 +607,9 @@ footer .container .footer-container .has-black-background-color {
 }
 
 .front-page-container {
-  width: 1500px;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
   margin: 0 auto;
 }
 
@@ -615,6 +617,8 @@ footer .container .footer-container .has-black-background-color {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
   height: 850px;
+  background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
+  padding: 0 2rem;
   position: relative;
   z-index: 0;
   width: 100%;
@@ -727,9 +731,7 @@ footer .container .footer-container .has-black-background-color {
   transition: all 0.3s;
   position: absolute;
   bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
 .featured-product .featured-products-grid .featured-card .featured-card-name:hover {
   background-color: var(--white);
@@ -756,7 +758,9 @@ footer .container .footer-container .has-black-background-color {
   position: relative;
 }
 .our-story .story-container {
-  width: 1500px;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
   margin: 0 auto;
   display: flex;
   gap: 2rem;
@@ -816,6 +820,9 @@ footer .container .footer-container .has-black-background-color {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
   clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 90%);
   transform: rotate(180deg);
+  background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
+  padding: 0 2rem;
+  height: 700px;
   z-index: 0;
   height: 540px;
 }
@@ -829,6 +836,9 @@ footer .container .footer-container .has-black-background-color {
   z-index: 2;
   margin: 6rem;
   padding: 3rem 0;
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 .promo-section .promo-product {
   display: flex;
@@ -876,29 +886,6 @@ footer .container .footer-container .has-black-background-color {
   color: var(--yellow);
 }
 
-@media (max-width: 400px) {
-  .web-banner {
-    margin-top: 6rem;
-  }
-  .front-page-container,
-  .story-container {
-    padding: 1rem;
-  }
-  .web-banner .front-page-container {
-    display: inline-block;
-  }
-  .web-banner .front-page-container .text {
-    width: 380px;
-  }
-  .web-banner .front-page-container .video {
-    width: 360px;
-    margin-right: 1rem;
-    margin-top: 1rem;
-  }
-  .featured-product .featured-card-grid {
-    display: inline-block;
-  }
-}
 .order-container, .order-container-second {
   height: 700px;
   background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
@@ -1363,4 +1350,118 @@ footer .container .footer-container .has-black-background-color {
   .other-products .content .section-blog article {
     width: 300px;
   }
+}
+
+.get-quote .header {
+  background: linear-gradient(90deg, #0066cc, #3fa3e0);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+  background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
+  padding: 0 2rem;
+  z-index: 0;
+  position: absolute;
+}
+.get-quote .quote-content {
+  margin: 0 2rem;
+  z-index: 1;
+  position: relative;
+  top: 110;
+}
+.get-quote .quote-content .quote-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  margin: 8rem 0;
+}
+.get-quote .quote-content .quote-card .quote-description {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.get-quote .quote-content .quote-card .quote-description h2 {
+  color: var(--margenta);
+}
+.get-quote .quote-content .quote-card .quote-description p {
+  margin-bottom: 1rem;
+}
+.get-quote .quote-content .quote-card .quote-description .icon-svg {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  margin: 1rem 0;
+}
+.get-quote .quote-content .quote-card .quote-description .icon-svg p {
+  margin: 0;
+}
+.get-quote .quote-content .quote-card .quote-description img {
+  border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.get-quote .quote-content .quote-card .quote-description .icon-container {
+  background-color: var(--darkcyan);
+  border-radius: 50%;
+  padding: 0.5rem;
+  align-items: center;
+}
+.get-quote .quote-content .quote-card .quote-description .icon-container svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 750px) {
+  .get-quote .quote-content .quote-card .quote-description {
+    border-radius: 1rem 0 0 1rem;
+    align-content: center;
+    padding: 0 2rem;
+  }
+}
+.get-quote .quote-content .quote-card .quote-form {
+  background-color: var(--paleblue);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+}
+@media (min-width: 750px) {
+  .get-quote .quote-content .quote-card .quote-form {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+@media (min-width: 750px) {
+  .get-quote .quote-content .quote-card {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    max-width: 1000px;
+    margin: 10rem auto;
+  }
+}
+
+.single-banner .container {
+  padding: 7rem 2rem;
+}
+.single-banner .container .thumb {
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.single-banner .container h1 {
+  margin: 1.5rem 0;
+}
+.single-banner .container .featured {
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: solid 6px var(--margenta2);
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.single-banner .container .featured ul {
+  list-style: disc;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+}
+.single-banner .container .btn {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
