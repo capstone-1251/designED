@@ -1046,6 +1046,8 @@ footer .container .footer-container .has-black-background-color {
   background: linear-gradient(90deg, rgba(0, 102, 204, 0.9), rgba(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom/cover fixed;
   color: var(--white);
   align-items: center;
+  position: relative;
+  z-index: 3;
 }
 
 .order-container {
@@ -1351,6 +1353,11 @@ footer .container .footer-container .has-black-background-color {
     padding: 0.7rem 2rem;
     font-size: 0.95rem;
   }
+}
+
+.btn {
+  position: absolute;
+  z-index: 5;
 }
 
 .overlay {

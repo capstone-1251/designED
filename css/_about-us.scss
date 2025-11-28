@@ -35,7 +35,6 @@
         .about-img img {
          border-radius: 1rem;
          width: 100%;
-         // have to discuss about this
          height: 50vh;  
          }
 
@@ -198,3 +197,8 @@
     }
   }
 }
+
+.btn {
+        position: absolute;
+        z-index: 5;
+        }
