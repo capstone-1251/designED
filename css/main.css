@@ -1317,6 +1317,7 @@ footer .container .footer-container .has-black-background-color {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 5;
+  margin-top: 50px;
 }
 .owner-section .owner-photo .owner-name {
   position: absolute;
@@ -1339,6 +1340,9 @@ footer .container .footer-container .has-black-background-color {
   .owner-section .owner-photo {
     width: 100%;
     margin: 0 auto;
+  }
+  .owner-section .btn {
+    width: 90%;
   }
 }
 @media (max-width: 450px) {
