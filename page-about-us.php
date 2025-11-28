@@ -81,6 +81,7 @@ $owner_picture = $owner_image['sizes']['custom-size'];
             </figure>
         </div>
     </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/white-bg-01.avif" alt="Logo" class="about-bg">
 </div>
 
 

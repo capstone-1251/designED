@@ -35,7 +35,6 @@
         .about-img img {
          border-radius: 1rem;
          width: 100%;
-         // have to discuss about this
          height: 50vh;  
          }
 
@@ -95,6 +94,25 @@
 
 .owner-section {
   padding: 5rem 0;
+  position: relative;
+
+  img.about-bg {
+        position: absolute;
+        bottom: -420px;
+        left: -430px;
+        z-index: 1;
+        rotate: 30deg;
+        width: 80%;
+        opacity: 0.4;
+        @media (max-width: $ipad) {
+        bottom: 400px;
+        left: -160px;
+        z-index: 1;
+        rotate: 40deg;
+        width: 100%;
+        opacity: 0.4;
+        }
+    }
 
   .owner-inner {
     max-width: 1500px;
@@ -121,6 +139,7 @@
     figure {
       position: relative;
       margin: 0;
+      z-index: 5;
     }
 
     img {
@@ -128,6 +147,7 @@
       display: block;
       border-radius: 26px;
       object-fit: cover;
+      z-index: 5;
     }
 
     .owner-name {
@@ -177,3 +197,8 @@
     }
   }
 }
+
+.btn {
+        position: absolute;
+        z-index: 5;
+        }

@@ -44,6 +44,7 @@ if (have_posts()): while (have_posts()): the_post();
                     <a href="<?php echo esc_url($get_quote); ?>" class="btn">Get Quote</a>
                 </div>
             </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/white-bg-02.avif" alt="Logo" class="bg-image1">
         </div>
 
         <section class="product-description">
