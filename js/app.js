@@ -24,11 +24,32 @@ document.addEventListener("DOMContentLoaded", (evt) => {
     }
   });
 
+  // gsap.registerPlugin(SplitText);
+
+  let split = SplitText.create(".text", {
+    type: "words",
+  });
+
+  gsap.from(split.words, {
+    y: 100,
+    autoAlpha: 0,
+    stagger: 0.05,
+  });
+
   // about us page animation
 
   let testText = SplitText.create(".text-about-us", {
-    type: "words",
+    type: "lines",
   });
+
+  gsap.from(testText.lines, {
+    y: 100,
+    autoAlpha: 0,
+    stagger: 0.1,
+  });
+
+  // Header
+  let header = document.querySelector(".header-container");
 
   gsap.from(header, {
     duration: 1,
