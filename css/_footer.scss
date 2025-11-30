@@ -1,6 +1,6 @@
 footer {
-  background-color: var(--darkcyan);
-  position: absolute;
+   background-color: var(--darkcyan);
+  position: relative; 
   width: 100%;
   
   .container {
@@ -8,27 +8,30 @@ footer {
    
     .phone-btn {
       position: absolute;
-      right: 7%;
-      top: -55px;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: #ffe94d;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 30;
+    right: 2rem;   
+    top: -75px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #ffe94d;
+    z-index: 10;
+     display: flex;              
+  align-items: center;
+  justify-content: center;
     }
   
     .phone-btn svg {
       width: 45px;
       height: 45px;
       object-fit: contain;
+       display: block;
     }
   
     .footer-container {
       color: var(--white);
       font-family: "Montserrat", sans-serif;
+       position: relative;
+    padding-right: 8rem;
      
     }
   

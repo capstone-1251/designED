@@ -19,7 +19,7 @@ $picture3 = $image3['sizes']['custom-size'];
       
             <div class="header-inner-flex">
                 <h1><?php the_title(); ?></h1>
-                <div>
+                <div class="text-about-us">
                     <?php
                     the_field('online_ordering_description')
                     ?>
@@ -38,7 +38,7 @@ $picture3 = $image3['sizes']['custom-size'];
         <div class="service-text">
             <h2><?php the_field('web_portal'); ?></h2>
             <div class="promo-underline"></div>
-            <p><?php the_field('web_portal_description'); ?></p>
+            <p class="text-about-us"><?php the_field('web_portal_description'); ?></p>
         </div>
         <div class="service-media">
             <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
@@ -57,7 +57,7 @@ $picture3 = $image3['sizes']['custom-size'];
             <div class="service-text">
                 <h2><?php the_field('instant_proofing'); ?></h2>
                 <div class="promo-underline"></div>
-                <p><?php the_field('instant_proofing_description'); ?></p>
+                <p class="text-about-us"><?php the_field('instant_proofing_description'); ?></p>
             </div>
         </div>
             </div>
@@ -69,7 +69,7 @@ $picture3 = $image3['sizes']['custom-size'];
         <div class="service-text">
             <h2><?php the_field('warehousing_distribution'); ?></h2>
             <div class="promo-underline"></div>
-            <p><?php the_field('warehousing_and_distribution_description'); ?></p>
+            <p class="text-about-us"><?php the_field('warehousing_and_distribution_description'); ?></p>
         </div>
         <div class="service-media">
             <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">

@@ -152,6 +152,7 @@
       border-radius: 26px;
       object-fit: cover;
       z-index: 5;
+      margin-top: 50px;
     }
 
     .owner-name {
@@ -185,6 +186,10 @@
       width: 100%;
       margin: 0 auto;
     }
+
+    .btn {
+       width: 90%;
+      }
   }
 
   @media (max-width: 450px) {
