@@ -1,49 +1,47 @@
-let hiddenNav = document.querySelector(".hamburger");
-let hidden = document.querySelector(".hidden");
-let close = document.querySelector(".close");
-let searchBtn = document.querySelector(".size-6");
-let searchInput = document.querySelector(".search-input");
+document.addEventListener("DOMContentLoaded", (evt) => {
+  let hiddenNav = document.querySelector(".hamburger");
+  let hidden = document.querySelector(".hidden");
+  let close = document.querySelector(".close");
+  let searchBtn = document.querySelector(".size-6");
+  let searchInput = document.querySelector(".search-input");
 
-hiddenNav.addEventListener("click", () => {
-  hidden.classList.toggle("unhidden");
-});
+  hiddenNav.addEventListener("click", () => {
+    hidden.classList.toggle("unhidden");
+  });
 
-close.addEventListener("click", () => {
-  hidden.classList.remove("unhidden");
-});
+  close.addEventListener("click", () => {
+    hidden.classList.remove("unhidden");
+  });
 
-searchBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  searchInput.classList.toggle("search-close");
-});
+  searchBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    searchInput.classList.toggle("search-close");
+  });
 
-document.addEventListener("click", (evt) => {
-  if (!searchInput.contains(evt.target) && !searchBtn.contains(evt.target)) {
-    searchInput.classList.remove("search-close");
-  }
-});
+  document.addEventListener("click", (evt) => {
+    if (!searchInput.contains(evt.target) && !searchBtn.contains(evt.target)) {
+      searchInput.classList.remove("search-close");
+    }
+  });
 
-gsap.registerPlugin(SplitText);
+  // gsap.registerPlugin(SplitText);
 
-let split = SplitText.create(".text", {
-  type: "words",
-});
+  let split = SplitText.create(".text", {
+    type: "words",
+  });
 
-gsap.from(split.words, {
-  y: 100,
-  autoAlpha: 0,
-  stagger: 0.05,
-});
+  gsap.from(split.words, {
+    y: 100,
+    autoAlpha: 0,
+    stagger: 0.05,
+  });
 
-// ___________________________
+  // Header
+  let header = document.querySelector(".header-container");
 
-let testText = SplitText.create(".text-test", {
-  type: "words",
-});
-
-gsap.from(testText.words, {
-  y: 100,
-  autoAlpha: 0,
-  stagger: 0.05,
-  delay: 1,
+  gsap.from(header, {
+    duration: 1,
+    y: -100,
+    opacity: 0,
+  });
 });
