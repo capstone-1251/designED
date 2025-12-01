@@ -1,46 +1,66 @@
 .front-page {
   background: var(--white);
-}
-.front-page-container {
-  @include container(1350px);
-  margin: 0 auto;
-
-  @media (max-width: $ipad) {
-    padding: 2rem;
-  }
+  background: url(../img/front-page-bg.avif) center / cover no-repeat fixed;
 }
 
 .header {
   background: linear-gradient(90deg, #0066cc, #3fa3e0);
-  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
-  height: 850px;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 80%);
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 800px;
+  padding: 0 2rem;
   background: linear-gradient(
       90deg,
       rgb(0, 102, 204, 0.9),
       rgb(63, 163, 224, 0.9)
     ),
     url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 0;
-  width: 100%;
+  /* Web Banner */
+  .web-banner {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 5rem;
+
+    .video {
+      width: 800px;
+    }
+
+    .banner-btn {
+      @include btn();
+    }
+
+    @media (max-width: $labtop) {
+      .video {
+        width: 60%;
+      }
+    }
+
+    @media (max-width: $ipad) {
+      .video {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: $ipad) {
+    height: 850px;
+  }
 }
 
-/* Web Banner */
-.web-banner {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin-top: 5rem;
+.front-page-container {
+  @include container(1350px);
+  margin: 0 auto;
 
-  .video {
-    width: 800px;
+  @media (max-width: $labtop) {
+    padding: 2rem;
   }
 
-  .banner-btn {
-    @include btn();
+  @media (max-width: $ipad) {
+    padding: 2rem;
   }
 
   @media (max-width: $ipad) {
@@ -55,7 +75,6 @@
   gap: 2rem;
   align-items: center;
   height: 75vh;
-  margin-bottom: $section-margin-bottom;
 
   h1 {
     line-height: 1;
@@ -86,65 +105,113 @@
 }
 
 .featured-product {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  align-items: center;
-  margin: 0 auto;
-  @include container(1350px);
-
-  .hr-underline {
-    width: 80px;
-    height: 4px;
-    background: var(--margenta);
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
-  }
-
-  .featured-products-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 320px;
+  .front-page-container {
+    display: flex;
+    flex-direction: row;
     gap: 2rem;
-    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    .hr-underline {
+      width: 80px;
+      height: 4px;
+      background: var(--margenta);
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
 
-    .featured-card {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-      background: white;
+    .featured-products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 320px;
+      gap: 2rem;
+      width: 100%;
 
-      .featured-card-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+      .featured-card {
         position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        background: white;
+
+        .featured-card-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          position: relative;
+        }
+
+        .featured-card-name {
+          @include innerBtn();
+          position: absolute;
+          bottom: 0;
+          margin-bottom: 1rem;
+        }
+      }
+      .featured-card:nth-of-type(1) {
+        grid-row: span 1;
+        height: 450px;
       }
 
-      .featured-card-name {
-        @include innerBtn();
-        position: absolute;
-        bottom: 0;
+      .featured-card:nth-of-type(2) {
+        grid-row: span 2;
+        height: 550px;
+        margin-top: 15rem;
+      }
+
+      .featured-card:nth-of-type(3) {
+        grid-row: span 2;
+        margin-top: 8rem;
+        height: 450px;
+      }
+    }
+
+    @media (max-width: $labtop) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      width: unset;
+      padding: 2rem;
+      .featured-products-grid {
+        width: 100%;
+        max-width: 100%;
+        gap: 1rem;
+
+        .featured-card {
+          width: fit-content;
+          height: fit-content;
+        }
+      }
+    }
+
+    @media (max-width: $ipad) {
+      margin: 0 2rem;
+      margin-bottom: $section-margin-bottom;
+
+      h2 {
         margin-bottom: 1rem;
       }
-    }
-    .featured-card:nth-of-type(1) {
-      grid-row: span 1;
-      height: 450px;
-    }
+      p {
+        width: fit-content;
+      }
+      .featured-products-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
 
-    .featured-card:nth-of-type(2) {
-      grid-row: span 2;
-      height: 550px;
-      margin-top: 15rem;
-    }
+        .featured-card {
+          width: fit-content;
+          height: fit-content;
+        }
 
-    .featured-card:nth-of-type(3) {
-      grid-row: span 2;
-      margin-top: 8rem;
-      height: 450px;
+        .featured-card:nth-of-type(1),
+        .featured-card:nth-of-type(2),
+        .featured-card:nth-of-type(3) {
+          margin: 0;
+        }
+      }
     }
   }
   @media (max-width: $ipad) {
@@ -248,6 +315,9 @@
     z-index: 0;
     height: 540px;
   }
+  @media (max-width: $labtop) {
+    padding: 2rem;
+  }
 
   @media (max-width: $ipad) {
     .story-container {
@@ -285,8 +355,7 @@
   align-items: center;
   position: relative;
   z-index: 2;
-  margin: $section-margin-bottom;
-  padding: 3rem 0;
+  padding: 6rem 0;
   @include container(1350px);
 
   .promo-product {
@@ -321,12 +390,16 @@
       margin-top: 1rem;
     }
   }
+  @media (max-width: $labtop) {
+    padding: 2rem;
+    padding-bottom: 6rem;
+  }
 
   @media (max-width: $ipad) {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
     padding: 2rem;
-    margin-bottom: $section-margin-bottom;
+    padding-bottom: 6rem;
   }
 }
