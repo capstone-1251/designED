@@ -1272,7 +1272,10 @@ footer .container .footer-container .has-black-background-color {
 .owner-section {
   padding: 5rem 0;
   position: relative;
+<<<<<<< HEAD
   padding-bottom: 10rem;
+=======
+>>>>>>> main
 }
 .owner-section img.about-bg {
   position: absolute;
@@ -1322,6 +1325,10 @@ footer .container .footer-container .has-black-background-color {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 5;
+<<<<<<< HEAD
+=======
+  margin-top: 50px;
+>>>>>>> main
 }
 .owner-section .owner-photo .owner-name {
   position: absolute;
@@ -1349,6 +1356,9 @@ footer .container .footer-container .has-black-background-color {
     width: 100%;
     margin: 0 auto;
   }
+  .owner-section .btn {
+    width: 90%;
+  }
 }
 @media (max-width: 450px) {
   .owner-section {
@@ -1362,6 +1372,11 @@ footer .container .footer-container .has-black-background-color {
     padding: 0.7rem 2rem;
     font-size: 0.95rem;
   }
+}
+
+.btn {
+  position: absolute;
+  z-index: 5;
 }
 
 .overlay {

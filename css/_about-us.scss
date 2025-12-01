@@ -35,8 +35,12 @@
         .about-img img {
          border-radius: 1rem;
          width: 100%;
+<<<<<<< HEAD
          height: 50vh; 
           object-fit: cover;
+=======
+         height: 50vh;  
+>>>>>>> main
          }
 
         .about-text ul {
@@ -96,7 +100,10 @@
 .owner-section {
   padding: 5rem 0;
   position: relative;
+<<<<<<< HEAD
   padding-bottom: 10rem;
+=======
+>>>>>>> main
 
   img.about-bg {
         position: absolute;
@@ -152,6 +159,10 @@
       border-radius: 26px;
       object-fit: cover;
       z-index: 5;
+<<<<<<< HEAD
+=======
+      margin-top: 50px;
+>>>>>>> main
     }
 
     .owner-name {
@@ -185,6 +196,10 @@
       width: 100%;
       margin: 0 auto;
     }
+
+    .btn {
+       width: 90%;
+      }
   }
 
   @media (max-width: 450px) {
@@ -205,3 +220,9 @@
     }
   }
 }
+
+.btn {
+        position: absolute;
+        z-index: 5;
+
+        }
