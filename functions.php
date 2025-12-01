@@ -1,5 +1,7 @@
 <?php
 
+
+
 // Fonts
 function mytheme_enqueue_fonts()
 {
@@ -169,3 +171,5 @@ add_filter('wpforms_field_properties', function ($properties, $field, $form_data
 
     return $properties;
 }, 100, 3);
+
+

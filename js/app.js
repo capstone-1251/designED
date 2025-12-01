@@ -23,6 +23,9 @@ document.addEventListener("click", (evt) => {
   }
 });
 
+
+
+
 gsap.registerPlugin(SplitText);
 
 let split = SplitText.create(".text",{
