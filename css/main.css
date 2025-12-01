@@ -1186,6 +1186,8 @@ footer .container .footer-container .has-black-background-color {
   align-items: center;
   gap: 45px;
   padding: 3rem 0rem;
+  position: relative;
+  z-index: 5;
 }
 .online-order-content .service-text {
   flex: 1;
@@ -1264,6 +1266,8 @@ footer .container .footer-container .has-black-background-color {
   border-radius: 1rem;
   width: 100%;
   height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about-container .about-text ul {
   display: flex;
@@ -1308,6 +1312,7 @@ footer .container .footer-container .has-black-background-color {
 .owner-section {
   padding: 5rem 0;
   position: relative;
+  padding-bottom: 10rem;
 }
 .owner-section img.about-bg {
   position: absolute;
@@ -1336,6 +1341,8 @@ footer .container .footer-container .has-black-background-color {
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
   gap: 3rem;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 .owner-section .owner-text .owner-title {
   color: #2b6fdd;
@@ -1369,6 +1376,10 @@ footer .container .footer-container .has-black-background-color {
   font-size: 1rem;
   text-align: center;
 }
+.owner-section .owner-photo .btn {
+  position: absolute;
+  z-index: 5;
+}
 @media (max-width: 750px) {
   .owner-section .owner-inner {
     grid-template-columns: 1fr;
@@ -1391,11 +1402,6 @@ footer .container .footer-container .has-black-background-color {
     padding: 0.7rem 2rem;
     font-size: 0.95rem;
   }
-}
-
-.btn {
-  position: absolute;
-  z-index: 5;
 }
 
 .overlay {
