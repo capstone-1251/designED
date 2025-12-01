@@ -63,11 +63,11 @@ $owner_picture = $owner_image['sizes']['custom-size-2'];
 
             <div class="aboutus-underline"></div>
 
-            <p class="text-about-us">
+            <p class="text-about-us owner-description">
                 <?php the_field('owner_description'); ?>
             </p>
 
-            <a href="/contact" class="btn">Contact Us</a>
+            <div class="contact"><a href="/contact" class="btn">Contact Us</a></div>
         </div>
 
 
