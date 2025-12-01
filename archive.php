@@ -4,7 +4,7 @@
     <div class="product-archive-banner">
         <div class="container">
             <div class="content">
-                <h1>Product Catalog</h1>
+                <h1 class="text-test">Product Catalog</h1>
                 <p>Explore our full range of custom print products, from business essentials to promotional materials and specialty finishes. Browse, compare, and discover the perfect options to bring your ideas to life—all in one easy-to-navigate catalog.</p>
             </div>
             <a href="<?php echo esc_url(home_url('/get-quote/')); ?>" class="btn">Get Quote</a>

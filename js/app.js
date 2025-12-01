@@ -25,14 +25,25 @@ document.addEventListener("click", (evt) => {
 
 gsap.registerPlugin(SplitText);
 
-let split = SplitText.create(".text",{
-  type:"words"
+let split = SplitText.create(".text", {
+  type: "words",
 });
 
 gsap.from(split.words, {
-  y:100,
-  autoAlpha:0,
-  stagger: 0.05
-})
+  y: 100,
+  autoAlpha: 0,
+  stagger: 0.05,
+});
 
+// ___________________________
 
+let testText = SplitText.create(".text-test", {
+  type: "words",
+});
+
+gsap.from(testText.words, {
+  y: 100,
+  autoAlpha: 0,
+  stagger: 0.05,
+  delay: 1,
+});
