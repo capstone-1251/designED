@@ -18,11 +18,9 @@
                  
             
             <?php endif; ?>
-        </div>
-        
-         
+        </div>      
     </div>
-   
+   <div class="creadit">PrintED © 2025</div>
 </footer>
 
 
