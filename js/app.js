@@ -22,3 +22,19 @@ document.addEventListener("click", (evt) => {
     searchInput.classList.remove("search-close");
   }
 });
+
+
+// about us page animation
+
+let testText = SplitText.create(".text-about-us", {
+  type: "words",
+});
+
+gsap.from(testText.words, {
+  y: 100,
+  autoAlpha: 0,
+  stagger: 0.05,
+  delay: 1,
+});
+
+
