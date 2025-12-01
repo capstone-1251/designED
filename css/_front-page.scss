@@ -4,6 +4,10 @@
 .front-page-container {
   @include container(1350px);
   margin: 0 auto;
+
+  @media (max-width: $ipad) {
+    padding: 2rem;
+  }
 }
 
 .header {
@@ -38,13 +42,19 @@
   .banner-btn {
     @include btn();
   }
+
+  @media (max-width: $ipad) {
+    .video {
+      width: 100%;
+    }
+  }
 }
 
 .web-banner .front-page-container {
   display: flex;
   gap: 2rem;
   align-items: center;
-  height: 65vh;
+  height: 75vh;
   margin-bottom: $section-margin-bottom;
 
   h1 {
@@ -64,14 +74,24 @@
     border-radius: 4px;
     margin: 1.5rem 0;
   }
+
+  @media (max-width: $ipad) {
+    display: inline-block;
+    padding: 2rem;
+
+    .banner-btn {
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .featured-product {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   align-items: center;
   margin: 0 auto;
-  width: 1350px;
+  @include container(1350px);
 
   .hr-underline {
     width: 80px;
@@ -125,6 +145,40 @@
       grid-row: span 2;
       margin-top: 8rem;
       height: 450px;
+    }
+  }
+  @media (max-width: $ipad) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin: 0 2rem;
+    width: unset;
+    margin-bottom: $section-margin-bottom;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+    p {
+      width: fit-content;
+    }
+
+    .featured-products-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 100%;
+
+      .featured-card {
+        width: 100%;
+        height: fit-content;
+      }
+
+      .featured-card:nth-of-type(1),
+      .featured-card:nth-of-type(2),
+      .featured-card:nth-of-type(3) {
+        margin: 0;
+      }
     }
   }
 }
@@ -194,11 +248,39 @@
     z-index: 0;
     height: 540px;
   }
+
+  @media (max-width: $ipad) {
+    .story-container {
+      display: inline-block;
+      padding: 2rem;
+
+      .our-story-content {
+        width: auto;
+        padding: 2rem 0;
+
+        h2 {
+          margin-top: 2rem;
+        }
+        .story-btn {
+          max-width: unset;
+        }
+      }
+    }
+
+    .our-story-bg {
+      height: auto;
+      width: auto;
+      top: -5rem;
+      padding: 1rem;
+      clip-path: polygon(0 10%, 100% 0, 100% 85%, 0 90%);
+    }
+  }
 }
 
 /* Promo Section */
 .promo-section {
   display: flex;
+  flex-direction: row;
   gap: 3rem;
   align-items: center;
   position: relative;
@@ -238,5 +320,13 @@
       width: 360px;
       margin-top: 1rem;
     }
+  }
+
+  @media (max-width: $ipad) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 2rem;
+    margin-bottom: $section-margin-bottom;
   }
 }

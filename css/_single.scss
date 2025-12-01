@@ -1,6 +1,24 @@
 .single-banner {
+    overflow: hidden;
+        img.bg-image1 {
+        position: absolute;
+        top: 0;
+        left: -300px;
+        rotate: -80deg;
+        z-index: 1;
+        height: 1000px;
+        opacity: 0.5;
+        @media (max-width: $ipad) {
+            left: -100px;
+            top: -30px;
+            height: 500px;
+            rotate: -30deg;
+        }
+    }
     .container {
-        padding: 7rem 2rem;
+        position: relative;
+        z-index: 2;
+        padding: 7rem 2rem 5rem 2rem;
         .thumb {
             border-radius: 20px;
             box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
@@ -23,6 +41,125 @@
         }
         .btn {
             width: 100%;
+        }
+
+        @media (min-width: $ipad) {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 4rem;
+            padding-top: 10rem;
+            h1 {
+                font-size: clamp(1.5rem, 1.0588rem + 1.5686vw, 3rem);
+            }
+            .image {
+                grid-area: 1 / 2 / 3 / 7;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .content {
+                grid-area: 1 / 7 / 3 / 12;
+            }
+
+            .btn {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: $labtop) {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.product-description {
+    position: relative;
+    z-index: 3;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    padding: 5rem 0;
+    background: linear-gradient(90deg, rgb(0, 102, 204, 0.95), rgb(63, 163, 224, 0.95)), url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
+    overflow: hidden;
+    .container {
+        padding: 2rem;
+        color: white;
+        h2 {
+            margin-bottom: 1rem;
+        }
+        .mg-line {
+            @include margentaLine(100px);
+        }
+    }
+    @media (min-width: $ipad) {
+        .container {
+            max-width: 1050px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+        padding: 10rem 0;
+    }
+}
+
+.product-gallery {
+    position: relative;
+    z-index: 2;
+    img.bg-image2 {
+    position: absolute;
+    z-index: 1;
+    bottom: -400px;
+    right: -150px;
+    rotate: -40deg;
+    width: 100%;
+    opacity: 0.5;
+    @media (max-width: $ipad) {
+        right: 0;
+        bottom: -100px;
+        rotate: -60deg;
+        width: 1000px;
+        height: 1000px;
+    }
+    }
+    padding: 2rem 2rem 7rem 2rem;
+    h2 {
+        margin-bottom: 1rem;
+    }
+    .bl-line {
+        height: 4px;
+        width: 60px;
+        background-color: var(--brightblue);
+    }
+    .gallery-content {
+        position: relative;
+        z-index: 2;
+        margin-top: 3rem;
+        .wpcp-carousel-wrapper .wpcp-single-item {
+            border-radius: 15px;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+    }
+    @media (min-width: $ipad) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .gallery-content {
+                .wpcp-carousel-wrapper .wpcp-single-item img {
+                    height: 400px;
+                    width: 300px;
+                    object-fit: cover;
+                }
+            }
         }
     }
 }

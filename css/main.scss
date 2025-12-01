@@ -126,7 +126,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5rem, 1.0221rem + 1.6993vw, 3.125rem);
+  font-size: clamp(1.5rem, 1.3529rem + 0.5229vw, 2rem);
 }
 
 .btn {
@@ -168,11 +168,16 @@ footer nav {
   margin: 0.5rem 0 1.5rem 0;
 }
 
+main {
+  overflow: hidden;
+}
+
 @import "_nav-bar";
 @import "_footer";
 @import "_front-page";
 @import "_online-ordering-page";
 @import "_about-us";
 @import "_product-catalog";
-@import "_get-quote";
-@import "_single"
+@import "_get-form";
+@import "_single";
+@import "_search";

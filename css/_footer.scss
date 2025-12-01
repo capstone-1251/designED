@@ -5,7 +5,11 @@ footer {
   
   .container {
      padding: 2rem;
+<<<<<<< HEAD
     // overflow: hidden;
+=======
+   
+>>>>>>> main
     .phone-btn {
       position: absolute;
       right: 7%;
@@ -17,6 +21,7 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 30;
     }
   
     .phone-btn svg {

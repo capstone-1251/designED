@@ -1,4 +1,4 @@
-.get-quote {
+.form {
   .header {
     background: linear-gradient(90deg, #0066cc, #3fa3e0);
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
@@ -12,25 +12,26 @@
     z-index: 0;
     position: absolute;
   }
-  .quote-content {
+  .form-content,
+  .contact-content {
     margin: 0 2rem;
     z-index: 1;
     position: relative;
     top: 110;
 
-    .quote-card {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    .form-card {
+      box-shadow: 0 4px 10px rgba(105, 24, 24, 0.25);
       border-radius: 1rem;
       margin: 8rem 0;
 
-      .quote-description {
+      .form-description {
         background-color: var(--white);
         padding: 1rem;
         border-radius: 1rem 1rem 0 0;
-
-        h2 {
+        h1 {
           color: var(--margenta);
         }
+
         p {
           margin-bottom: 1rem;
         }
@@ -72,7 +73,7 @@
           padding: 0 2rem;
         }
       }
-      .quote-form {
+      .form-control {
         background-color: var(--paleblue);
         border-radius: 0 0 1rem 1rem;
         padding: 1rem;
@@ -88,6 +89,15 @@
         justify-content: center;
         max-width: 1000px;
         margin: 10rem auto;
+      }
+    }
+  }
+
+  .contact-content {
+    padding: 0.1rem;
+    .form-card {
+      .form-description {
+        padding: 2rem 2rem;
       }
     }
   }

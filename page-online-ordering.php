@@ -44,6 +44,8 @@ $picture3 = $image3['sizes']['custom-size'];
             <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
         </div>
     </div>
+      <img src="<?php echo get_template_directory_uri(); ?>/img/white-bg-02.avif" alt="Logo" class="order-bgone">
+
  </div>
     
     <div class="order-container-second">
@@ -73,6 +75,7 @@ $picture3 = $image3['sizes']['custom-size'];
             <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
         </div>
     </div>
+          <img src="<?php echo get_template_directory_uri(); ?>/img/white-bg-02.avif" alt="Logo" class="order-bgtwo">
  </div>
 
     

@@ -35,7 +35,8 @@
         .about-img img {
          border-radius: 1rem;
          width: 100%;
-         height: 50vh;  
+         height: 50vh; 
+          object-fit: cover;
          }
 
         .about-text ul {
@@ -94,6 +95,26 @@
 
 .owner-section {
   padding: 5rem 0;
+  position: relative;
+  padding-bottom: 10rem;
+
+  img.about-bg {
+        position: absolute;
+        bottom: -420px;
+        left: -430px;
+        z-index: 1;
+        rotate: 30deg;
+        width: 80%;
+        opacity: 0.4;
+        @media (max-width: $ipad) {
+        bottom: 400px;
+        left: -160px;
+        z-index: 1;
+        rotate: 40deg;
+        width: 100%;
+        opacity: 0.4;
+        }
+    }
 
   .owner-inner {
     max-width: 1500px;
@@ -103,6 +124,8 @@
     grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
     gap: 3rem;
     align-items: center;
+    position: relative;
+    z-index: 5;
   }
 
   .owner-text {
@@ -120,6 +143,7 @@
     figure {
       position: relative;
       margin: 0;
+      z-index: 5;
     }
 
     img {
@@ -127,6 +151,7 @@
       display: block;
       border-radius: 26px;
       object-fit: cover;
+      z-index: 5;
     }
 
     .owner-name {
@@ -142,6 +167,10 @@
       font-size: 1rem;
       text-align: center;
     }
+    .btn {
+        position: absolute;
+        z-index: 5;
+        }
 
   }
 
@@ -155,10 +184,6 @@
     .owner-photo {
       width: 100%;
       margin: 0 auto;
-    }
-
-    .btn {
-      width: 98%;
     }
   }
 

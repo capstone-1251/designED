@@ -3,14 +3,19 @@
   background: linear-gradient(90deg, rgb(0, 102, 204, 0.9), rgb(63, 163, 224, 0.9)), url(../img/bg-banner.jpg) no-repeat center bottom / cover fixed;
   color: var(--white);
   align-items: center;
+  position: relative;
+  z-index: 3;
+  
 }
 
 .order-container {
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 80%);
+
 }
 
 .order-container-second {
     clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+
 
 }
 
@@ -66,6 +71,45 @@
 
 .online-order-content {
   padding: 5rem 5rem 4rem 5rem;
+  position: relative;
+
+   img.order-bgone {
+        position: absolute;
+        bottom: -220px;
+        right: -430px;
+        z-index: 1;
+        rotate: 80deg;
+        width: 80%;
+        opacity: 0.4;
+        @media (max-width: $ipad) {
+        top:-52%;
+        right: 20%;
+        z-index: 1;
+        rotate: 59deg;
+        width: 100%;
+        opacity: 0.4;
+        transform: scale(4);
+        }
+    }
+
+  img.order-bgtwo {
+        position: absolute;
+        bottom: -150px;
+        left: -730px;
+        z-index: 1;
+        rotate: 80deg;
+        width: 80%;
+        opacity: 0.4;
+        @media (max-width: $ipad) {
+        top: 0px;
+        left: -240px;
+        z-index: 1;
+        
+        width: 100%;
+        opacity: 0.4;
+        transform: scale(2);
+        }
+    }
 
   .inner-flex {
     margin: 0 auto;
@@ -85,6 +129,7 @@
 
   .service-media {
     flex: 0 0 50%;
+    z-index: 10;
   }
 
   .portal-image {
@@ -94,6 +139,7 @@
     display: block;
     border-radius: 20px;
     object-fit: cover;
+    z-index: 5;
   }
 
 
