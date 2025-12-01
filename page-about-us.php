@@ -29,7 +29,7 @@ $owner_picture = $owner_image['sizes']['custom-size-2'];
                         the_field('about_us_description');
                         ?>
                     </p>
-                    <ul>
+                    <ul class="text-about-us">
                         <li><?php
                             the_field('about_us_1');
                             ?></li>
@@ -40,7 +40,7 @@ $owner_picture = $owner_image['sizes']['custom-size-2'];
                             the_field('about_us_3');
                             ?></li>
                     </ul>
-                    <p class="about-tagline"><?php
+                    <p class="about-tagline text-about-us"><?php
                                                 the_field('about_us_tagline');
                                                 ?></p>
                 </div>

@@ -554,12 +554,24 @@ footer .container .phone-btn {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 550px) {
+  footer .container .phone-btn {
+    width: 70px;
+    height: 70px;
+  }
+}
 footer .container .phone-btn svg {
   width: 45px;
   height: 45px;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
+}
+@media (max-width: 550px) {
+  footer .container .phone-btn svg {
+    width: 30px;
+    height: 30px;
+  }
 }
 footer .container .footer-container {
   color: var(--white);
@@ -1314,6 +1326,9 @@ footer .container .footer-container .has-black-background-color {
 .about-container .about-text ul {
   display: flex;
   gap: 5px;
+}
+.about-container .about-text li {
+  font-size: 1.5rem;
 }
 .about-container .container {
   padding: 8rem 0rem;
