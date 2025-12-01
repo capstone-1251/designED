@@ -38,15 +38,12 @@ document.addEventListener("DOMContentLoaded", (evt) => {
 
   // about us page animation
 
-  let testText = SplitText.create(".text-about-us", {
-    type: "lines",
+  gsap.from(".text-about-us", {
+    duration: 1,
+    y: -100,
+    opacity: 0,
   });
 
-  gsap.from(testText.lines, {
-    y: 100,
-    autoAlpha: 0,
-    stagger: 0.1,
-  });
 
   // Header
   let header = document.querySelector(".header-container");
