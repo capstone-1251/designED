@@ -558,6 +558,8 @@ footer .container .phone-btn {
   footer .container .phone-btn {
     width: 70px;
     height: 70px;
+    right: 30px;
+    bottom: 30px;
   }
 }
 footer .container .phone-btn svg {
