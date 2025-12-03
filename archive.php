@@ -4,10 +4,10 @@
     <div class="product-archive-banner">
         <div class="container">
             <div class="content">
-                <h1 class="text-test">Product Catalog</h1>
-                <p>Explore our full range of custom print products, from business essentials to promotional materials and specialty finishes. Browse, compare, and discover the perfect options to bring your ideas to life—all in one easy-to-navigate catalog.</p>
+                <h1 id="product-catalog">Product Catalog</h1>
+                <p id="product-catalog-tagline">Explore our full range of custom print products, from business essentials to promotional materials and specialty finishes. Browse, compare, and discover the perfect options to bring your ideas to life—all in one easy-to-navigate catalog.</p>
             </div>
-            <a href="<?php echo esc_url(home_url('/get-quote/')); ?>" class="btn">Get Quote</a>
+            <a href="<?php echo esc_url(home_url('/get-quote/')); ?>" class="btn" id="product-btn">Get Quote</a>
         </div>
     </div>
 </div>

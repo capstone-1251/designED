@@ -17,7 +17,7 @@ $owner_picture = $owner_image['sizes']['custom-size-2'];
         <div class="container">
 
             <div class="about-content">
-                <h1><?php the_title(); ?></h1>
+                <h1 class="about-title"><?php the_title(); ?></h1>
                 <div class="aboutus-underline"></div>
 
                 <div class="about-text">
@@ -41,8 +41,8 @@ $owner_picture = $owner_image['sizes']['custom-size-2'];
                             ?></li>
                     </ul>
                     <p class="about-tagline text-about-us"><?php
-                                                the_field('about_us_tagline');
-                                                ?></p>
+                                                            the_field('about_us_tagline');
+                                                            ?></p>
                 </div>
 
             </div>
