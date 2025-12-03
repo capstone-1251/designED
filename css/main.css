@@ -735,11 +735,17 @@ footer .container .footer-container .has-black-background-color {
   margin-bottom: 1rem;
 }
 .web-banner .container .video {
-  width: 850px;
+  width: 100%;
+  max-width: 750px;
+  aspect-ratio: 16/9;
+  background: #000;
+  position: relative;
+  overflow: hidden;
 }
-.web-banner .container .video .wp-video-shortcode video, .web-banner .container .video video.wp-video-shortcode {
-  height: -moz-fit-content;
-  height: fit-content;
+.web-banner .container .video video, .web-banner .container .video iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 .web-banner .container .banner-underline {
   width: 100px;
