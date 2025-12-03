@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", (evt) => {
   // Single Product Page Animation
   let singleImg = document.querySelector("#single-img");
   let singleTitle = SplitText.create("#single-title", {
-    type: "chars",
+    type: "words",
   });
   let singleDescription = SplitText.create("#single-description", {
     type: "lines",
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", (evt) => {
     opacity: 0,
     delay: 0.5,
   });
-  gsap.from(singleTitle.chars, {
+  gsap.from(singleTitle.words, {
     x: 100,
     autoAlpha: 0,
     stagger: {
