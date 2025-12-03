@@ -9,7 +9,7 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 800px;
+  height: 850px;
   padding: 0 2rem;
   background: linear-gradient(
       90deg,
@@ -24,57 +24,21 @@
     width: 100%;
     top: 0;
     left: 0;
-    margin-top: 5rem;
-
-    .video {
-      width: 800px;
-    }
-
-    .banner-btn {
-      @include btn();
-    }
-
-    @media (max-width: $labtop) {
-      .video {
-        width: 60%;
-      }
-    }
-
-    @media (max-width: $ipad) {
-      .video {
-        width: 100%;
-      }
-    }
-  }
-  @media (max-width: $ipad) {
-    height: 850px;
   }
 }
 
-.front-page-container {
-  @include container(1350px);
-  margin: 0 auto;
-
-  @media (max-width: $labtop) {
-    padding: 2rem;
-  }
-
-  @media (max-width: $ipad) {
-    padding: 2rem;
-  }
-
-  @media (max-width: $ipad) {
-    .video {
-      width: 100%;
-    }
-  }
-}
-
-.web-banner .front-page-container {
+.web-banner .container {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   align-items: center;
   height: 75vh;
+  margin-top: 2rem;
+  padding: 0 2rem;
+
+  .banner-btn {
+    @include btn();
+  }
 
   h1 {
     line-height: 1;
@@ -85,6 +49,9 @@
     color: var(--white);
     margin-bottom: 1rem;
   }
+  .video {
+    width: 850px;
+  }
 
   .banner-underline {
     width: 100px;
@@ -94,22 +61,38 @@
     margin: 1.5rem 0;
   }
 
-  @media (max-width: $ipad) {
-    display: inline-block;
+  @media (max-width: $labtop) {
     padding: 2rem;
+    .video {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: $ipad) {
+    flex-direction: column;
+    margin-top: 4rem;
 
     .banner-btn {
       margin-bottom: 1rem;
+      width: 100%;
+    }
+    .text {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .video {
+      width: 100%;
     }
   }
 }
 
 .featured-product {
-  .front-page-container {
+  .container {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+    width: 85%;
     margin: 0 auto;
     .hr-underline {
       width: 80px;
@@ -171,7 +154,7 @@
       flex-direction: column-reverse;
       align-items: flex-start;
       width: unset;
-      padding: 2rem;
+      padding: 1rem;
       .featured-products-grid {
         width: 100%;
         max-width: 100%;
@@ -185,7 +168,6 @@
     }
 
     @media (max-width: $ipad) {
-      margin: 0 2rem;
       margin-bottom: $section-margin-bottom;
 
       h2 {
@@ -255,14 +237,15 @@
   margin-bottom: $section-margin-bottom;
   position: relative;
 
-  .story-container {
-    @include container(1350px);
+  .container {
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     gap: 2rem;
     overflow: hidden;
     align-items: center;
     justify-content: center;
+    padding: 0 2rem;
 
     .our-story-content {
       display: flex;
@@ -272,7 +255,6 @@
       position: relative;
       z-index: 2;
       color: var(--white);
-      width: 60%;
 
       .story-divider {
         width: 60px;
@@ -281,13 +263,12 @@
       }
       .story-btn {
         @include btn();
-        max-width: 360px;
       }
     }
 
     .our-story-image img {
-      width: 600px;
-      height: 500px;
+      width: 1000px;
+      height: 550px;
       border-radius: 20px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
       object-fit: cover;
@@ -320,19 +301,16 @@
   }
 
   @media (max-width: $ipad) {
-    .story-container {
-      display: inline-block;
-      padding: 2rem;
+    .container {
+      flex-direction: column;
+      padding: 1rem;
 
       .our-story-content {
-        width: auto;
-        padding: 2rem 0;
-
         h2 {
-          margin-top: 2rem;
+          padding-top: 3rem;
         }
-        .story-btn {
-          max-width: unset;
+        p {
+          width: fit-content;
         }
       }
     }
