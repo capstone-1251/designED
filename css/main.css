@@ -737,6 +737,10 @@ footer .container .footer-container .has-black-background-color {
 .web-banner .container .video {
   width: 850px;
 }
+.web-banner .container .video .wp-video-shortcode video, .web-banner .container .video video.wp-video-shortcode {
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .web-banner .container .banner-underline {
   width: 100px;
   height: 4px;

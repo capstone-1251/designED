@@ -51,6 +51,9 @@
   }
   .video {
     width: 850px;
+      .wp-video-shortcode video, video.wp-video-shortcode {
+            height: fit-content;
+    }
   }
 
   .banner-underline {
