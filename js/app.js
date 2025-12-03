@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", (evt) => {
 
   // Homepage
 
+  let homeBanner = document.querySelector(".header");
+  gsap.from(homeBanner, {
+    duration: 2,
+    y: -100,
+    opacity: 0,
+    ease: "power.in",
+  });
+
   let split = SplitText.create(".text", {
     type: "words",
   });
@@ -37,6 +45,7 @@ document.addEventListener("DOMContentLoaded", (evt) => {
       amount: 1,
       from: "start",
     },
+    delay: 0.5,
   });
 
   let homeSplit = SplitText.create(".home-title", {
@@ -47,26 +56,27 @@ document.addEventListener("DOMContentLoaded", (evt) => {
     y: 100,
     autoAlpha: 0,
     stagger: 0.05,
+    delay: 0.3,
   });
 
-  let homeUnder = document.querySelector("#home-underline");
+  let homeUnder = document.querySelector(".banner-underline");
   gsap.from(homeUnder, {
     duration: 1,
     x: -100,
     opacity: 0,
+    delay: 0.5,
   });
 
   let homeBtn = document.querySelector("#home-btn");
   gsap.fromTo(
     homeBtn,
     {
-      x: 100,
+      opacity: 0,
     },
     {
-      x: 0,
-      duration: 0.5,
+      duration: 1,
       opacity: 1,
-      delay: 0.5,
+      delay: 0.8,
     }
   );
 

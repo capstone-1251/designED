@@ -4,11 +4,11 @@ Template Name: Contact Us
 */
 
 $image1 = get_field('web_portal_image');
-$picture1 = $image1['sizes']['custom-size'];
+$picture1 = $image1['sizes']['custom-size-2'];
 $image2 = get_field('instant_proofing_image');
-$picture2 = $image2['sizes']['custom-size'];
+$picture2 = $image2['sizes']['custom-size-2'];
 $image3 = get_field('warehousing_distribution_image');
-$picture3 = $image3['sizes']['custom-size'];
+$picture3 = $image3['sizes']['custom-size-2'];
 ?>
 
 
@@ -52,7 +52,7 @@ $picture3 = $image3['sizes']['custom-size'];
     <div class="online-order-content container">
         <div class="inner-flex">
             <div class="service-media">
-                <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
+                <img class="portal-image" src="<?php echo $picture2; ?>" alt="Temp">
             </div>
             <div class="service-text">
                 <h2><?php the_field('instant_proofing'); ?></h2>
@@ -72,7 +72,7 @@ $picture3 = $image3['sizes']['custom-size'];
             <p class="text-about-us"><?php the_field('warehousing_and_distribution_description'); ?></p>
         </div>
         <div class="service-media">
-            <img class="portal-image" src="<?php echo $picture1; ?>" alt="Temp">
+            <img class="portal-image" src="<?php echo $picture3; ?>" alt="Temp">
         </div>
     </div>
     <img src="<?php echo get_template_directory_uri(); ?>/img/white-bg-02.avif" alt="Logo" class="order-bgtwo">

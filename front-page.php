@@ -28,7 +28,7 @@ $promo_link = get_field('promo_product_link');
                     <p><?php
                         the_field('tagline');
                         ?></p>
-                    <a href="<?php echo esc_url($catalog); ?>" class="banner-btn btn">Product Catalog</a>
+                    <a href="<?php echo esc_url($catalog); ?>" class="banner-btn btn" id="home-btn">Product Catalog</a>
                 </div>
                 <div class="video">
                     <?php the_field('featured_video');
