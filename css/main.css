@@ -810,6 +810,17 @@ footer .container .footer-container .has-black-background-color {
   display: block;
   position: relative;
 }
+.featured-product .container .featured-products-grid .featured-card .featured-card-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 600px;
+}
+@media (max-width: 750px) {
+  .featured-product .container .featured-products-grid .featured-card .featured-card-image img {
+    height: 100%;
+    width: auto;
+  }
+}
 .featured-product .container .featured-products-grid .featured-card .featured-card-name {
   position: absolute;
   text-align: center;

@@ -20,9 +20,11 @@ $picture3 = $image3['sizes']['custom-size-2'];
         <div class="header-inner-flex">
             <h1 class="online-title"><?php the_title(); ?></h1>
             <div class="text-about-us">
-                <?php
-                the_field('online_ordering_description')
-                ?>
+                <p>
+                    <?php
+                    the_field('online_ordering_description')
+                    ?>
+                </p>
                 <br>
                 <br>
                 <a href="<?php the_field('portal_button') ?>" class="btn" target="_blank">Go to Web Portal</a>

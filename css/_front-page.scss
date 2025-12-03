@@ -126,6 +126,14 @@
           object-fit: cover;
           display: block;
           position: relative;
+          img {
+            object-fit: cover;
+            height: 600px;
+            @media (max-width: $ipad) {
+              height: 100%;
+              width: auto;
+            }
+          }
         }
 
         .featured-card-name {
