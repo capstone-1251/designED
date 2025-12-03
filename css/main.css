@@ -720,6 +720,9 @@ footer .container .footer-container .has-black-background-color {
     width: 100%;
   }
 }
+.header .web-banner #home-btn {
+  opacity: 0;
+}
 @media (max-width: 1240px) {
   .header .web-banner .video {
     width: 60%;
@@ -1012,6 +1015,12 @@ footer .container .footer-container .has-black-background-color {
      object-fit: cover;
   position: relative;
   z-index: 2;
+}
+@media (max-width: 750px) {
+  .our-story .story-container .our-story-image img {
+    width: 100%;
+    height: 200px;
+  }
 }
 .our-story .our-story-bg {
   position: absolute;
@@ -1489,6 +1498,9 @@ footer .container .footer-container .has-black-background-color {
   width: -moz-fit-content;
   width: fit-content;
 }
+.overlay .product-archive-banner .container #product-btn {
+  opacity: 0;
+}
 @media (min-width: 750px) {
   .overlay {
     clip-path: polygon(0 0, 100% 0%, 100% 70%, 0% 100%);
@@ -1896,6 +1908,9 @@ footer .container .footer-container .has-black-background-color {
 }
 .single-banner .container .btn {
   width: 100%;
+}
+.single-banner .container #single-btn {
+  opacity: 0;
 }
 @media (min-width: 750px) {
   .single-banner .container {

@@ -11,17 +11,17 @@ if (have_posts()): while (have_posts()): the_post();
                     <?php
                     if (has_post_thumbnail()):
                     ?>
-                        <img src="<?php the_post_thumbnail_url('blog-xl') ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true) ?>" class="thumb">
+                        <img src="<?php the_post_thumbnail_url('blog-xl') ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true) ?>" class="thumb" id="single-img">
                     <?php
                     endif
                     ?>
                 </div>
                 <div class="content">
-                    <h1><?php the_title(); ?></h1>
-                    <p><?php
-                        the_field('short_description')
-                        ?></p>
-                    <div class="featured">
+                    <h1 id="single-title"><?php the_title(); ?></h1>
+                    <p id="single-description"><?php
+                                                the_field('short_description')
+                                                ?></p>
+                    <div class="featured" id="single-featured">
                         <h3>Product Feature:</h3>
                         <ul class="sm-caption">
                             <li><?php
@@ -41,7 +41,7 @@ if (have_posts()): while (have_posts()): the_post();
                                 ?></li>
                         </ul>
                     </div>
-                    <a href="<?php echo esc_url($get_quote); ?>" class="btn">Get Quote</a>
+                    <a href="<?php echo esc_url($get_quote); ?>" class="btn" id="single-btn">Get Quote</a>
                 </div>
             </div>
             <img src="<?php echo get_template_directory_uri(); ?>/img/white-bg-02.avif" alt="Logo" class="bg-image1">

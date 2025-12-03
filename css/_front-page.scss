@@ -34,6 +34,10 @@
       @include btn();
     }
 
+    #home-btn {
+      opacity: 0;
+    }
+
     @media (max-width: $labtop) {
       .video {
         width: 60%;
@@ -293,6 +297,10 @@
       object-fit: cover;
       position: relative;
       z-index: 2;
+      @media (max-width: $ipad) {
+        width: 100%;
+      height: 200px;
+      }
     }
   }
 

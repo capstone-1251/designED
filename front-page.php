@@ -18,17 +18,17 @@ $promo_link = get_field('promo_product_link');
     <div class="header">
         <div class="web-banner">
             <div class="front-page-container">
-                <div class="text">
-                    <h1>
+                <div>
+                    <h1 class="home-title">
                         <?php
                         the_field('headline');
                         ?>
                     </h1>
-                    <div class="banner-underline"></div>
-                    <p><?php
-                        the_field('tagline');
-                        ?></p>
-                    <a href="<?php echo esc_url($catalog); ?>" class="banner-btn">Product Catalog</a>
+                    <div class="banner-underline" id="home-underline"></div>
+                    <p class="text"><?php
+                                    the_field('tagline');
+                                    ?></p>
+                    <a href="<?php echo esc_url($catalog); ?>" class="banner-btn" id="home-btn">Product Catalog</a>
                 </div>
                 <div class="video">
                     <?php the_field('featured_video');
@@ -37,7 +37,7 @@ $promo_link = get_field('promo_product_link');
             </div>
         </div>
     </div>
-    <section class="featured-product ">
+    <section class="featured-product">
         <div class="front-page-container">
             <div class="featured-products-grid">
                 <?php foreach ($items as $post) : setup_postdata($post); ?>

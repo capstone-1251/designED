@@ -42,6 +42,9 @@
         .btn {
             width: 100%;
         }
+        #single-btn {
+            opacity: 0;
+        }
 
         @media (min-width: $ipad) {
             display: grid;
