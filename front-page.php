@@ -40,18 +40,18 @@ $promo_link = get_field('promo_product_link');
     <section class="featured-product" >
         <div class="container banner-content">
             <div class="featured-products-grid">
-                    <?php foreach ($items as $post) : setup_postdata($post); ?>
-                        <div class="featured-card">
-                            <a href="<?php echo esc_url(get_permalink()); ?>"
-                                class="featured-card-image">
-                                <span class="featured-card-name">
-                                    <?php echo esc_html(get_the_title()); ?>
-                                </span>
-                                <?php echo get_the_post_thumbnail(get_the_ID(), 'large'); ?>
-                            </a>
-                        </div>
-                    <?php endforeach;
-                    wp_reset_postdata(); ?>
+                <?php foreach ($items as $post) : setup_postdata($post); ?>
+                    <div class="featured-card">
+                        <a href="<?php echo esc_url(get_permalink()); ?>"
+                            class="featured-card-image">
+                            <span class="featured-card-name">
+                                <?php echo esc_html(get_the_title()); ?>
+                            </span>
+                            <?php echo get_the_post_thumbnail(get_the_ID(), 'large'); ?>
+                        </a>
+                    </div>
+                <?php endforeach;
+                wp_reset_postdata(); ?>
             </div>
             <div class="text">
                 <h2>

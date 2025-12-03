@@ -542,17 +542,25 @@ footer .container {
   padding: 2rem;
 }
 footer .container .phone-btn {
-  position: absolute;
-  right: 2rem;
-  top: -75px;
+  position: fixed;
+  right: 70px;
+  bottom: 70px;
   width: 110px;
   height: 110px;
   border-radius: 50%;
   background: #ffe94d;
-  z-index: 10;
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 550px) {
+  footer .container .phone-btn {
+    width: 70px;
+    height: 70px;
+    right: 30px;
+    bottom: 30px;
+  }
 }
 footer .container .phone-btn svg {
   width: 45px;
@@ -561,11 +569,16 @@ footer .container .phone-btn svg {
      object-fit: contain;
   display: block;
 }
+@media (max-width: 550px) {
+  footer .container .phone-btn svg {
+    width: 30px;
+    height: 30px;
+  }
+}
 footer .container .footer-container {
   color: var(--white);
   font-family: "Montserrat", sans-serif;
   position: relative;
-  padding-right: 8rem;
 }
 footer .container .footer-container .sidebar {
   display: flex;
@@ -1290,6 +1303,9 @@ footer .container .footer-container .has-black-background-color {
   display: flex;
   gap: 5px;
 }
+.about-container .about-text li {
+  font-size: 1.5rem;
+}
 .about-container .container {
   padding: 8rem 0rem;
 }
@@ -1334,11 +1350,12 @@ footer .container .footer-container .has-black-background-color {
 .owner-section img.about-bg {
   position: absolute;
   bottom: -420px;
-  left: -430px;
+  left: -600px;
   z-index: 1;
   rotate: 30deg;
   width: 80%;
   opacity: 0.4;
+  transform: scale(1.5);
 }
 @media (max-width: 750px) {
   .owner-section img.about-bg {
