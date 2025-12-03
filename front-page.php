@@ -37,7 +37,7 @@ $promo_link = get_field('promo_product_link');
             </div>
         </div>
     </div>
-    <section class="featured-product" >
+    <section class="featured-product">
         <div class="container banner-content">
             <div class="featured-products-grid">
                 <?php foreach ($items as $post) : setup_postdata($post); ?>
@@ -76,7 +76,7 @@ $promo_link = get_field('promo_product_link');
                 <a href="/about" class="story-btn">About Us</a>
             </div>
             <div class="our-story-image">
-                <img 
+                <img
                     src="<?php echo esc_url($picture); ?>"
                     alt="<?php echo esc_attr($story_img['alt']); ?>" />
             </div>
