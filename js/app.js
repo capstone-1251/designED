@@ -23,7 +23,6 @@ document.addEventListener("click", (evt) => {
   }
 });
 
-
 // about us page animation
 
 let testText = SplitText.create(".text-about-us", {
@@ -37,4 +36,68 @@ gsap.from(testText.words, {
   delay: 1,
 });
 
+// For Web Banner Text
+gsap.registerPlugin(SplitText);
 
+console.clear();
+
+document.fonts.ready.then(() => {
+  gsap.set("#split", { opacity: 1 });
+
+  let split;
+  SplitText.create("#split", {
+    type: "words,lines",
+    linesClass: "line",
+    autoSplit: true,
+    mask: "lines",
+    onSplit: (self) => {
+      split = gsap.from(self.lines, {
+        duration: 0.6,
+        yPercent: 80,
+        opacity: 0,
+        stagger: 0.2,
+        ease: "circ.out",
+        timeScale: 0.2,
+        play: 0,
+      });
+      return split;
+    },
+  });
+});
+
+gsap.from(".banner-content", {
+  scrollTrigger: {
+    trigger: ".featured-product",
+    start: "clamp(top center)",
+    end: "clamp(bottom center)",
+    marker: true,
+  },
+  yPercent: 30,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.2,
+});
+
+gsap.from(".story-img", {
+  scrollTrigger: {
+    trigger: ".our-story",
+    start: "clamp(top center)",
+    end: "clamp(bottom center)",
+    marker: true,
+  },
+  yPercent: 30,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.2,
+});
+
+gsap.from(".btn", {
+  scrollTrigger: {
+    trigger: ".banner-btn",
+    start: "bottom 70%",
+  },
+  opacity: 0,
+  yPercent: 100,
+  duration: 1,
+  ease: "power.in",
+});

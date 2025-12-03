@@ -17,9 +17,9 @@ $promo_link = get_field('promo_product_link');
 <section class="front-page">
     <div class="header">
         <div class="web-banner">
-            <div class="front-page-container">
+            <div class="container">
                 <div class="text">
-                    <h1>
+                    <h1 id="split">
                         <?php
                         the_field('headline');
                         ?>
@@ -28,7 +28,7 @@ $promo_link = get_field('promo_product_link');
                     <p><?php
                         the_field('tagline');
                         ?></p>
-                    <a href="<?php echo esc_url($catalog); ?>" class="banner-btn">Product Catalog</a>
+                    <a href="<?php echo esc_url($catalog); ?>" class="banner-btn btn">Product Catalog</a>
                 </div>
                 <div class="video">
                     <?php the_field('featured_video');
@@ -37,8 +37,8 @@ $promo_link = get_field('promo_product_link');
             </div>
         </div>
     </div>
-    <section class="featured-product ">
-        <div class="front-page-container">
+    <section class="featured-product" >
+        <div class="container banner-content">
             <div class="featured-products-grid">
                     <?php foreach ($items as $post) : setup_postdata($post); ?>
                         <div class="featured-card">
@@ -67,8 +67,8 @@ $promo_link = get_field('promo_product_link');
         </div>
     </section>
 
-    <section class="our-story">
-        <div class="story-container">
+    <section class="our-story story-img">
+        <div class="container">
             <div class="our-story-content">
                 <h2><?php the_field('our_story'); ?></h2>
                 <div class="story-divider"></div>
@@ -76,7 +76,7 @@ $promo_link = get_field('promo_product_link');
                 <a href="/about" class="story-btn">About Us</a>
             </div>
             <div class="our-story-image">
-                <img
+                <img 
                     src="<?php echo esc_url($picture); ?>"
                     alt="<?php echo esc_attr($story_img['alt']); ?>" />
             </div>
@@ -100,7 +100,7 @@ $promo_link = get_field('promo_product_link');
 
             <p><?php the_field('promo_product_details'); ?></p>
 
-            <a href="<?php echo esc_url($promo_link); ?>" class="promo-btn">
+            <a href="<?php echo esc_url($promo_link); ?>" class="promo-btn btn">
                 Visit Store
             </a>
         </div>
