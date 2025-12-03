@@ -30,7 +30,7 @@ get_template_part('includes/section', 'products');
                 case 'Pressure Seal Forms':
                     echo do_shortcode('[sp_wpcarousel id="159"]');
                     break;
-                case 'Multi-Part Snapset Forms':
+                case 'Snapset Forms':
                     echo do_shortcode('[sp_wpcarousel id="164"]');
                     break;
                 default:

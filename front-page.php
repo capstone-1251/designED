@@ -8,7 +8,7 @@ $story_img = get_field('story_image');
 $picture = $story_img['sizes']['custom-size-2'];
 $promo_image = get_field('promo_product_picture');
 $promo_picture = $promo_image['sizes']['custom-size-2'];
-$promo_link = get_field('promo_product_link');
+$promo_link = get_field('promo_products_link');
 ?>
 
 <?php get_header(); ?>
@@ -94,7 +94,7 @@ $promo_link = get_field('promo_product_link');
         </div>
 
         <div class="promo-content">
-            <h2>Promo Product</h2>
+            <h2>Promo Products</h2>
 
             <div class="promo-underline"></div>
 
